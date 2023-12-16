@@ -3,7 +3,7 @@
 @section('title','Tabungan')
 
 @section('conten')
-    
+
 		<h6 class="mb-0 text-uppercase" align="center">Tabungan</h6>
         <table>
             <tr>
@@ -35,11 +35,12 @@
                </div>
             </div>
           </div>
-        
+
         </div><!--end row-->
 
 		<div class="card">
 			<div class="card-body">
+                {{-- {{var_dump($tarik)}} --}}
 							<div class="table-responsive">
 								<table id="example2" class="table table-striped table-bordered">
 									<thead>
@@ -47,6 +48,7 @@
 											<th>Tanggal Penarikan</th>
 											<th>Kredit</th>
 											<th>Debit</th>
+                                            {{-- <th>Petugas</th> --}}
 										</tr>
 									</thead>
 									<tbody>
@@ -55,8 +57,9 @@
 											<td>{{ $tar->tgl_tab }}</td>
 											<td>{{ $tar->kredit }}</td>
 											<td>{{ $tar->debit }}</td>
+                                            {{-- <td>{{ $tar->petugas_id }}</td> --}}
 										</tr>
-									@endforeach  
+									@endforeach
 									</tbody>
 								</table>
 

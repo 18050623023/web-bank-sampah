@@ -113,22 +113,25 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <h5 align="center">Transaksi Debit Nasabah</h5>
+
                         <table id="example" class="table table-striped table-bordered">
+
                             <thead>
                                 <tr>
                                     <th>Tanggal Penarikan</th>
                                     <th>Kredit</th>
                                     <th>Debit</th>
-                                    <th>Petugas</th>
+                                    {{-- <th>Petugas</th> --}}
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($tarik as $tar)
+                                @foreach ($lala as $lol)
                                     <tr>
-                                        <td>{{ $tar->tgl_tab }}</td>
-                                        <td>{{ $tar->kredit }}</td>
-                                        <td>{{ $tar->debit }}</td>
-                                        <td>{{ $tar->nama_pegawai }}</td>
+                                        <td>{{ $lol->tgl_tab }}</td>
+                                        <td>{{ $lol->kredit }}</td>
+                                        <td>{{ $lol->debit }}</td>
+                                        {{-- <td>{{ $pet->nama_pegawai }}</td> --}}
+                                        {{-- {{var_dump($tar)}} --}}
                                     </tr>
                                 @endforeach
                             </tbody>

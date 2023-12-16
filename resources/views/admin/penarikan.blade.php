@@ -3,12 +3,12 @@
 @section('title','Penarikan')
 
 @section('conten')
-    
+
 		<h6 class="mb-0 text-uppercase">Penarikan Uang</h6>
 		<hr/>
 		<div class="card">
 			<div class="card-body">
-			
+
 							<div class="table-responsive">
 								<table id="example" class="table table-striped table-bordered">
 									<thead>
@@ -27,7 +27,7 @@
 												<a href="/admin/{{$nas->id}}/penarikanuang" class="btn btn-primary">Pilih</a>
 											</td>
 										</tr>
-									@endforeach  
+									@endforeach
 									</tbody>
 								</table>
 					</div>

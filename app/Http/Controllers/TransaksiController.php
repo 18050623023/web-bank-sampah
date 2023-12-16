@@ -162,6 +162,10 @@ class TransaksiController extends Controller
         ->sum('debit');
         $saldo = $kredit - $debit;
 
+        $lala = DB::table('tabungans')
+        ->where('tabungans.nasabah_id', '=', $id)
+        ->get();
+
         $tarik = DB::table('tabungans')
         ->join('pegawais', 'tabungans.petugas_id', '=', 'pegawais.id')
         ->join('nasabahs', 'tabungans.nasabah_id', '=', 'nasabahs.id')
@@ -169,7 +173,10 @@ class TransaksiController extends Controller
         ->where('tabungans.nasabah_id', '=', $id)
         ->get();
 
-        return view('admin.penarikanuang', compact(['nasabah','saldo','petugas','tarik','lokasi','lokasi_bank']));
+
+
+
+        return view('admin.penarikanuang', compact(['nasabah','lala','saldo','petugas','tarik','lokasi','lokasi_bank']));
     }
 
     public function tarikuang(Request $request)
