@@ -57,7 +57,7 @@
     var map = L.map('map').setView([-7.2754417,112.6302826], 11);
 
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-        maxZoom: 200,
+        maxZoom: 100,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
