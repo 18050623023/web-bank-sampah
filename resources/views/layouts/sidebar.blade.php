@@ -94,7 +94,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ url('admin/setoran') }}">
+                <a href="{{ url('admin/setornasabah') }}">
                     <div class="parent-icon"><i class="bx bx-repeat"></i>
                     </div>
                     <div class="menu-title">Setoran</div>

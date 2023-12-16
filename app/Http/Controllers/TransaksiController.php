@@ -27,6 +27,22 @@ class TransaksiController extends Controller
         return view('admin.penarikan', compact('nasabah'));
     }
 
+    public function  setoranNasabah()
+    {
+        $user_id = Auth::user()->id;
+        $nasabah = Nasabah::Where('user_id', $user_id)->first();
+        $user_id = $nasabah->user_id;
+        $kategori = Kategorie::all();
+        $petugas = Pegawai::all();
+        $lokasi = Databank::all();
+        $setoran = DB::table('storans')
+        ->join('kategories', 'storans.kategori_id', '=', 'kategories.id')
+        ->select('storans.*', 'kategories.kategori_sampah')
+        ->where('storans.nasabah_id', '=', $user_id)
+            ->get();
+        return view('admin.pilihnasabah', compact(['nasabah', 'kategori', 'setoran', 'petugas', 'lokasi']));
+    }
+
     public function pilihnasabah($id)
     {
         $user_id = Auth::user()->id;
