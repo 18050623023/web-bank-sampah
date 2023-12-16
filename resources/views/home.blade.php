@@ -145,7 +145,7 @@
             </div>
         </div>
         <footer class="bg-white shadow-sm border-top p-2 text-center fixed-bottom">
-            <p class="mb-0">Copyright © 2023. Serang-Banten.</p>
+            <p class="mb-0">Copyright © 2023. All right reserved. <a href="https://schienetren.tech">By Schiene Tren</a> </p>
         </footer>
     </div>
     <!--end wrapper-->

@@ -3,7 +3,7 @@
 @section('title','Setoran Nasabah')
 
 @section('conten')
-    
+
 		<h6 class="mb-0 text-uppercase">Setoran Nasabah</h6>
         <table>
             <tr>
@@ -35,7 +35,7 @@
 											<input type="text" name="user_id" class="form-control" id="inputEmailAddress2" value="{{ $nasabah->user_id }}">
 										</div>
 									</div>
-						
+
 									<div class="row mb-3" hidden>
 										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Nasabah Id</label>
 										<div class="col-sm-9">
@@ -67,6 +67,7 @@
 							</div>
 						<?php } ?>
 
+
 									<div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Kategori</label>
 										<div class="col-sm-9">
@@ -96,7 +97,7 @@
                                             </select>
 										</div>
 									</div>
-	
+
 									<div class="row">
 										<label class="col-sm-3 col-form-label"></label>
 										<div class="col-sm-9">
@@ -134,7 +135,7 @@
 												<a href="/admin/{{$set->id}}/editsetoran" class="btn btn-primary">Edit</a>
 											</td>
 										</tr>
-									@endforeach  
+									@endforeach
 									</tbody>
 								</table>
 					</div>

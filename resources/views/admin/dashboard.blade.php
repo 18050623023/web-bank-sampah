@@ -3,7 +3,7 @@
 @section('title','Dashboard')
 
 @section('conten')
-    
+
 		<h6 class="mb-0 text-uppercase">Dashboard</h6>
 		<hr/>
 
@@ -22,7 +22,7 @@
 						   </div>
 					   </div>
 					</div>
-				  </div> 
+				  </div>
 
 				   <div class="col">
 					<div class="card radius-10 border-start border-0 border-3 border-danger">
@@ -39,7 +39,7 @@
 					</div>
 				  </div>
 				</div><!--end row-->
-		
+
 	<div class="card">
 	<div class="card-header bg-white">
         <h3>Maps Bank Sampah</h3>
@@ -54,10 +54,10 @@
 @push('service')
 <script src="{{asset('template')}}/plugins/jquery/jquery.min.js"></script>
 <script>
-    var map = L.map('map').setView([-6.404714029225542,106.05509298074013], 9);
+    var map = L.map('map').setView([-7.2754417,112.6302826], 11);
 
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-        maxZoom: 20,
+        maxZoom: 200,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 

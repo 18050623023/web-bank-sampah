@@ -3,7 +3,7 @@
 @section('title','Petugas')
 
 @section('conten')
-    
+
 		<h6 class="mb-0 text-uppercase">Data Petugas</h6>
 		<hr/>
 		<div class="card">
@@ -23,14 +23,15 @@
                 					@foreach($petugas as $pet)
 										<tr>
 											<td>{{ $pet->nama_pegawai }}</td>
+                                            <td>{{ $pet->alamat }}</td>
 											<td>{{ $pet->no_hp }}</td>
-											<td>{{ $pet->alamat }}</td>
+
 											<td>
 												<a href="/admin/{{$pet->id}}/editpetugas" class="btn btn-primary">Edit</a>
 												<a href="/admin/delpetugas/<?php echo $pet->id ?>" class="btn btn-primary">Delete</a>
 											</td>
 										</tr>
-									@endforeach  
+									@endforeach
 									</tbody>
 								</table>
 					</div>

@@ -93,7 +93,13 @@
                     <div class="menu-title">Buka Tabungan</div>
                 </a>
             </li>
-
+            <li>
+                <a href="{{ url('admin/setoran') }}">
+                    <div class="parent-icon"><i class="bx bx-repeat"></i>
+                    </div>
+                    <div class="menu-title">Setoran</div>
+                </a>
+            </li>
             <li>
                 <a href="{{ url('admin/lihattabungan') }}">
                     <div class="parent-icon"><i class='bx bx-folder'></i>
