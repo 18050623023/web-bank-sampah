@@ -5,7 +5,7 @@
             <img src="{{ asset('template') }}/assets/images/dlh.png" class="logo-icon" alt="logo icon">
         </div>
         <div>
-            <h4 class="logo-text text-success">Simbas.id</h4>
+            <h4 class="logo-text text-success">Bank Sampah</h4>
         </div>
         {{-- <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
         </div> --}}
@@ -60,7 +60,7 @@
                 </a>
             </li>
 
-            {{-- <li>
+          <li>
 					<a href="{{ url('admin/setoran') }}">
 						<div class="parent-icon"><i class="bx bx-repeat"></i>
 						</div>
@@ -74,7 +74,7 @@
 						</div>
 						<div class="menu-title">Penarikan</div>
 					</a>
-				</li> --}}
+				</li>
 
             <li>
                 <a href="{{ url('admin/laporan') }}">
