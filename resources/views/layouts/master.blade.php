@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{ asset('template') }}/assets/images/dlh.png" type="image/png" />
+    <link rel="icon" href="{{ asset('template') }}/assets/images/earntrash.png" type="image/png" />
     <!--plugins-->
     <link href="{{ asset('template') }}/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <link href="{{ asset('template') }}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
