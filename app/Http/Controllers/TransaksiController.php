@@ -85,9 +85,7 @@ class TransaksiController extends Controller
             'jml_tab_pergram' => $jml_tab,
             'total_tabungan' => $total_tabungan
         ]);
-
         if($stor){
-
             Tabungan::create([
                 'nasabah_id' => $user_id,
                 'petugas_id' => $petugas,
