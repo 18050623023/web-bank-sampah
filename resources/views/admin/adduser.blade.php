@@ -3,8 +3,8 @@
 @section('title','User')
 
 @section('conten')
-    
-		<div class="row">
+
+		<d    iv class="row">
 					<div class="col-xl-9 mx-auto">
 						<h6 class="mb-0 text-uppercase">Tambah User</h6>
 						<hr/>
@@ -47,9 +47,9 @@
                                             </select>
 										</div>
 									</div>
-	
+
 									<div class="row">
-										<label class="col-sm-3 col-form-label"></label>
+										<label clas	s="col-sm-3 col-form-label"></label>
 										<div class="col-sm-9">
 											<button type="submit" class="btn btn-info px-5">simpan</button>
 										</div>

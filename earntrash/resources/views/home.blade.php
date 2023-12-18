@@ -81,7 +81,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{ asset('template') }}/assets/images/favicon-32x32.png" type="image/png" />
+    <link rel="icon" href="{{ asset('template') }}/assets/images/earntrash.png" type="image/png" />
     <!--plugins-->
     <link href="{{ asset('template') }}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
     <link href="{{ asset('template') }}/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
@@ -105,7 +105,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-white rounded fixed-top rounded-0 shadow-sm">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="{{ asset('template') }}/assets/images/earntrash.png" width="75" alt="" />
+                        <img src="{{ asset('template') }}/assets/images/earntrash.png" width="140" alt="" />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
