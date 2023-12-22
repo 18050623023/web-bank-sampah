@@ -14,6 +14,7 @@
     <link href="{{ asset('template') }}/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
     <link href="{{ asset('template') }}/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
     <!-- Datatables-->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
     <link href="{{ asset('template') }}/assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
     <!-- loader-->
     <link href="{{ asset('template') }}/assets/css/pace.min.css" rel="stylesheet" />

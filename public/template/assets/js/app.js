@@ -1,6 +1,6 @@
-$(function() {
+jQuery(function() {
 	"use strict";
-	new PerfectScrollbar(".header-message-list"), new PerfectScrollbar(".header-notifications-list"),
+	// new PerfectScrollbar(".header-message-list"), new PerfectScrollbar(".header-notifications-list"),
 
 
 	    $(".mobile-search-icon").on("click", function() {
@@ -14,8 +14,8 @@ $(function() {
 		$(".mobile-toggle-menu").on("click", function() {
 			$(".wrapper").addClass("toggled")
 		}),
-		
-		
+
+
 		$(".toggle-icon").click(function() {
 			$(".wrapper").hasClass("toggled") ? ($(".wrapper").removeClass("toggled"), $(".sidebar-wrapper").unbind("hover")) : ($(".wrapper").addClass("toggled"), $(".sidebar-wrapper").hover(function() {
 				$(".wrapper").addClass("sidebar-hovered")
@@ -80,8 +80,8 @@ $(function() {
 		}), $("#headercolor8").on("click", function() {
 			$("html").addClass("color-header headercolor8"), $("html").removeClass("headercolor1 headercolor2 headercolor4 headercolor5 headercolor6 headercolor7 headercolor3")
 		})
-		
-	// sidebar colors 
+
+	// sidebar colors
 	$('#sidebarcolor1').click(theme1);
 	$('#sidebarcolor2').click(theme2);
 	$('#sidebarcolor3').click(theme3);
