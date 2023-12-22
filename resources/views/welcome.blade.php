@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{ asset('template') }}/assets/images/dlh.png" class="logo-icon" alt="logo icon"
+    <link rel="icon" href="{{ asset('template') }}/assets/images/earntrash.png" class="logo-icon" alt="logo icon"
         type="image/png" />
     <!--plugins-->
     <link href="{{ asset('template') }}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="{{ asset('template') }}/assets/css/app.css" rel="stylesheet">
     <link href="{{ asset('template') }}/assets/css/icons.css" rel="stylesheet">
-    <title>Bank Sampah</title>
+    <title>earntrash</title>
 </head>
 
 <body class="bg-login">
@@ -32,7 +32,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-white rounded fixed-top rounded-0 shadow-sm">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="{{ asset('template') }}/assets/images/dlh.png" width="70" alt="" />
+                        <img src="{{ asset('template') }}/assets/images/earntrash.png" width="85" alt="" />
 
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -68,7 +68,7 @@
                 <div class="text-center">
                     <h3 class="">Selamat Datang</h3>
                     <h3 class="">Sistem Infomasi Management</h3>
-                    <h3>Bank Sampah</h3>
+                    <h3>Earntrash</h3>
                 </div>
             </div>
         </div>

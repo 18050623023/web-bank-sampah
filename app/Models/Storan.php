@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Storan extends Model
 {
     use HasFactory;
-   
+
     protected $fillable = [
         'nasabah_id',
         'kategori_id',
@@ -16,6 +16,9 @@ class Storan extends Model
         'tgl_menabung',
         'harga_pergram',
         'jml_tab_pergram',
-        'total_tabungan'
+        'total_tabungan',
+        'point',
+        'total_harga',
+        'petugas_id'
     ];
 }

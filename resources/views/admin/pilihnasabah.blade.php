@@ -84,9 +84,9 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="inputEmailAddress2" class="col-sm-3 col-form-label">Jumlah Tabungan (pergram)</label>
+                        <label for="inputEmailAddress2" class="col-sm-3 col-form-label">Jumlah Setor (perton)</label>
                         <div class="col-sm-9">
-                            <input type="number" name="jml_tab" class="form-control" id="inputEmailAddress2">
+                            <input type="number" name="jml_tab" class="form-control" id="inputEmailAddress2" placeholder="Minimal 1 Ton">
                         </div>
                     </div>
 
@@ -121,9 +121,10 @@
                                 <tr>
                                     <th>Tanggal Menabung</th>
                                     <th>Kategori</th>
-                                    <th>Harga (Pergram)</th>
-                                    <th>Jumlah Tabungan (Pergram)</th>
-                                    <th>Total Tabungan</th>
+                                    <th>Harga (Setor Perton)</th>
+                                    <th>Total Harga </th>
+                                    <th>Jumlah Setor (Perton)</th>
+                                    <th>Total Point</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -132,12 +133,16 @@
                                     <tr>
                                         <td>{{ $set->tgl_menabung }}</td>
                                         <td>{{ $set->kategori_sampah }}</td>
-                                        <td>{{ $set->harga_pergram }}</td>
-                                        <td>{{ $set->jml_tab_pergram }}</td>
-                                        <td>{{ $set->total_tabungan }}</td>
+                                        <td>Rp. {{ $set->harga_pergram }}</td>
+                                        <td>Rp. {{ $set->total_harga }}</td>
+                                        <td>{{ $set->jml_tab_pergram }} Ton</td>
+                                        <td>{{ $set->total_tabungan }} Point</td>
                                         <td>
                                             <a href="/admin/{{ $set->id }}/editsetoran"
                                                 class="btn btn-primary">Edit</a>
+                                            {{-- <a href="/admin/{{ $set->id }}/destroysetor"
+                                                class="btn btn-primary">Delete</a> --}}
+
                                         </td>
                                     </tr>
                                 @endforeach

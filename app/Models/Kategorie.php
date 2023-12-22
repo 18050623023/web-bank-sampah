@@ -11,6 +11,8 @@ class Kategorie extends Model
 
     protected $fillable = [
         'kategori_sampah',
-        'harga_pergram'
+        'harga_pergram',
+        'point',
+        'ton'
     ];
 }

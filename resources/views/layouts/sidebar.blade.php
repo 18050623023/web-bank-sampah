@@ -2,10 +2,10 @@
 <div class="sidebar-wrapper" data-simplebar="true">
     <div class="sidebar-header">
         <div>
-            <img src="{{ asset('template') }}/assets/images/dlh.png" class="logo-icon" alt="logo icon">
+            <img src="{{ asset('template') }}/assets/images/earntrash.png" class="logo-icon" alt="logo icon">
         </div>
         <div>
-            <h4 class="logo-text text-success">Bank Sampah</h4>
+            <h4 class="logo-text text-success">Earntrash</h4>
         </div>
         {{-- <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
         </div> --}}

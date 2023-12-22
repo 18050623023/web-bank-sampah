@@ -33,7 +33,7 @@ class LokasiController extends Controller
         $request->file('file')->move(
             base_path() . '/public/document/', $filename
         );
-        
+
 
         Databank::create([
             'teller_id' => $request->teller,
@@ -45,7 +45,7 @@ class LokasiController extends Controller
         ]);
 
         return redirect('admin/lokasi');
-       
+
     }
 
     public function destroylokasi($id)
@@ -74,7 +74,7 @@ class LokasiController extends Controller
         $request->file('file')->move(
             base_path() . '/public/document/', $filename
         );
-        
+
         DB::table('databanks')->where('id',$id)->update([
             'teller_id' => $request->teller,
             'nama_bank' => $request->nama_bank,

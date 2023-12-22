@@ -3,7 +3,7 @@
 @section('title','Edit Setoran Nasabah')
 
 @section('conten')
-    
+
 		<h6 class="mb-0 text-uppercase">Edit Setoran Nasabah</h6>
 		<hr/>
 
@@ -64,7 +64,7 @@
 									</div>
 
 									<div class="row mb-3">
-										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Jumlah Tabungan (pergram)</label>
+										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Jumlah Setor (perton)</label>
 										<div class="col-sm-9">
 											<input type="number" name="jml_tab" class="form-control" id="inputEmailAddress2" value="{{ $setoran->jml_tab_pergram }}">
 										</div>
@@ -76,7 +76,7 @@
 											<select class="form-control" name="petugas">
                                                 <option value="0">-Pilih Petugas-</option>
                                             @foreach($petugas as $pet)
-                                                @if ($setoran->kategori_id == $pet->id)
+                                                @if ($setoran->petugas_id == $pet->id)
                                                     <option value="{{ $pet->id }}" selected>{{ $pet->nama_pegawai }}</option>
                                                 @else
                                                     <option value="{{ $pet->id }}">{{ $pet->nama_pegawai }}</option>
@@ -85,7 +85,7 @@
                                             </select>
 										</div>
 									</div>
-	
+
 									<div class="row">
 										<label class="col-sm-3 col-form-label"></label>
 										<div class="col-sm-9">
