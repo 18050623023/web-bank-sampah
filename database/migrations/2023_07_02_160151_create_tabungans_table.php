@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('nasabah_id');
             $table->integer('petugas_id')->nullable();
             $table->integer('lokasi_id');
-            $table->integer('storan_id');
+            $table->integer('storan_id')->nullable();
             $table->date('tgl_tab');
             $table->double('kredit');
             $table->double('debit');
