@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,7 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+    Route::get('/admin', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/admin/laporan', [App\Http\Controllers\DashboardController::class, 'laporansampah']);
@@ -74,9 +76,13 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/admin/{id}/pilihnasabah', [App\Http\Controllers\TransaksiController::class, 'pilihnasabah']);
     Route::get('/admin/setornasabah', [App\Http\Controllers\TransaksiController::class, 'setoranNasabah']);
 
+    Route::get('/admin/updatestatus', [App\Http\Controllers\TransaksiController::class, 'setoranNasabah']);
+
     Route::post('/admin/stortabungan', [App\Http\Controllers\TransaksiController::class, 'stortabungan']);
     Route::get('/admin/{id}/editsetoran', [App\Http\Controllers\TransaksiController::class, 'editsetoran']);
-    Route::post('/admin/updatesetoran', [App\Http\Controllers\TransaksiController::class, 'updatesetoran']);
+
+    Route::post('/admin/updatesetoran/{status}', [App\Http\Controllers\TransaksiController::class, 'ubahStatus']);
+    Route::get('/admin/delsetoran/{id}', [App\Http\Controllers\TransaksiController::class, 'destroystr']);
 
     Route::get('/admin/{id}/penarikanuang', [App\Http\Controllers\TransaksiController::class, 'penarikanuang']);
     Route::post('/admin/tarikuang', [App\Http\Controllers\TransaksiController::class, 'tarikuang']);

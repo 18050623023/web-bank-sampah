@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('harga_pergram');
             $table->integer('jml_tab_pergram');
             $table->double('total_tabungan');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

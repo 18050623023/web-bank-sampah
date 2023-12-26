@@ -28,7 +28,6 @@
                 <hr />
                 <form method="POST" action="{{ url('admin/stortabungan') }}">
                     @csrf
-
                     <div class="row mb-3" hidden>
                         <label for="inputEmailAddress2" class="col-sm-3 col-form-label">User Id</label>
                         <div class="col-sm-9">
@@ -89,7 +88,7 @@
                             <input type="number" name="jml_tab" class="form-control" id="inputEmailAddress2">
                         </div>
                     </div>
-
+                    <?php if(auth()->user()->type != 'Nasabah'){ ?>
                     <div class="row mb-3">
                         <label for="inputEnterYourName" class="col-sm-3 col-form-label">Petugas</label>
                         <div class="col-sm-9">
@@ -102,6 +101,7 @@
                         </div>
                     </div>
 
+                    <?php } ?>
                     <div class="row">
                         <label class="col-sm-3 col-form-label"></label>
                         <div class="col-sm-9">
@@ -124,6 +124,7 @@
                                     <th>Harga (Pergram)</th>
                                     <th>Jumlah Tabungan (Pergram)</th>
                                     <th>Total Tabungan</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -135,6 +136,15 @@
                                         <td>{{ $set->harga_pergram }}</td>
                                         <td>{{ $set->jml_tab_pergram }}</td>
                                         <td>{{ $set->total_tabungan }}</td>
+                                        <td>
+                                            @if ($set->status == 1)
+                                                <span class="badge bg-success">Accept</span>
+                                            @elseif ($set->status == 2)
+                                                <span class="badge bg-danger">Cencel</span>
+                                            @else
+                                                <span class="badge bg-warning">Pending</span>
+                                            @endif
+                                        </td>
                                         <td>
                                             <a href="/admin/{{ $set->id }}/editsetoran"
                                                 class="btn btn-primary">Edit</a>
