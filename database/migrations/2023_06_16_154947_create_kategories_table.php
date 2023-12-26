@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('kategori_sampah');
             $table->integer('harga_pergram');
+            $table->integer('point');
+            $table->integer('ton');
             $table->timestamps();
         });
     }
