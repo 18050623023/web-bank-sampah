@@ -39,9 +39,15 @@ class TransaksiController extends Controller
     {
         $nasabah = Nasabah::all();
         $pegawai = Pegawai::all();
-        $setoran = Storan::with(['Nasabah', 'DataBank', 'Tabungan'])->get();
 
-        // return TransaksiResource::collection($setoran)->toArray(request());
+        if (auth()->user()->type == 'Teller') {
+            $setoran = Storan::whereRelation('DataBank', 'teller_id', '=', auth()->user()->id)->with(['Nasabah', 'Tabungan'])->get();
+        }else {
+            $setoran = Storan::with(['Nasabah', 'DataBank', 'Tabungan'])->get();
+        }
+
+        // return TransaksiResource::collection($hasil)->toArray(request());
+        // dd($hasil);
 
         return view('admin.setoran', compact(['nasabah', 'setoran', 'pegawai']));
     }
@@ -69,6 +75,7 @@ class TransaksiController extends Controller
                 ->select('storans.*', 'kategories.kategori_sampah')
                 ->where('storans.nasabah_id', '=', $user_id)
                 ->get();
+                // dd($setoran);
             return view('admin.pilihnasabah', compact(['nasabah', 'kategori', 'setoran', 'petugas', 'lokasi']));
         }
     }
