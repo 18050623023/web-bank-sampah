@@ -20,9 +20,11 @@ return new class extends Migration
             $table->integer('petugas_id');
             $table->integer('lokasi_id');
             $table->date('tgl_menabung');
+            $table->integer('total_harga');
             $table->integer('harga_pergram');
             $table->integer('jml_tab_pergram');
             $table->double('total_tabungan');
+            $table->integer('point');
             $table->timestamps();
         });
     }

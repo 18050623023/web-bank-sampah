@@ -15,7 +15,11 @@
                             <div class="col-lg">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900">Welcome Earntrash!</h1>
+                                        <a class="navbar-brand" href="#">
+                                            <img src="{{ asset('template') }}/assets/images/earntrash.png" width="90" alt="" />
+
+                                        </a>
+                                        {{-- <h1 class="h4 text-gray-900">Welcome Earntrash!</h1> --}}
                                         <p>Please Login</p>
                                     </div>
                                     <form class="user" method="POST" action="{{ route('login') }}">
@@ -55,11 +59,11 @@
                                             </button>
                                         </form>
                                         <hr>
-                                        <div class="text-center">
+                                        {{-- <div class="text-center">
                                             <a class="small" href="">Forgot Password?</a>
-                                        </div>
+                                        </div> --}}
                                         <div class="text-center">
-                                            <a class="small" href="{{ url('/register') }}">Create an Account!</a>
+                                            <a class="small" href="{{ route('register') }}">Create an Account!</a>
                                         </div>
                                 </div>
                             </div>
