@@ -29,7 +29,12 @@
     <link rel="stylesheet" href="{{ asset('template') }}/assets/css/dark-theme.css" />
     <link rel="stylesheet" href="{{ asset('template') }}/assets/css/semi-dark.css" />
     <link rel="stylesheet" href="{{ asset('template') }}/assets/css/header-colors.css" />
+    <!-- Custom fonts for this template-->
+    <link href="{{ asset('template') }}/sbadmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
+    <!-- Custom styles for this template-->
+    <link href="{{ asset('template') }}/sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
 
@@ -42,7 +47,7 @@
     <title>@yield('title')</title>
 </head>
 
-<body>
+<body >
     <!--wrapper-->
     <div class="wrapper">
         @include('layouts.sidebar')
