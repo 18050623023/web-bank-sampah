@@ -116,10 +116,19 @@
 <script src="{{ asset('template') }}/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
 <script src="{{ asset('template') }}/assets/plugins/chartjs/js/Chart.min.js"></script>
 <script src="{{ asset('template') }}/assets/plugins/chartjs/js/Chart.extension.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="{{ asset('template') }}/sbadmin/vendor/jquery/jquery.min.js"></script>
+<script src="{{ asset('template') }}/sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{{ asset('template') }}/sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{{ asset('template') }}/sbadmin/js/sb-admin-2.min.js"></script>
 {{-- <script src="{{ asset('template') }}/assets/js/index.js"></script> --}}
 <!--Data tables-->
-<script src="{{ asset('template') }}/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-<script src="{{ asset('template') }}/assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+<script src="{{ asset('template') }}/sbadmin/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+<script src="{{ asset('template') }}/sbadmin/assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 <script>
 
     // $.noConflict();

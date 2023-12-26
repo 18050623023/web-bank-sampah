@@ -42,7 +42,7 @@
 
 	<div class="card">
 	<div class="card-header bg-white">
-        <h3>Maps Bank Sampah</h3>
+        <h3>Maps Earntrash</h3>
     </div>
 			<div class="card-body">
 				<div id="map"></div>

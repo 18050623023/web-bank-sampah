@@ -3,7 +3,7 @@
 @section('title','Kategori')
 
 @section('conten')
-    
+
 		<div class="row">
 					<div class="col-xl-9 mx-auto">
 						<h6 class="mb-0 text-uppercase">Tambah Kategori Sampah</h6>
@@ -26,9 +26,21 @@
 										</div>
 									</div>
 									<div class="row mb-3">
-										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Harga Pergram</label>
+										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Harga PerTon</label>
 										<div class="col-sm-9">
-											<input type="number" name="harga_pergram" class="form-control" id="inputEmailAddress2" placeholder="Harga Pergram">
+											<input type="number" name="harga_pergram" class="form-control" id="inputEmailAddress2" placeholder="Harga PerTon">
+										</div>
+									</div>
+                                    <div class="row mb-3">
+										<label for="inputEmailAddress3" class="col-sm-3 col-form-label">Point</label>
+										<div class="col-sm-9">
+											<input type="number" name="point" class="form-control" id="inputEmailAddress3" placeholder="Point">
+										</div>
+									</div>
+                                    <div class="row mb-3">
+										<label for="inputEmailAddress3" class="col-sm-3 col-form-label">Satuan Ton</label>
+										<div class="col-sm-9">
+											<input type="number" name="ton" class="form-control" id="inputEmailAddress4" placeholder="Berat">
 										</div>
 									</div>
 									<div class="row">

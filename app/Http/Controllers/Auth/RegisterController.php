@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -62,13 +63,49 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    protected function create(array $data, Request $request)
     {
+
+        $extension = $request->file('file')->extension();
+
+        $waktu = time ();
+
+        $filename = $waktu.'.'.$extension;
+
+        $request->file('file')->move(
+            base_path(). '/public/document/persyaratan/', $filename
+        );
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'type' => 2,
+            'type' => $data['type'],
+            'path' => $filename
         ]);
     }
+    public function reguser()
+    {
+        return view('auth.register');
+    }
+    public function storeuser(Request $request)
+    {
+        $extension = $request->file('file')->extension();
+
+        $waktu = time ();
+
+        $filename = $waktu.'.'.$extension;
+
+        $request->file('file')->move(
+            base_path(). '/public/document/persyaratan/', $filename
+        );
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'type' => $request->type,
+            'path' => $filename
+        ]);
+        return view('home');
+    }
+
 }

@@ -3,7 +3,7 @@
 @section('title','User')
 
 @section('conten')
-    
+
 		<h6 class="mb-0 text-uppercase">Management User</h6>
 		<hr/>
 		<div class="card">
@@ -17,6 +17,7 @@
 											<th>Name</th>
 											<th>Email</th>
 											<th>Role</th>
+                                            <th>Dockument</th>
 											<th>Action</th>
 										</tr>
 									</thead>
@@ -28,12 +29,13 @@
 											<td>{{ $usr->name }}</td>
 											<td>{{ $usr->email }}</td>
 											<td>{{ $usr->type }}</td>
+                                            <td><a href="/document/persyaratan/{{ $usr->path }}" target="__blank">{{ $usr->path }}</a></td>
 											<td>
 												<a href="/admin/{{$usr->id}}/edituser" class="btn btn-primary">Edit</a>
 												<a href="/admin/deluser/<?php echo $usr->id ?>" class="btn btn-primary">Delete</a>
 											</td>
 										</tr>
-									@endforeach  
+									@endforeach
 									</tbody>
 								</table>
 					</div>

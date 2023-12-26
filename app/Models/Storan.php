@@ -21,6 +21,9 @@ class Storan extends Model
         'harga_pergram',
         'jml_tab_pergram',
         'total_tabungan',
+        'point',
+        'total_harga',
+        'petugas_id',
         'status'
     ];
 

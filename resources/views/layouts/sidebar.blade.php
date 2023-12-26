@@ -2,10 +2,10 @@
 <div class="sidebar-wrapper" data-simplebar="true">
     <div class="sidebar-header">
         <div>
-            <img src="{{ asset('template') }}/assets/images/dlh.png" class="logo-icon" alt="logo icon">
+            <img src="{{ asset('template') }}/assets/images/earntrash.png" class="logo-icon" alt="logo icon">
         </div>
         <div>
-            <h4 class="logo-text text-success">Bank Sampah</h4>
+            <h4 class="logo-text text-success">Earntrash</h4>
         </div>
         {{-- <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
         </div> --}}
@@ -125,6 +125,65 @@
                     <div class="menu-title">Lihat Tabungan</div>
                 </a>
             </li>
+        @endif
+
+
+        @if (auth()->user()->type == 'Teller')
+        <li>
+            <a href="{{ url('admin/nasabah') }}">
+                <div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
+                </div>
+                <div class="menu-title">Data Nasabah</div>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ url('admin/petugas') }}">
+                <div class="parent-icon"><i class='bx bx-message-square-edit'></i>
+                </div>
+                <div class="menu-title">Data Pegawai</div>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ url('admin/kategori') }}">
+                <div class="parent-icon"><i class="bx bx-folder"></i>
+                </div>
+                <div class="menu-title">Kategori Sampah</div>
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('admin/lokasi') }}">
+                <div class="parent-icon"><i class="bx bx-map-alt"></i>
+                </div>
+                <div class="menu-title">Bank Sampah</div>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ url('admin/setoran') }}">
+                <div class="parent-icon"><i class="bx bx-repeat"></i>
+                </div>
+                <div class="menu-title">Setoran</div>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ url('admin/penarikan') }}">
+                <div class="parent-icon"> <i class="bx bx-donate-blood"></i>
+                </div>
+                <div class="menu-title">Penarikan</div>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ url('admin/laporan') }}">
+                <div class="parent-icon"><i class="bx bx-map-alt"></i>
+                </div>
+                <div class="menu-title">Laporan Sampah</div>
+            </a>
+        </li>
+
         @endif
 
     </ul>

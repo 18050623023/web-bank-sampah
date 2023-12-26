@@ -9,8 +9,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Bank Sampah</title>
+    <title>Earntrash</title>
+    <!-- Custom fonts for this template-->
+    <link href="{{ asset('template') }}/sbadmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
+    <!-- Custom styles for this template-->
+    <link href="{{ asset('template') }}/sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -23,7 +28,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <h5>Bank Sampah</h5>
+                    <h5>Earntrash</h5>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -78,5 +83,10 @@
             @yield('content')
         </main>
     </div>
+    <!-- Core plugin JavaScript-->
+<script src="{{ asset('template') }}/sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{{ asset('template') }}/sbadmin/js/sb-admin-2.min.js"></script>
 </body>
 </html>

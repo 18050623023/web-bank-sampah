@@ -15,12 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('auth/login');
 
+});
+Route::get('reguser', [App\Http\Controllers\Auth\RegisterController::class, 'reguser']);
+Route::post('storeuser', [App\Http\Controllers\Auth\RegisterController::class, 'storeuser']);
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function(){
+
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     Route::get('/admin', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
@@ -48,6 +51,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/admin/delnasabah/{id}', [App\Http\Controllers\NasabahController::class, 'destroynasabah']);
     Route::get('/admin/{id}/editnasabah', [App\Http\Controllers\NasabahController::class, 'editnasabah']);
     Route::put('/admin/updatenasabah/{id}', [App\Http\Controllers\NasabahController::class, 'updatenasabah']);
+    // Route::get('/admin/{id}/destroysetor', [App\Http\Controllers\TransaksiController::class, 'destroysetor']);
 
     Route::get('/admin/petugas', [App\Http\Controllers\PetugasController::class, 'index']);
     Route::get('/admin/addpetugas', [App\Http\Controllers\PetugasController::class, 'addpetugas']);

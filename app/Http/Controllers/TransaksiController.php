@@ -102,8 +102,11 @@ class TransaksiController extends Controller
 
         $kategori = Kategorie::find($kategori_id);
         $harga_pergram = $kategori->harga_pergram;
+        $point = $kategori->point;
 
-        $total_tabungan = $harga_pergram * $jml_tab;
+
+        $total_tabungan = $point * $jml_tab;
+        $total_harga = $harga_pergram * $jml_tab;
         $tgl_hariini = date('Y-m-d');
 
         $status = (isset($request->status)) ? $request->status : 0;
@@ -113,8 +116,11 @@ class TransaksiController extends Controller
             'nasabah_id' => $user_id,
             'kategori_id' => $kategori_id,
             'lokasi_id' => $lokasi,
+            'petugas_id' => $petugas,
             'tgl_menabung' => $tgl_hariini,
             'harga_pergram' => $harga_pergram,
+            'point' => $point,
+            'total_harga' => $total_harga,
             'jml_tab_pergram' => $jml_tab,
             'total_tabungan' => $total_tabungan,
             'status' => $status
@@ -134,6 +140,14 @@ class TransaksiController extends Controller
 
         return redirect('admin/' . "{$nasabah_id}" . '/pilihnasabah');
     }
+
+    // public function destroysetor($id)
+    // {
+
+
+    //     DB::table('storans')->where('id',$id)->delete();
+    //     return redirect('admin/pilihnasabah');
+    // }
 
     public function editsetoran($id)
     {
@@ -167,16 +181,21 @@ class TransaksiController extends Controller
 
         $kategori = Kategorie::find($kategori_id);
         $harga_pergram = $kategori->harga_pergram;
+        $point = $kategori->point;
 
-        $total_tabungan = $harga_pergram * $jml_tab;
+        $total_tabungan = $point * $jml_tab;
+        $total_harga = $harga_pergram * $jml_tab;
         $tgl_hariini = date('Y-m-d');
 
         $stor = DB::table('storans')->where('id', $id)->update([
             'nasabah_id' => $nasabah_id,
             'kategori_id' => $kategori_id,
             'lokasi_id' => $lokasi,
+            'petugas_id' => $petugas,
             'tgl_menabung' => $tgl_hariini,
             'harga_pergram' => $harga_pergram,
+            'point' => $point,
+            'total_harga' => $total_harga,
             'jml_tab_pergram' => $jml_tab,
             'total_tabungan' => $total_tabungan
         ]);

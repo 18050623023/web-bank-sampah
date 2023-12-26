@@ -38,7 +38,7 @@ class UserController extends Controller
         ]);
 
         return redirect('admin/user');
-       
+
     }
 
     public function destroyusr($id)
