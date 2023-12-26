@@ -5,7 +5,7 @@
 @section('conten')
 
     <?php if(auth()->user()->type == 'Admin'||auth()->user()->type == 'Teller'){ $no=0; ?>
-    <h6 class="mb-0 text-uppercase">Setoran Pending</h6>
+    <h6 class="mb-0 text-uppercase">Status Setoran</h6>
     <hr />
 
     {{-- {{var_dump($setoran)}} --}}
@@ -118,7 +118,7 @@
     </div>
     <br><br>
     <?php } ?>
-    <h6 class="mb-0 text-uppercase">Mall</h6>
+    <h6 class="mb-0 text-uppercase">Nasahab Mall</h6>
     <hr />
     <div class="card">
         <div class="card-body">
