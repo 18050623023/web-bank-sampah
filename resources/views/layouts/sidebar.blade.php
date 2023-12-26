@@ -85,24 +85,6 @@
             </li>
         @endif
 
-        @if (auth()->user()->type == 'Teller')
-            <li>
-                <a href="{{ url('admin/setoran') }}">
-                    <div class="parent-icon"><i class="bx bx-repeat"></i>
-                    </div>
-                    <div class="menu-title">Setoran</div>
-                </a>
-            </li>
-            <li>
-                <a href="{{ url('admin/penarikan') }}">
-                    <div class="parent-icon"> <i class="bx bx-donate-blood"></i>
-                    </div>
-                    <div class="menu-title">Penarikan</div>
-                </a>
-            </li>
-        @endif
-
-
         @if (auth()->user()->type == 'Nasabah')
             <li>
                 <a href="{{ url('admin/addnasabah') }}">
@@ -150,13 +132,6 @@
                 <div class="parent-icon"><i class="bx bx-folder"></i>
                 </div>
                 <div class="menu-title">Kategori Sampah</div>
-            </a>
-        </li>
-        <li>
-            <a href="{{ url('admin/lokasi') }}">
-                <div class="parent-icon"><i class="bx bx-map-alt"></i>
-                </div>
-                <div class="menu-title">Bank Sampah</div>
             </a>
         </li>
 
