@@ -25,6 +25,7 @@ return new class extends Migration
             $table->integer('jml_tab_pergram');
             $table->double('total_tabungan');
             $table->integer('point');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

@@ -52,7 +52,7 @@
 @endsection
 
 @push('service')
-<!--<script src="{{asset('template')}}/plugins/jquery/jquery.min.js"></script>-->
+<script src="{{asset('template')}}/assets/plugins/jquery/jquery.min.js"></script>
 <script>
     var map = L.map('map').setView([-7.2754417,112.6302826], 11);
 
