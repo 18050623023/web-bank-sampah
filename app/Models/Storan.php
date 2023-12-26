@@ -34,7 +34,7 @@ class Storan extends Model
 
     public function DataBank(): BelongsTo
     {
-        return $this->belongsTo(DataBank::class, 'lokasi_id');
+        return $this->belongsTo(Databank::class, 'lokasi_id');
     }
 
     public function Tabungan(): HasOne
