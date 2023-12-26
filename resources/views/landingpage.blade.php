@@ -74,9 +74,9 @@
                         {{-- <h5>Sudah Kita <span>Tabung mi</span></h5>
                         <h5>sampah ta <span>hari ini?</span></h5>
                         <br> --}}
-                        <a href="https://play.google.com/store/apps/details?id=com.sisa.customer" >
-                            <img src="{{ asset('template') }}/front/img/google-play.png" alt="workingspace1" class="img-fluid photo">
-                        </a>
+                        {{-- <a href="https://play.google.com/store/apps/details?id=com.sisa.customer" >
+                            <img src="{{ asset('template') }}/front/img/earntrash.png" alt="workingspace1" class="img-fluid photo">
+                        </a> --}}
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -115,12 +115,12 @@
                         bentuk sistem daur ulang yang efisien sehingga mudah diakses dimana saja dan kapan saja, Harapan kami adalah untuk menghubungkan orang - orang dalam membentuk fondasi yang kokoh bagi lingkungan serta berusaha untuk menjadikan dunia
                         ini tempat yang lebih baik. Kami dengan senang hati menyambut semua orang yang ingin berpartisipasi dalam gerakan ini.
                     </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.sisa.customer" <button type="button" class="btn btn-primary">
+                    <a href="#" <button type="button" class="btn btn-primary">
                         Lihat Lebih Lengkap>>
                     </a></button>
                 </div>
-                <div class="col-md-6">
-                    <img src="{{ asset('template') }}/front/img/tentang-01.png" class="img-fluid">
+                <div class="col-md-4">
+                    <img src="{{ asset('template') }}/front/img/earntrash.png" class="img-fluid">
                 </div>
             </div>
         </div>
