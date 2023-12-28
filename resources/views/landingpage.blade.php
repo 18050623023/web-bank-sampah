@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ asset('template') }}/front/css/style.css">
     <link rel="stylesheet" href="{{ asset('template') }}/front/css/blog.css">
 
-    <title>SISA - SISTEM INFROMASI SAMPAH</title>
+    <title>Sarntrash - SISTEM INFROMASI SAMPAH</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('template') }}/front/img/favicon.ico" />
 
 </head>

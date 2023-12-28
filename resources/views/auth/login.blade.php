@@ -63,7 +63,7 @@
                                             <a class="small" href="">Forgot Password?</a>
                                         </div> --}}
                                         <div class="text-center">
-                                            <a class="small" href="{{ route('register') }}">Create an Account!</a>
+                                            <label>Don't have an account ?</label> <a class="small" href="{{ route('register') }}">Sing Up</a>
                                         </div>
                                 </div>
                             </div>
