@@ -261,7 +261,7 @@
                                 <div class="elementor-element elementor-element-f8b67b4 elementor-widget elementor-widget-heading"
                                     data-id="f8b67b4" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Antar Sampah</h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">Panggil Petugas</h2>
                                     </div>
                                 </div>
                             </div>
@@ -282,7 +282,7 @@
                                 <div class="elementor-element elementor-element-c8d2722 elementor-widget elementor-widget-heading"
                                     data-id="c8d2722" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Antar Sampah</h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">Tukar Poin</h2>
                                     </div>
                                 </div>
                             </div>
