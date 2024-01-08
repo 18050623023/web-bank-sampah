@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('landingpage2');
+    return view('landingpage3');
 
 });
 Route::get('reguser', [App\Http\Controllers\Auth\RegisterController::class, 'reguser']);

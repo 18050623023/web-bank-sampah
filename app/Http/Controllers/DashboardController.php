@@ -16,7 +16,7 @@ class DashboardController extends Controller
         $bank = DB::table('databanks')->count();
         $saldo = DB::table('tabungans')->count();
         $saldo = $request->saldo;
-         return view('admin.dashboard1', compact('nasabah','bank'));
+         return view('admin.dashboard', compact('nasabah','bank'));
     }
 
     public function titikbank(Request $request)
