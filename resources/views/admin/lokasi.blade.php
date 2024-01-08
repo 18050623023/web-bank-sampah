@@ -3,7 +3,7 @@
 @section('title','Data Bank')
 
 @section('conten')
-    
+
 		<h6 class="mb-0 text-uppercase">Data Bank Sampah</h6>
 		<hr/>
 		<div class="card">
@@ -31,13 +31,13 @@
 											<td>{{ $lok->tgl_bergabung }}</td>
 											<td>{{ $lok->lat }}</td>
 											<td>{{ $lok->long }}</td>
-											<td><a href="/document/invoice/{{ $lok->path }}" target="__blank">{{ $lok->path }}</a></td>
+											<td><a href="/document/{{ $lok->path }}" target="__blank">{{ $lok->path }}</a></td>
 											<td>
 												<a href="/admin/{{$lok->id}}/editlokasi" class="btn btn-primary">Edit</a>
 												<a href="/admin/dellokasi/<?php echo $lok->id ?>" class="btn btn-primary">Delete</a>
 											</td>
 										</tr>
-									@endforeach  
+									@endforeach
 									</tbody>
 								</table>
 					</div>

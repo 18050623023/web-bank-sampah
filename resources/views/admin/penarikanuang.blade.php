@@ -73,15 +73,15 @@
                     <?php } ?>
 
                     <div class="row mb-3">
-                        <label for="inputEmailAddress2" class="col-sm-3 col-form-label">Saldo</label>
+                        <label for="inputEmailAddress2" class="col-sm-3 col-form-label">Point</label>
                         <div class="col-sm-9">
                             <input type="text" name="saldo" class="form-control" id="inputEmailAddress2"
-                                value="<?php echo $saldo; ?>" readonly>
+                                value="<?php echo $saldo; ?> Point" readonly>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="inputEmailAddress2" class="col-sm-3 col-form-label">Jumlah Uang Yang Ditarik</label>
+                        <label for="inputEmailAddress2" class="col-sm-3 col-form-label">Jumlah Point Yang Ditarik</label>
                         <div class="col-sm-9">
                             <input type="number" name="jml_tab" class="form-control" id="inputEmailAddress2">
                         </div>
@@ -112,15 +112,15 @@
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <h5 align="center">Transaksi Debit Nasabah</h5>
+                        <h5 align="center">Transaksi Point Nasabah</h5>
 
                         <table id="example" class="table table-striped table-bordered">
 
                             <thead>
                                 <tr>
                                     <th>Tanggal Penarikan</th>
-                                    <th>Kredit</th>
-                                    <th>Debit</th>
+                                    <th>Point Masuk</th>
+                                    <th>Point Keluar</th>
                                     {{-- <th>Petugas</th> --}}
                                 </tr>
                             </thead>
@@ -136,7 +136,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <h5>Saldo : RP. <?php echo $saldo; ?></h5>
+                        <h5>Point :  <?php echo $saldo; ?></h5>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@
 @section('title','Kategori')
 
 @section('conten')
-    
+
 		<h6 class="mb-0 text-uppercase">Kategori Sampah</h6>
 		<hr/>
 		<div class="card">
@@ -15,7 +15,9 @@
 										<tr>
 											<th>No</th>
 											<th>Kategori Sampah</th>
-											<th>Harga Pergram</th>
+											<th>Harga PerTon</th>
+                                            <th>Point</th>
+                                            <th>Satuan Setor</th>
 											<th>Action</th>
 										</tr>
 									</thead>
@@ -25,13 +27,15 @@
 										<tr>
 											<td>{{ $i++ }}</td>
 											<td>{{ $kat->kategori_sampah }}</td>
-											<td>{{ $kat->harga_pergram }}</td>
+											<td>Rp. {{ $kat->harga_pergram }}</td>
+                                            <td>{{$kat->point}} point</td>
+                                            <td>{{$kat->ton}} Ton</td>
 											<td>
 												<a href="/admin/{{$kat->id}}/editkategori" class="btn btn-primary">Edit</a>
 												<a href="/admin/delkategori/<?php echo $kat->id ?>" class="btn btn-primary">Delete</a>
 											</td>
 										</tr>
-									@endforeach  
+									@endforeach
 									</tbody>
 								</table>
 					</div>

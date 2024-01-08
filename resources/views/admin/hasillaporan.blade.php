@@ -3,7 +3,7 @@
 @section('title','Petugas')
 
 @section('conten')
-    
+
 		<h6 class="mb-0 text-uppercase">Hasil Laporan jumlah sampah</h6>
 		<hr/>
 		<div class="card">
@@ -14,7 +14,7 @@
 										<tr>
 											<th>No</th>
 											<th>Kategori</th>
-											<th>Jumlah Sampah Pergram</th>
+											<th>Jumlah Sampah Perton</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -23,13 +23,13 @@
 										<tr>
                                             <td>{{ $i++ }}</td>
 											<td>{{ $lap->kategori_sampah }}</td>
-											<td>{{ $lap->jml_tab_pergram }}</td>
+											<td>{{ $lap->jml_tab_pergram }} Ton</td>
 										</tr>
-									@endforeach  
+									@endforeach
                                         <tr>
                                             <td>Total Sampah</td>
                                             <td></td>
-                                            <td>{{ $jmlsampah }}</td>
+                                            <td>{{ $jmlsampah }} Ton</td>
                                         </tr>
 									</tbody>
 								</table>

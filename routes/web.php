@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,14 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('landingpage3');
 
+});
+Route::get('reguser', [App\Http\Controllers\Auth\RegisterController::class, 'reguser']);
+Route::post('storeuser', [App\Http\Controllers\Auth\RegisterController::class, 'storeuser']);
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function(){
+
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+    Route::get('/admin', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/admin/laporan', [App\Http\Controllers\DashboardController::class, 'laporansampah']);
@@ -46,6 +51,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/admin/delnasabah/{id}', [App\Http\Controllers\NasabahController::class, 'destroynasabah']);
     Route::get('/admin/{id}/editnasabah', [App\Http\Controllers\NasabahController::class, 'editnasabah']);
     Route::put('/admin/updatenasabah/{id}', [App\Http\Controllers\NasabahController::class, 'updatenasabah']);
+    // Route::get('/admin/{id}/destroysetor', [App\Http\Controllers\TransaksiController::class, 'destroysetor']);
 
     Route::get('/admin/petugas', [App\Http\Controllers\PetugasController::class, 'index']);
     Route::get('/admin/addpetugas', [App\Http\Controllers\PetugasController::class, 'addpetugas']);
@@ -74,9 +80,13 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/admin/{id}/pilihnasabah', [App\Http\Controllers\TransaksiController::class, 'pilihnasabah']);
     Route::get('/admin/setornasabah', [App\Http\Controllers\TransaksiController::class, 'setoranNasabah']);
 
+    Route::get('/admin/updatestatus', [App\Http\Controllers\TransaksiController::class, 'setoranNasabah']);
+
     Route::post('/admin/stortabungan', [App\Http\Controllers\TransaksiController::class, 'stortabungan']);
     Route::get('/admin/{id}/editsetoran', [App\Http\Controllers\TransaksiController::class, 'editsetoran']);
-    Route::post('/admin/updatesetoran', [App\Http\Controllers\TransaksiController::class, 'updatesetoran']);
+
+    Route::post('/admin/updatesetoran/{status}', [App\Http\Controllers\TransaksiController::class, 'ubahStatus']);
+    Route::get('/admin/delsetoran/{id}', [App\Http\Controllers\TransaksiController::class, 'destroystr']);
 
     Route::get('/admin/{id}/penarikanuang', [App\Http\Controllers\TransaksiController::class, 'penarikanuang']);
     Route::post('/admin/tarikuang', [App\Http\Controllers\TransaksiController::class, 'tarikuang']);
