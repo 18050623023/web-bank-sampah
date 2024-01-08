@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use App\Models\Databank;
+use App\Models\Tabungan;
 
 class DashboardController extends Controller
 {
@@ -13,6 +14,8 @@ class DashboardController extends Controller
     {
         $nasabah = DB::table('nasabahs')->count();
         $bank = DB::table('databanks')->count();
+        $saldo = DB::table('tabungans')->count();
+        $saldo = $request->saldo;
          return view('admin.dashboard', compact('nasabah','bank'));
     }
 
@@ -33,7 +36,7 @@ class DashboardController extends Controller
     public function searchlaporan(Request $request)
     {
         $lokasi = $request->lokasi;
-        
+
         $jmlsampah = DB::table('storans')
         ->where('storans.lokasi_id', $lokasi)
         ->whereBetween('storans.tgl_menabung', array($request->tgl1, $request->tgl2))
@@ -49,4 +52,6 @@ class DashboardController extends Controller
 
         return view('admin.hasillaporan', compact('laporan','jmlsampah'));
     }
+
+
 }

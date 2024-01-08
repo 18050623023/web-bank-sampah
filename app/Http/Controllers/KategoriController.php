@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class KategoriController extends Controller
 {
-    
+
     public function index()
     {
         $kategori = Kategorie::all();
@@ -25,11 +25,13 @@ class KategoriController extends Controller
 
         Kategorie::create([
             'kategori_sampah' => $request->kategori_sampah,
-            'harga_pergram' => $request->harga_pergram
+            'harga_pergram' => $request->harga_pergram,
+            'point' => $request->point,
+            'ton' => $request->ton
         ]);
 
         return redirect('admin/kategori');
-       
+
     }
 
     public function destroykategori($id)
@@ -50,5 +52,5 @@ class KategoriController extends Controller
         $kategori->update($request->except(['_token','submit']));
         return redirect('admin/kategori');
     }
-       
+
 }

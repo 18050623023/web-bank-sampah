@@ -13,6 +13,7 @@ class Tabungan extends Model
         'nasabah_id',
         'petugas_id',
         'lokasi_id',
+        'storan_id',
         'tgl_tab',
         'kredit',
         'debit'

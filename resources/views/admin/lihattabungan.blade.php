@@ -26,8 +26,8 @@
                <div class="card-body">
                    <div class="d-flex align-items-center">
                        <div>
-                           <p class="mb-0 text-secondary">Saldo Anda</p>
-                           <h4 class="my-1 text-danger">Rp. <?php echo $saldo; ?></h4>
+                           <p class="mb-0 text-secondary">Point Anda</p>
+                           <h4 class="my-1 text-danger">Point. <?php echo $saldo; ?></h4>
                        </div>
                        <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto"><i class='bx bxs-wallet'></i>
                        </div>
@@ -46,8 +46,8 @@
 									<thead>
 										<tr>
 											<th>Tanggal Penarikan</th>
-											<th>Kredit</th>
-											<th>Debit</th>
+											<th>Point Masuk</th>
+											<th>Point Keluar</th>
                                             {{-- <th>Petugas</th> --}}
 										</tr>
 									</thead>
