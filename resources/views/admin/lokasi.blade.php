@@ -31,7 +31,7 @@
 											<td>{{ $lok->tgl_bergabung }}</td>
 											<td>{{ $lok->lat }}</td>
 											<td>{{ $lok->long }}</td>
-											<td><a href="/document/{{ $lok->path }}" target="__blank">{{ $lok->path }}</a></td>
+											<td><a href="{{url('/')}}/document/{{ $lok->path }}" target="__blank">{{ $lok->path }}</a></td>
 											<td>
 												<a href="/admin/{{$lok->id}}/editlokasi" class="btn btn-primary">Edit</a>
 												<a href="/admin/dellokasi/<?php echo $lok->id ?>" class="btn btn-primary">Delete</a>
