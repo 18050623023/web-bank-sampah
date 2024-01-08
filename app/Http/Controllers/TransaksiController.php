@@ -305,7 +305,7 @@ class TransaksiController extends Controller
         if ($nasabah == null) {
             return view('admin.bukarek');
         } else {
-            return view('admin.dashboard1', compact(['nasabah', 'saldo', 'tarik']));
+            return view('admin.dashboarduser', compact(['nasabah', 'saldo', 'tarik']));
         }
     }
 
