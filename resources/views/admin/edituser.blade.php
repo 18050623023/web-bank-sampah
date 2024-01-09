@@ -3,7 +3,7 @@
 @section('title','edit User')
 
 @section('conten')
-    
+
 		<div class="row">
 					<div class="col-xl-9 mx-auto">
 						<h6 class="mb-0 text-uppercase">Edit User</h6>
@@ -17,7 +17,7 @@
 										<h5 class="mb-0 text-info">Edit User</h5>
 									</div>
 									<hr/>
-                                    <a href="/admin/{{ $user->id }}/changeuserpass" class="btn btn-primary">Change Password</a><br><br>
+                                    <a href="/admin/{{ $user->id }}/changeuserpassold" class="btn btn-primary">Change Password</a><br><br>
                         <form method="POST" action="/admin/edituser/{{ $user->id }}">
                         @method('put')
                         @csrf
@@ -33,7 +33,7 @@
 											<input type="email" name="email" class="form-control" id="inputEmailAddress2" value="{{ $user->email }}">
 										</div>
 									</div>
-									
+
 									<div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Role</label>
 										<div class="col-sm-9">
@@ -44,7 +44,7 @@
                                         </select>
 										</div>
 									</div>
-	
+
 									<div class="row">
 										<label class="col-sm-3 col-form-label"></label>
 										<div class="col-sm-9">

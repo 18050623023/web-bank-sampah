@@ -26,38 +26,14 @@ Route::group(['middleware' => ['auth']], function(){
 
     // New Route
 
-    Route::get('/admin/dashboard', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboard');
-    Route::get('/admin/dashboardbaru', function () {
-        $user_id = Auth::user()->id;
+    Route::get('/admin/dashboarduser', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboarduser');
 
-        $nasabah = DB::table('nasabahs')
-            ->where('user_id', '=', $user_id)
-            ->first();
-
-        $kredit = DB::table('tabungans')
-            ->where('nasabah_id', '=', $user_id)
-            ->sum('kredit');
-        $debit = DB::table('tabungans')
-            ->where('nasabah_id', '=', $user_id)
-            ->sum('debit');
-        $saldo = $kredit - $debit;
-
-        $tarik = DB::table('tabungans')
-            ->where('tabungans.nasabah_id', $user_id)
-            ->get();
-
-        if ($nasabah == null) {
-            return view('admin.bukarek');
-        } else {
-            return view('admin.dashboard1', compact(['nasabah', 'saldo', 'tarik']));
-        }
-    });
 
     // Default Route
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('home', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboarduser');
 
     // Route::get('/admin', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-    // Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
 
     Route::get('/admin/laporan', [App\Http\Controllers\DashboardController::class, 'laporansampah']);
@@ -71,9 +47,11 @@ Route::group(['middleware' => ['auth']], function(){
     Route::put('/admin/edituser/{id}', [App\Http\Controllers\UserController::class, 'updateuser']);
 
     Route::get('/admin/{id}/changeuserpass', [App\Http\Controllers\UserController::class, 'changeuserpass']);
+    Route::get('/admin/{id}/changeuserpassold', [App\Http\Controllers\UserController::class, 'changeuserpassold']);
     Route::post('/admin/updatepass', [App\Http\Controllers\UserController::class, 'updatepass']);
 
     Route::get('/admin/profile', [App\Http\Controllers\UserController::class, 'profile']);
+    Route::get('/admin/profileuser', [App\Http\Controllers\UserController::class, 'profileuser']);
     Route::post('/admin/saveprofile', [App\Http\Controllers\UserController::class, 'saveprofile']);
 
     Route::get('/admin/nasabah', [App\Http\Controllers\NasabahController::class, 'index']);

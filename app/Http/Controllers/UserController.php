@@ -15,7 +15,11 @@ class UserController extends Controller
         $users = User::all();
         return view('admin.user', compact('users'));
     }
-
+    public function profileuser(Request $request)
+    {
+        $user = User::find(Auth::user()->id);
+        return view('admin.profileuser');
+    }
     public function profile(Request $request)
     {
         $user = User::find(Auth::user()->id);
@@ -66,6 +70,12 @@ class UserController extends Controller
         return view('admin.changeuserpass', compact(['user']));
     }
 
+    public function changeuserpassold($id)
+    {
+        $user = User::find($id);
+        return view('admin.changeuserpassold', compact(['user']));
+    }
+
     public function updatepass(Request $request)
     {
         $request->validate([
@@ -107,7 +117,7 @@ class UserController extends Controller
                 'email' => $request->email
         ]);
 
-        return redirect('admin/profile');
+        return redirect('admin/profileuser');
 
     }
 }

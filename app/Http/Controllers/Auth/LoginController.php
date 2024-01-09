@@ -40,14 +40,14 @@ class LoginController extends Controller
     }
 
     public function login(Request $request)
-    {   
+    {
         $input = $request->all();
-      
+
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required',
         ]);
-      
+
         if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
         {
             if (auth()->user()->type == 'Admin') {
@@ -55,11 +55,11 @@ class LoginController extends Controller
             }else if (auth()->user()->type == 'Teller') {
                 return redirect()->route('dashboard');
             }else{
-                return redirect()->route('dashboard');
+                return redirect()->route('dashboarduser');
             }
         }else{
             return redirect()->route('login');
         }
-           
+
     }
 }

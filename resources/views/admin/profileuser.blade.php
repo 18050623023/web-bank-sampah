@@ -6,26 +6,24 @@
         data-no-optimize="1">var litespeed_docref = sessionStorage.getItem("litespeed_docref"); litespeed_docref && (Object.defineProperty(document, "referrer", { get: function () { return litespeed_docref } }), sessionStorage.removeItem("litespeed_docref"));</script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link data-optimized="2" rel="stylesheet" href="{{asset('template')}}/nasabah/dashboard/css/css-f8fda53ebf67e415f07e9f2764fcecf1.css" />
+    <link data-optimized="2" rel="stylesheet" href="{{asset('template')}}/nasabah/profile/css/css-b1770ebff3c1899c7624dfb9abef0541.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <title>Dashboard - My Blog</title>
-    <link rel="canonical" href="https://hafizadinata.com/?page_id=37" />
+    <title>profile - My Blog</title>
+    <link rel="canonical" href="https://hafizadinata.com/?page_id=166" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Dashboard - My Blog" />
-    <meta property="og:description"
-        content="Admin Hai, Admin Bebaskan lingkunganmu dari sampah, yuk setorkan sampahmu ET Point 12 Antar Sampah Antar Sampah Antar Sampah" />
-    <meta property="og:url" content="https://hafizadinata.com/?page_id=37" />
+    <meta property="og:title" content="profile - My Blog" />
+    <meta property="og:description" content="Profile Update Profile Update Password" />
+    <meta property="og:url" content="https://hafizadinata.com/?page_id=166" />
     <meta property="og:site_name" content="My Blog" />
-    <meta property="article:modified_time" content="2023-12-28T04:01:05+00:00" />
-    <meta property="og:image" content="./images/Frame-63.png" />
+    <meta property="article:modified_time" content="2024-01-08T12:56:34+00:00" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:label1" content="Est. reading time" />
     <meta name="twitter:data1" content="1 minute" />
     <script type="application/ld+json"
-        class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://hafizadinata.com/?page_id=37","url":"https://hafizadinata.com/?page_id=37","name":"Dashboard - My Blog","isPartOf":{"@id":"https://hafizadinata.com/#website"},"primaryImageOfPage":{"@id":"https://hafizadinata.com/?page_id=37#primaryimage"},"image":{"@id":"https://hafizadinata.com/?page_id=37#primaryimage"},"thumbnailUrl":"https://hafizadinata.com/wp-content/uploads/2023/12/Frame-63.png","datePublished":"2023-12-28T03:44:17+00:00","dateModified":"2023-12-28T04:01:05+00:00","breadcrumb":{"@id":"https://hafizadinata.com/?page_id=37#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://hafizadinata.com/?page_id=37"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://hafizadinata.com/?page_id=37#primaryimage","url":"https://hafizadinata.com/wp-content/uploads/2023/12/Frame-63.png","contentUrl":"https://hafizadinata.com/wp-content/uploads/2023/12/Frame-63.png","width":241,"height":40},{"@type":"BreadcrumbList","@id":"https://hafizadinata.com/?page_id=37#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hafizadinata.com/"},{"@type":"ListItem","position":2,"name":"Dashboard"}]},{"@type":"WebSite","@id":"https://hafizadinata.com/#website","url":"https://hafizadinata.com/","name":"My Blog","description":"My WordPress Blog","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://hafizadinata.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+        class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://hafizadinata.com/?page_id=166","url":"https://hafizadinata.com/?page_id=166","name":"profile - My Blog","isPartOf":{"@id":"https://hafizadinata.com/#website"},"datePublished":"2024-01-08T12:42:27+00:00","dateModified":"2024-01-08T12:56:34+00:00","breadcrumb":{"@id":"https://hafizadinata.com/?page_id=166#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://hafizadinata.com/?page_id=166"]}]},{"@type":"BreadcrumbList","@id":"https://hafizadinata.com/?page_id=166#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hafizadinata.com/"},{"@type":"ListItem","position":2,"name":"profile"}]},{"@type":"WebSite","@id":"https://hafizadinata.com/#website","url":"https://hafizadinata.com/","name":"My Blog","description":"My WordPress Blog","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://hafizadinata.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
     <link rel="alternate" type="application/rss+xml" title="My Blog &raquo; Feed"
         href="https://hafizadinata.com/?feed=rss2" />
     <link rel="alternate" type="application/rss+xml" title="My Blog &raquo; Comments Feed"
@@ -35,21 +33,22 @@
         data-src="https://hafizadinata.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
     <link rel="https://api.w.org/" href="https://hafizadinata.com/index.php?rest_route=/" />
     <link rel="alternate" type="application/json"
-        href="https://hafizadinata.com/index.php?rest_route=/wp/v2/pages/37" />
+        href="https://hafizadinata.com/index.php?rest_route=/wp/v2/pages/166" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hafizadinata.com/xmlrpc.php?rsd" />
     <meta name="generator" content="WordPress 6.4.2" />
-    <link rel='shortlink' href='https://hafizadinata.com/?p=37' />
+    <link rel='shortlink' href='https://hafizadinata.com/?p=166' />
     <link rel="alternate" type="application/json+oembed"
-        href="https://hafizadinata.com/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fhafizadinata.com%2F%3Fpage_id%3D37" />
+        href="https://hafizadinata.com/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fhafizadinata.com%2F%3Fpage_id%3D166" />
     <link rel="alternate" type="text/xml+oembed"
-        href="https://hafizadinata.com/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fhafizadinata.com%2F%3Fpage_id%3D37&#038;format=xml" />
+        href="https://hafizadinata.com/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fhafizadinata.com%2F%3Fpage_id%3D166&#038;format=xml" />
     <meta name="generator"
         content="Elementor 3.18.2; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, block_editor_assets_optimize, e_image_loading_optimization; settings: css_print_method-external, google_font-enabled, font_display-swap">
     <meta name="generator"
         content="Powered by Slider Revolution 6.6.14 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
 </head>
 
-<body class="page-template-default page page-id-37 elementor-default elementor-kit-7 elementor-page elementor-page-37">
+<body
+    class="page-template page-template-elementor_header_footer page page-id-166 elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-166">
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     <div data-elementor-type="header" data-elementor-id="13" class="elementor elementor-13 elementor-location-header"
         data-elementor-post-type="elementor_library">
@@ -116,7 +115,7 @@
                     <div class="elementor-element elementor-element-173b6e0 elementor-widget elementor-widget-ucaddon_dropdown_button"
                         data-id="173b6e0" data-element_type="widget" data-widget_type="ucaddon_dropdown_button.default">
                         <div class="elementor-widget-container">
-                            <div id="uc_dropdown_button_elementor14365" class="ca_btn_wrapper">
+                            <div id="uc_dropdown_button_elementor13222" class="ca_btn_wrapper">
                                 <div class="ca_btn_container"> <button class="ca_btn" ontouchstart=""><i
                                             class='fas fa-user-circle'></i><span class="ue-btn-text">{{ Auth::user()->type }}</span>
                                         <ul class="ca_dropdown uc-items-wrapper">
@@ -137,76 +136,129 @@
             </div>
         </div>
     </div>
-    <main id="content" class="site-main post-37 page type-page status-publish hentry">
-
-        <div class="page-content">
-            <div data-elementor-type="wp-page" data-elementor-id="37" class="elementor elementor-37"
-                data-elementor-post-type="page">
-
-                <div class="elementor-element elementor-element-82a00c5 e-flex e-con-boxed e-con e-parent"
-                    data-id="82a00c5" data-element_type="container"
-                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}"
-                    data-core-v316-plus="true">
+    <div data-elementor-type="wp-page" data-elementor-id="166" class="elementor elementor-166"
+        data-elementor-post-type="page">
+        <div class="elementor-element elementor-element-a511939 e-flex e-con-boxed e-con e-parent" data-id="a511939"
+            data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"
+            data-core-v316-plus="true">
+            <div class="e-con-inner">
+                <div class="elementor-element elementor-element-a2ff8f0 e-flex e-con-boxed e-con e-child"
+                    data-id="a2ff8f0" data-element_type="container"
+                    data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
                     <div class="e-con-inner">
-                        <div class="elementor-element elementor-element-1134fbb e-flex e-con-boxed e-con e-child"
-                            data-id="1134fbb" data-element_type="container"
+                        <div class="elementor-element elementor-element-3b8ccdc elementor-widget elementor-widget-heading"
+                            data-id="3b8ccdc" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">Profile</h2>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-20c95ff elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                            data-id="20c95ff" data-element_type="widget" data-widget_type="divider.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-divider"> <span class="elementor-divider-separator"> </span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="elementor-element elementor-element-32c6663 e-flex e-con-boxed e-con e-parent" data-id="32c6663"
+            data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"
+            data-core-v316-plus="true">
+            <div class="e-con-inner">
+                <div class="elementor-element elementor-element-30e6b14 e-flex e-con-boxed e-con e-child"
+                    data-id="30e6b14" data-element_type="container"
+                    data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                    <div class="e-con-inner">
+                        <div class="elementor-element elementor-element-044aa55 e-flex e-con-boxed e-con e-child"
+                            data-id="044aa55" data-element_type="container"
                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
                             <div class="e-con-inner">
-                                <div class="elementor-element elementor-element-d1e5c4f e-flex e-con-boxed e-con e-child"
-                                    data-id="d1e5c4f" data-element_type="container"
+                                <div class="elementor-element elementor-element-a24a152 e-flex e-con-boxed e-con e-child"
+                                    data-id="a24a152" data-element_type="container"
                                     data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
                                     <div class="e-con-inner">
-                                        <div class="elementor-element elementor-element-bfacb77 elementor-widget__width-inherit elementor-widget elementor-widget-heading"
-                                            data-id="bfacb77" data-element_type="widget"
-                                            data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Hai, {{ Auth::user()->name }}
-                                                </h2>
+                                        <div class="elementor-element elementor-element-449766c e-flex e-con-boxed e-con e-child"
+                                            data-id="449766c" data-element_type="container"
+                                            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                                            <div class="e-con-inner">
+                                                <div class="elementor-element elementor-element-e5b9988 elementor-widget elementor-widget-heading"
+                                                    data-id="e5b9988" data-element_type="widget"
+                                                    data-widget_type="heading.default">
+                                                    <div class="elementor-widget-container">
+                                                        <h2 class="elementor-heading-title elementor-size-default">
+                                                            Update Profile</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="elementor-element elementor-element-1943ab7 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                                                    data-id="1943ab7" data-element_type="widget"
+                                                    data-widget_type="divider.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="elementor-divider"> <span
+                                                                class="elementor-divider-separator"> </span></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="elementor-element elementor-element-5e26629 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
-                                            data-id="5e26629" data-element_type="widget"
-                                            data-widget_type="text-editor.default">
+                                        <div class="elementor-element elementor-element-fc4b4db elementor-button-align-stretch elementor-widget elementor-widget-form"
+                                            data-id="fc4b4db" data-element_type="widget"
+                                            data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
+                                            data-widget_type="form.default">
                                             <div class="elementor-widget-container">
-                                                <p>Bebaskan lingkunganmu dari sampah, yuk setorkan sampahmu</p>
+                                                <form class="elementor-form" method="post" name="New Form" method="POST" action="{{ url('admin/saveprofile') }}">
+                                                    @csrf <input
+                                                        type="hidden" name="post_id" value="166" /> <input type="hidden"
+                                                        name="form_id" value="fc4b4db" /> <input type="hidden"
+                                                        name="referer_title" value="profile - My Blog" /><input
+                                                        type="hidden" name="queried_id" value="166" />
+                                                    <div class="elementor-form-fields-wrapper elementor-labels-above">
+                                                        <div
+                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100">
+                                                            <label for="form-field-name" class="elementor-field-label">
+                                                                Name </label> <input size="1" type="text"
+                                                                name="name" id="inputEnterYourName" value="{{ Auth::user()->name }}"
+                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                placeholder="Name"></div>
+                                                        <div
+                                                            class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+                                                            <label for="form-field-email" class="elementor-field-label">
+                                                                Email </label> <input size="1" type="email"
+                                                                name="email" id="nputEmailAddress2" value="{{ Auth::user()->email }}"
+                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                placeholder="Email" required="required"
+                                                                aria-required="true"></div>
+                                                        <div
+                                                            class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+                                                            <button type="submit"
+                                                                class="elementor-button elementor-size-sm"> <span> <span
+                                                                        class="elementor-button-icon"> </span> <span
+                                                                        class="elementor-button-text">Simpan</span>
+                                                                </span> </button></div>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="elementor-element elementor-element-b8448e5 e-flex e-con-boxed e-con e-child"
-                                    data-id="b8448e5" data-element_type="container"
+                                <div class="elementor-element elementor-element-b79dfe7 e-flex e-con-boxed e-con e-child"
+                                    data-id="b79dfe7" data-element_type="container"
                                     data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
                                     <div class="e-con-inner">
-                                        <div class="elementor-element elementor-element-7794f65 e-con-full e-flex e-con e-child"
-                                            data-id="7794f65" data-element_type="container"
-                                            data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
-                                            <div class="elementor-element elementor-element-c53ebd2 elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box"
-                                                data-id="c53ebd2" data-element_type="widget"
-                                                data-widget_type="icon-box.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-icon-box-wrapper">
-                                                        <div class="elementor-icon-box-icon"> <span
-                                                                class="elementor-icon elementor-animation-"> <svg
-                                                                    aria-hidden="true"
-                                                                    class="e-font-icon-svg e-fas-database"
-                                                                    viewbox="0 0 448 512"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z">
-                                                                    </path>
-                                                                </svg> </span></div>
-                                                        <div class="elementor-icon-box-content">
-                                                            <h3 class="elementor-icon-box-title"> <span> ET Point
-                                                                </span></h3>
-                                                        </div>
+                                        <div class="elementor-element elementor-element-4d1173f e-flex e-con-boxed e-con e-child"
+                                            data-id="4d1173f" data-element_type="container"
+                                            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                                            <div class="e-con-inner">
+                                                <div class="elementor-element elementor-element-37a4679 elementor-widget elementor-widget-button"
+                                                    data-id="37a4679" data-element_type="widget"
+                                                    data-widget_type="button.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="elementor-button-wrapper"> <a
+                                                                class="elementor-button elementor-button-link elementor-size-sm"
+                                                                href="/admin/{{ Auth::user()->id }}/changeuserpass"> <span
+                                                                    class="elementor-button-content-wrapper"> <span
+                                                                        class="elementor-button-text">Update
+                                                                        Password</span> </span> </a></div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-element elementor-element-2e67d9c elementor-widget elementor-widget-heading"
-                                                data-id="2e67d9c" data-element_type="widget"
-                                                data-widget_type="heading.default">
-                                                <div class="elementor-widget-container">
-                                                    <h2 class="elementor-heading-title elementor-size-default"><?php echo $saldo; ?></h2>
                                                 </div>
                                             </div>
                                         </div>
@@ -216,82 +268,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="elementor-element elementor-element-f577b64 e-flex e-con-boxed e-con e-parent"
-                    data-id="f577b64" data-element_type="container"
-                    data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
-                    <div class="e-con-inner"> <a
-                            class="elementor-element elementor-element-b8e98ce e-transform e-flex e-con-boxed e-con e-child"
-                            data-id="b8e98ce" data-element_type="container"
-                            data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                            href="#">
-                            <div class="e-con-inner">
-                                <div class="elementor-element elementor-element-28e9f05 elementor-widget elementor-widget-image"
-                                    data-id="28e9f05" data-element_type="widget" data-widget_type="image.default">
-                                    <div class="elementor-widget-container"> <img data-lazyloaded="1"
-                                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMjciIGhlaWdodD0iMjE5IiB2aWV3Qm94PSIwIDAgMzI3IDIxOSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4="
-                                            fetchpriority="high" decoding="async" width="327" height="219"
-                                            data-src="https://hafizadinata.com/wp-content/uploads/2023/12/13102-removebg-preview-1.png"
-                                            class="attachment-large size-large wp-image-44" alt=""
-                                            data-srcset="https://hafizadinata.com/wp-content/uploads/2023/12/13102-removebg-preview-1.png 327w, https://hafizadinata.com/wp-content/uploads/2023/12/13102-removebg-preview-1-300x201.png 300w"
-                                            data-sizes="(max-width: 327px) 100vw, 327px" /></div>
-                                </div>
-                                <div class="elementor-element elementor-element-6932d27 elementor-widget elementor-widget-heading"
-                                    data-id="6932d27" data-element_type="widget" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Antar Sampah</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </a> <a
-                            class="elementor-element elementor-element-eb77791 e-transform e-flex e-con-boxed e-con e-child"
-                            data-id="eb77791" data-element_type="container"
-                            data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                            href="#">
-                            <div class="e-con-inner">
-                                <div class="elementor-element elementor-element-44d7500 elementor-widget elementor-widget-image"
-                                    data-id="44d7500" data-element_type="widget" data-widget_type="image.default">
-                                    <div class="elementor-widget-container"> <img data-lazyloaded="1"
-                                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjYiIGhlaWdodD0iMjQ0IiB2aWV3Qm94PSIwIDAgMzY2IDI0NCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4="
-                                            decoding="async" width="366" height="244"
-                                            data-src="https://hafizadinata.com/wp-content/uploads/2023/12/10181-removebg-preview-1.png"
-                                            class="attachment-large size-large wp-image-45" alt=""
-                                            data-srcset="https://hafizadinata.com/wp-content/uploads/2023/12/10181-removebg-preview-1.png 366w, https://hafizadinata.com/wp-content/uploads/2023/12/10181-removebg-preview-1-300x200.png 300w"
-                                            data-sizes="(max-width: 366px) 100vw, 366px" /></div>
-                                </div>
-                                <div class="elementor-element elementor-element-f8b67b4 elementor-widget elementor-widget-heading"
-                                    data-id="f8b67b4" data-element_type="widget" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Panggil Petugas</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </a> <a
-                            class="elementor-element elementor-element-5c8f015 e-transform e-flex e-con-boxed e-con e-child"
-                            data-id="5c8f015" data-element_type="container"
-                            data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                            href="#">
-                            <div class="e-con-inner">
-                                <div class="elementor-element elementor-element-c6c63a0 elementor-widget elementor-widget-image"
-                                    data-id="c6c63a0" data-element_type="widget" data-widget_type="image.default">
-                                    <div class="elementor-widget-container"> <img data-lazyloaded="1"
-                                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTciIGhlaWdodD0iMjMyIiB2aWV3Qm94PSIwIDAgMjU3IDIzMiI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4="
-                                            loading="lazy" decoding="async" width="257" height="232"
-                                            data-src="https://hafizadinata.com/wp-content/uploads/2023/12/2919242-removebg-preview-1.png"
-                                            class="attachment-large size-large wp-image-46" alt="" /></div>
-                                </div>
-                                <div class="elementor-element elementor-element-c8d2722 elementor-widget elementor-widget-heading"
-                                    data-id="c8d2722" data-element_type="widget" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Tukar Poin</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </a></div>
-                </div>
             </div>
-            <div class="post-tags"></div>
         </div>
-    </main>
+    </div>
     <div data-elementor-type="footer" data-elementor-id="144" class="elementor elementor-144 elementor-location-footer"
         data-elementor-post-type="elementor_library">
         <div class="elementor-element elementor-element-e6b06a7 e-flex e-con-boxed e-con e-parent" data-id="e6b06a7"
@@ -306,10 +285,10 @@
     <script
         data-no-optimize="1">var litespeed_vary = document.cookie.replace(/(?:(?:^|.*;\s*)_lscache_vary\s*\=\s*([^;]*).*$)|^.*$/, ""); litespeed_vary || fetch("/wp-content/plugins/litespeed-cache/guest.vary.php", { method: "POST", cache: "no-cache", redirect: "follow" }).then(e => e.json()).then(e => { console.log(e), e.hasOwnProperty("reload") && "yes" == e.reload && (sessionStorage.setItem("litespeed_docref", document.referrer), window.location.reload(!0)) });</script>
     <script data-optimized="1" type="litespeed/javascript"
-        data-src="https://hafizadinata.com/wp-content/litespeed/js/f4b9f330a27ee57b6baa71997ff3e4c6.js?ver=c1f79"></script>
+        data-src="https://hafizadinata.com/wp-content/litespeed/js/0c03b1ab8e1139b72e5be8e2218d17bb.js?ver=81f5c"></script>
     <script>const litespeed_ui_events = ["mouseover", "click", "keydown", "wheel", "touchmove", "touchstart"]; var urlCreator = window.URL || window.webkitURL; function litespeed_load_delayed_js_force() { console.log("[LiteSpeed] Start Load JS Delayed"), litespeed_ui_events.forEach(e => { window.removeEventListener(e, litespeed_load_delayed_js_force, { passive: !0 }) }), document.querySelectorAll("iframe[data-litespeed-src]").forEach(e => { e.setAttribute("src", e.getAttribute("data-litespeed-src")) }), "loading" == document.readyState ? window.addEventListener("DOMContentLoaded", litespeed_load_delayed_js) : litespeed_load_delayed_js() } litespeed_ui_events.forEach(e => { window.addEventListener(e, litespeed_load_delayed_js_force, { passive: !0 }) }); async function litespeed_load_delayed_js() { let t = []; for (var d in document.querySelectorAll('script[type="litespeed/javascript"]').forEach(e => { t.push(e) }), t) await new Promise(e => litespeed_load_one(t[d], e)); document.dispatchEvent(new Event("DOMContentLiteSpeedLoaded")), window.dispatchEvent(new Event("DOMContentLiteSpeedLoaded")) } function litespeed_load_one(t, e) { console.log("[LiteSpeed] Load ", t); var d = document.createElement("script"); d.addEventListener("load", e), d.addEventListener("error", e), t.getAttributeNames().forEach(e => { "type" != e && d.setAttribute("data-src" == e ? "src" : e, t.getAttribute(e)) }); let a = !(d.type = "text/javascript"); !d.src && t.textContent && (d.src = litespeed_inline2src(t.textContent), a = !0), t.after(d), t.remove(), a && e() } function litespeed_inline2src(t) { try { var d = urlCreator.createObjectURL(new Blob([t.replace(/^(?:< !-- ) ?(.*?)(?:- ->)?$/gm ,"$1")] , {type :"text/javascript "}) ) }catc h(e ) { d ="data:text/javascript;base64, " +btoa(t.replace(/^(?:<!--)?(.*?)(?:-->)?$/gm ,"$1") ) }return  d}</script>
 </body>
 
-</html> <!-- Page optimized by LiteSpeed Cache @2024-01-08 09:15:26 -->
-<!-- Page cached by LiteSpeed Cache 6.0.0.1 on 2024-01-08 09:15:24 --> <!-- Guest Mode -->
+</html> <!-- Page optimized by LiteSpeed Cache @2024-01-09 01:20:40 -->
+<!-- Page cached by LiteSpeed Cache 6.0.0.1 on 2024-01-09 01:20:39 --> <!-- Guest Mode -->
 <!-- QUIC.cloud UCSS in queue -->
