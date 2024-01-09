@@ -27,37 +27,37 @@ Route::group(['middleware' => ['auth']], function(){
     // New Route
 
     Route::get('/admin/dashboard', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboard');
-    Route::get('/admin/dashboardbaru', function () {
-        $user_id = Auth::user()->id;
+    // Route::get('/admin/dashboardbaru', function () {
+    //     $user_id = Auth::user()->id;
 
-        $nasabah = DB::table('nasabahs')
-            ->where('user_id', '=', $user_id)
-            ->first();
+    //     $nasabah = DB::table('nasabahs')
+    //         ->where('user_id', '=', $user_id)
+    //         ->first();
 
-        $kredit = DB::table('tabungans')
-            ->where('nasabah_id', '=', $user_id)
-            ->sum('kredit');
-        $debit = DB::table('tabungans')
-            ->where('nasabah_id', '=', $user_id)
-            ->sum('debit');
-        $saldo = $kredit - $debit;
+    //     $kredit = DB::table('tabungans')
+    //         ->where('nasabah_id', '=', $user_id)
+    //         ->sum('kredit');
+    //     $debit = DB::table('tabungans')
+    //         ->where('nasabah_id', '=', $user_id)
+    //         ->sum('debit');
+    //     $saldo = $kredit - $debit;
 
-        $tarik = DB::table('tabungans')
-            ->where('tabungans.nasabah_id', $user_id)
-            ->get();
+    //     $tarik = DB::table('tabungans')
+    //         ->where('tabungans.nasabah_id', $user_id)
+    //         ->get();
 
-        if ($nasabah == null) {
-            return view('admin.bukarek');
-        } else {
-            return view('admin.dashboard1', compact(['nasabah', 'saldo', 'tarik']));
-        }
-    });
+    //     if ($nasabah == null) {
+    //         return view('admin.bukarek');
+    //     } else {
+    //         return view('admin.dashboard1', compact(['nasabah', 'saldo', 'tarik']));
+    //     }
+    // });
 
     // Default Route
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     // Route::get('/admin', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-    // Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/admin/dashboardlama', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboardlama');
 
 
     Route::get('/admin/laporan', [App\Http\Controllers\DashboardController::class, 'laporansampah']);
@@ -122,7 +122,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/admin/{id}/penarikanuang', [App\Http\Controllers\TransaksiController::class, 'penarikanuang']);
     Route::post('/admin/tarikuang', [App\Http\Controllers\TransaksiController::class, 'tarikuang']);
 
-    // Route::get('/admin/lihattabungan', [App\Http\Controllers\TransaksiController::class, 'lihattabungan']);
+    Route::get('/admin/lihattabungan', [App\Http\Controllers\TransaksiController::class, 'lihattabungan']);
     Route::get('/peta/json', [App\Http\Controllers\DashboardController::class, 'titikbank']);
 });
 
