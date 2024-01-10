@@ -72,6 +72,13 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/admin/setoran', [App\Http\Controllers\TransaksiController::class, 'setoran']);
     Route::get('/admin/penarikan', [App\Http\Controllers\TransaksiController::class, 'penarikan']);
 
+    Route::get('/admin/reward', [App\Http\Controllers\KategoriController::class, 'reward']);
+    Route::get('/admin/addreward', [App\Http\Controllers\KategoriController::class, 'addreward']);
+    Route::post('/admin/storereward', [App\Http\Controllers\KategoriController::class, 'storereward']);
+    Route::get('/admin/dellreward/{id}', [App\Http\Controllers\KategoriController::class, 'destroyreward']);
+    Route::get('/admin/{id}/editreward', [App\Http\Controllers\KategoriController::class, 'editreward']);
+    Route::post('/admin/updatereward/{id}', [App\Http\Controllers\KategoriController::class, 'updatereward']);
+
     Route::get('/admin/lokasi', [App\Http\Controllers\LokasiController::class, 'index']);
     Route::get('/admin/addlokasi', [App\Http\Controllers\LokasiController::class, 'addlokasi']);
     Route::post('/admin/storelokasi', [App\Http\Controllers\LokasiController::class, 'storelokasi']);

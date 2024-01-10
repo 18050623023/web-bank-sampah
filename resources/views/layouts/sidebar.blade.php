@@ -69,6 +69,14 @@
             </li>
 
             <li>
+                <a href="{{ url('admin/reward') }}">
+                    <div class="parent-icon"><i class='bx bx-gift'></i>
+                    </div>
+                    <div class="menu-title">Reward Point</div>
+                </a>
+            </li>
+
+            <li>
                 <a href="{{ url('admin/penarikan') }}">
                     <div class="parent-icon"> <i class="bx bx-donate-blood"></i>
                     </div>

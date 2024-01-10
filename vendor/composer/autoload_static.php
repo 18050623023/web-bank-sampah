@@ -563,6 +563,7 @@ class ComposerStaticInit3e2e214433609bc46cbf3e7f850ca6dd
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Resources\\TransaksiResource' => __DIR__ . '/../..' . '/app/Http/Resources/TransaksiResource.php',
         'App\\Models\\Databank' => __DIR__ . '/../..' . '/app/Models/Databank.php',
         'App\\Models\\Kategorie' => __DIR__ . '/../..' . '/app/Models/Kategorie.php',
         'App\\Models\\Nasabah' => __DIR__ . '/../..' . '/app/Models/Nasabah.php',

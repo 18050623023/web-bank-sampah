@@ -52,6 +52,7 @@ class TransaksiController extends Controller
         return view('admin.setoran', compact(['nasabah', 'setoran', 'pegawai']));
     }
 
+
     public function penarikan(Request $request)
     {
         $nasabah = Nasabah::all();
