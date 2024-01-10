@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <title>Dashboard - My Blog</title>
+    <title>Dashboard User - Earn Trash</title>
+    <link rel="shortcut icon" type="image/png" href="{{ asset('template') }}/front/img/ttgicon.png" />
     <link rel="canonical" href="https://hafizadinata.com/?page_id=37" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
@@ -122,6 +123,8 @@
                                         <ul class="ca_dropdown uc-items-wrapper">
                                             <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/profileuser') }}"><i
                                                         class='fas fa-user-edit'></i>Profile</a></li>
+                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/addnasabah') }}"><i
+                                                        class='fas fa-solid fa-building-columns'></i>Tabungan</a></li>
                                             <li class="ca_dropdown_item elementor-repeater-item-f4af334"><a href="{{ route('logout') }}"onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();"><i
                                                         class='fas fa-sign-out-alt'></i>Logout</a></li>

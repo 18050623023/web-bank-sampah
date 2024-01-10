@@ -12,25 +12,24 @@
     </script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link data-optimized="2" rel="stylesheet" href="{{asset('template')}}/nasabah/password/css/css-54fe1c67ced3f0cdc00c35a9dec34d0e.css" />
+    <link data-optimized="2" rel="stylesheet" href="{{asset('template')}}/nasabah/tabungan/css/css-8e5c1f8fe16646c0b24d9f3299d22c55.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <title>Update Pssword - Earn Trash</title>
+    <title>Buka Tabungan - Earn Trash</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('template') }}/front/img/ttgicon.png" />
-    <link rel="shortcut icon" type="image/png" href="{{ asset('template') }}/front/img/ttgicon.png" />
-    <link rel="canonical" href="https://hafizadinata.com/?page_id=174" />
+    <link rel="canonical" href="https://hafizadinata.com/?page_id=199" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Update Pssword - My Blog" />
-    <meta property="og:description" content="Update Password" />
-    <meta property="og:url" content="https://hafizadinata.com/?page_id=174" />
+    <meta property="og:title" content="Buka Tabungan - My Blog" />
+    <meta property="og:description" content="Buka Tabungan" />
+    <meta property="og:url" content="https://hafizadinata.com/?page_id=199" />
     <meta property="og:site_name" content="My Blog" />
-    <meta property="article:modified_time" content="2024-01-08T12:56:37+00:00" />
+    <meta property="article:modified_time" content="2024-01-10T10:34:15+00:00" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:label1" content="Est. reading time" />
     <meta name="twitter:data1" content="1 minute" />
-    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://hafizadinata.com/?page_id=174","url":"https://hafizadinata.com/?page_id=174","name":"Update Pssword - My Blog","isPartOf":{"@id":"https://hafizadinata.com/#website"},"datePublished":"2024-01-08T12:54:05+00:00","dateModified":"2024-01-08T12:56:37+00:00","breadcrumb":{"@id":"https://hafizadinata.com/?page_id=174#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://hafizadinata.com/?page_id=174"]}]},{"@type":"BreadcrumbList","@id":"https://hafizadinata.com/?page_id=174#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hafizadinata.com/"},{"@type":"ListItem","position":2,"name":"Update Pssword"}]},{"@type":"WebSite","@id":"https://hafizadinata.com/#website","url":"https://hafizadinata.com/","name":"My Blog","description":"My WordPress Blog","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://hafizadinata.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://hafizadinata.com/?page_id=199","url":"https://hafizadinata.com/?page_id=199","name":"Buka Tabungan - My Blog","isPartOf":{"@id":"https://hafizadinata.com/#website"},"datePublished":"2024-01-10T10:27:52+00:00","dateModified":"2024-01-10T10:34:15+00:00","breadcrumb":{"@id":"https://hafizadinata.com/?page_id=199#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://hafizadinata.com/?page_id=199"]}]},{"@type":"BreadcrumbList","@id":"https://hafizadinata.com/?page_id=199#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hafizadinata.com/"},{"@type":"ListItem","position":2,"name":"Buka Tabungan"}]},{"@type":"WebSite","@id":"https://hafizadinata.com/#website","url":"https://hafizadinata.com/","name":"My Blog","description":"My WordPress Blog","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://hafizadinata.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
     <link rel="alternate" type="application/rss+xml" title="My Blog &raquo; Feed"
         href="https://hafizadinata.com/?feed=rss2" />
     <link rel="alternate" type="application/rss+xml" title="My Blog &raquo; Comments Feed"
@@ -39,14 +38,14 @@
     <script type="litespeed/javascript" data-src="https://hafizadinata.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
     <link rel="https://api.w.org/" href="https://hafizadinata.com/index.php?rest_route=/" />
     <link rel="alternate" type="application/json"
-        href="https://hafizadinata.com/index.php?rest_route=/wp/v2/pages/174" />
+        href="https://hafizadinata.com/index.php?rest_route=/wp/v2/pages/199" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hafizadinata.com/xmlrpc.php?rsd" />
     <meta name="generator" content="WordPress 6.4.2" />
-    <link rel='shortlink' href='https://hafizadinata.com/?p=174' />
+    <link rel='shortlink' href='https://hafizadinata.com/?p=199' />
     <link rel="alternate" type="application/json+oembed"
-        href="https://hafizadinata.com/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fhafizadinata.com%2F%3Fpage_id%3D174" />
+        href="https://hafizadinata.com/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fhafizadinata.com%2F%3Fpage_id%3D199" />
     <link rel="alternate" type="text/xml+oembed"
-        href="https://hafizadinata.com/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fhafizadinata.com%2F%3Fpage_id%3D174&#038;format=xml" />
+        href="https://hafizadinata.com/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fhafizadinata.com%2F%3Fpage_id%3D199&#038;format=xml" />
     <meta name="generator"
         content="Elementor 3.18.2; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, block_editor_assets_optimize, e_image_loading_optimization; settings: css_print_method-external, google_font-enabled, font_display-swap">
     <meta name="generator"
@@ -54,7 +53,7 @@
 </head>
 
 <body
-    class="page-template page-template-elementor_header_footer page page-id-174 elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-174">
+    class="page-template page-template-elementor_header_footer page page-id-199 elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-199">
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     <div data-elementor-type="header" data-elementor-id="13" class="elementor elementor-13 elementor-location-header"
         data-elementor-post-type="elementor_library">
@@ -123,9 +122,9 @@
                         data-id="173b6e0" data-element_type="widget"
                         data-widget_type="ucaddon_dropdown_button.default">
                         <div class="elementor-widget-container">
-                            <div id="uc_dropdown_button_elementor11865" class="ca_btn_wrapper">
+                            <div id="uc_dropdown_button_elementor10486" class="ca_btn_wrapper">
                                 <div class="ca_btn_container"> <button class="ca_btn" ontouchstart=""><i
-                                            class='fas fa-user-circle'></i><span class="ue-btn-text">{{ Auth::user()->type }}</span>
+                                            class='fas fa-user-circle'></i><span class="ue-btn-text">Nasabah</span>
                                         <ul class="ca_dropdown uc-items-wrapper">
                                             <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a
                                                     href="{{ url('admin/profileuser') }}"><i class='fas fa-user-edit'></i>Profile</a></li>
@@ -146,26 +145,32 @@
             </div>
         </div>
     </div>
-    <div data-elementor-type="wp-page" data-elementor-id="174" class="elementor elementor-174"
+    <div data-elementor-type="wp-page" data-elementor-id="199" class="elementor elementor-199"
         data-elementor-post-type="page">
-        <div class="elementor-element elementor-element-aba3d6e e-flex e-con-boxed e-con e-parent" data-id="aba3d6e"
+        <div class="elementor-element elementor-element-705111f e-flex e-con-boxed e-con e-parent" data-id="705111f"
             data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"
             data-core-v316-plus="true">
             <div class="e-con-inner">
-                <div class="elementor-element elementor-element-d4179aa e-flex e-con-boxed e-con e-child"
-                    data-id="d4179aa" data-element_type="container"
+                <div class="elementor-element elementor-element-6a26189 e-flex e-con-boxed e-con e-child"
+                    data-id="6a26189" data-element_type="container"
                     data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
                     <div class="e-con-inner">
-                        <div class="elementor-element elementor-element-75a3b86 elementor-widget elementor-widget-heading"
-                            data-id="75a3b86" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default">Update Password</h2>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-ded8cef elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                            data-id="ded8cef" data-element_type="widget" data-widget_type="divider.default">
-                            <div class="elementor-widget-container">
-                                <div class="elementor-divider"> <span class="elementor-divider-separator"> </span>
+                        <div class="elementor-element elementor-element-58a4927 e-flex e-con-boxed e-con e-child"
+                            data-id="58a4927" data-element_type="container"
+                            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                            <div class="e-con-inner">
+                                <div class="elementor-element elementor-element-97c2054 elementor-widget elementor-widget-heading"
+                                    data-id="97c2054" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h2 class="elementor-heading-title elementor-size-default">Buka Tabungan</h2>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-333221f elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                                    data-id="333221f" data-element_type="widget" data-widget_type="divider.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-divider"> <span class="elementor-divider-separator">
+                                            </span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -173,82 +178,129 @@
                 </div>
             </div>
         </div>
-        <div class="elementor-element elementor-element-bb5e860 e-flex e-con-boxed e-con e-parent" data-id="bb5e860"
+        <div class="elementor-element elementor-element-d05904e e-flex e-con-boxed e-con e-parent" data-id="d05904e"
             data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"
             data-core-v316-plus="true">
             <div class="e-con-inner">
-                <div class="elementor-element elementor-element-8224fe9 e-flex e-con-boxed e-con e-child"
-                    data-id="8224fe9" data-element_type="container"
+                <div class="elementor-element elementor-element-292a047 e-flex e-con-boxed e-con e-child"
+                    data-id="292a047" data-element_type="container"
                     data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
                     <div class="e-con-inner">
-                        <div class="elementor-element elementor-element-175c30c e-flex e-con-boxed e-con e-child"
-                            data-id="175c30c" data-element_type="container"
-                            data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
+                        <div class="elementor-element elementor-element-b281f3b e-flex e-con-boxed e-con e-child"
+                            data-id="b281f3b" data-element_type="container"
+                            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
                             <div class="e-con-inner">
-                                <div class="elementor-element elementor-element-41d13da e-flex e-con-boxed e-con e-child"
-                                    data-id="41d13da" data-element_type="container"
-                                    data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                                <div class="elementor-element elementor-element-1c19b70 e-flex e-con-boxed e-con e-child"
+                                    data-id="1c19b70" data-element_type="container"
+                                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
                                     <div class="e-con-inner">
-                                        <div class="elementor-element elementor-element-5fe2181 elementor-button-align-stretch elementor-widget elementor-widget-form"
-                                            data-id="5fe2181" data-element_type="widget"
-                                            data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
-                                            data-widget_type="form.default">
-                                            <div class="elementor-widget-container">
-                                                <form class="elementor-form" method="post" name="New Form" method="POST" action="{{ url('admin/updatepass') }}">
-                                                    @csrf
-                                                    <input
-                                                        type="hidden" name="post_id" value="174" /> <input
-                                                        type="hidden" name="form_id" value="5fe2181" /> <input
-                                                        type="hidden" name="referer_title"
-                                                        value="Update Pssword - My Blog" /><input type="hidden"
-                                                        name="queried_id" value="174" />
-                                                    <div class="elementor-form-fields-wrapper elementor-labels-above">
-                                                        <div
-                                                            class="row mb-3" hidden>
-                                                            <label for="form-field-name"
-                                                                class="elementor-field-label"> Id </label>
-                                                            <input size="1" type="text"
-                                                                name="id" id="inputEnterYourName" value="{{ $user->id }} " readonly
-                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                placeholder="id"
-                                                                aria-required="true"></div>
-                                                        <div
-                                                            class="elementor-field-type-password elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
-                                                            <label for="form-field-name"
-                                                                class="elementor-field-label"> Old Password </label>
-                                                            <input size="1" type="password"
-                                                                name="old_password" id="inputEmailAddress2"
-                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                placeholder="Old Password" required="required"
-                                                                aria-required="true"></div>
-                                                        <div
-                                                            class="elementor-field-type-password elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
-                                                            <label for="form-field-email"
-                                                                class="elementor-field-label"> New Password </label>
-                                                            <input size="1" type="password"
-                                                                name="new_password" id="inputEmailAddress2"
-                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                placeholder="New Password" required="required"
-                                                                aria-required="true"></div>
-                                                        <div
-                                                            class="elementor-field-type-password elementor-field-group elementor-column elementor-field-group-field_09949bf elementor-col-100 elementor-field-required">
-                                                            <label for="form-field-field_09949bf"
-                                                                class="elementor-field-label"> Confirm New Password
-                                                            </label> <input size="1" type="password"
-                                                                name="new_password_confirmation"
-                                                                id="inputEmailAddress2"
-                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                placeholder="Confirm New Password" required="required"
-                                                                aria-required="true"></div>
-                                                        <div
-                                                            class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
-                                                            <button type="submit"
-                                                                class="elementor-button elementor-size-sm"> <span>
-                                                                    <span class="elementor-button-icon"> </span> <span
-                                                                        class="elementor-button-text">Simpan</span>
-                                                                </span> </button></div>
+                                        <div class="elementor-element elementor-element-b40f8e3 e-flex e-con-boxed e-con e-child"
+                                            data-id="b40f8e3" data-element_type="container"
+                                            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                                            <div class="e-con-inner">
+                                                <div class="elementor-element elementor-element-32f88b3 elementor-button-align-stretch elementor-widget elementor-widget-form"
+                                                    data-id="32f88b3" data-element_type="widget"
+                                                    data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
+                                                    data-widget_type="form.default">
+                                                    <div class="elementor-widget-container">
+                                                        <form method="POST" action="/admin/updatenasabah/{{ $nasabah->id }}" class="elementor-form" method="post" name="New Form">
+                                                            @method('put')
+                                                            @csrf
+                                                            <input type="hidden" name="post_id" value="199" />
+                                                            <input type="hidden" name="form_id" value="32f88b3" />
+                                                            <input type="hidden" name="referer_title"
+                                                                value="Buka Tabungan - My Blog" /><input
+                                                                type="hidden" name="queried_id" value="199" />
+                                                            <div
+                                                                class="elementor-form-fields-wrapper elementor-labels-above">
+                                                                <div
+                                                                    class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
+                                                                    <label for="form-field-name"
+                                                                        class="elementor-field-label"> Email </label>
+                                                                    <input size="1" type="email"
+                                                                        name="email" id="inputEnterYourName"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                        placeholder="Email" required="required"
+                                                                        aria-required="true" value="{{ Auth::user()->email }}" readonly></div>
+                                                                <div
+                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+                                                                    <label for="form-field-email"
+                                                                        class="elementor-field-label"> NIK </label>
+                                                                    <input size="1" type="text"
+                                                                        name="nik"
+                                                                        id="inputEnterYourName"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                        placeholder="NIK" required="required"
+                                                                        aria-required="true" value="{{ $nasabah->nik }}"></div>
+                                                                <div
+                                                                    class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_09949bf elementor-col-100 elementor-field-required">
+                                                                    <label for="form-field-field_09949bf"
+                                                                        class="elementor-field-label"> Tanggal
+                                                                        Bergabung </label> <input type="date"
+                                                                        name="tgl_bergabung"
+                                                                        id="inputChoosePassword2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual elementor-date-field"
+                                                                        placeholder="Tanggal Bergabung"
+                                                                        required="required" aria-required="true"
+                                                                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="{{ $nasabah->tgl_bergabung }}"></div>
+                                                                <div
+                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9b53800 elementor-col-100">
+                                                                    <label for="form-field-field_9b53800"
+                                                                        class="elementor-field-label"> Nama Nasabah
+                                                                    </label> <input size="1" type="text"
+                                                                        name="nama_nasabah"
+                                                                        id="inputEmailAddress2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                        placeholder="Nama Nasabah" value="{{ $nasabah->nama_nasabah }}"></div>
+                                                                <div
+                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9a57f99 elementor-col-100">
+                                                                    <label for="form-field-field_9a57f99"
+                                                                        class="elementor-field-label"> No Handphone
+                                                                    </label> <input size="1" type="text"
+                                                                        name="no_hp"
+                                                                        id="inputChoosePassword2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                        placeholder="No Handphone" value="{{ $nasabah->no_hp }}"></div>
+                                                                <div
+                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_28ef71a elementor-col-100">
+                                                                    <label for="form-field-field_28ef71a"
+                                                                        class="elementor-field-label"> Tempat Lahir
+                                                                    </label> <input size="1" type="text"
+                                                                        name="tempat_lahir"
+                                                                        id="inputChoosePassword2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                        placeholder="Tempat Lahir" value="{{ $nasabah->tempat_lahir }}"></div>
+                                                                <div
+                                                                    class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_e7fd189 elementor-col-100">
+                                                                    <label for="form-field-field_e7fd189"
+                                                                        class="elementor-field-label"> Tanggal Lahir
+                                                                    </label> <input type="date"
+                                                                        name="tgl_lahir"
+                                                                        id="inputChoosePassword2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual elementor-date-field"
+                                                                        placeholder="Tanggal Lahir"
+                                                                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="{{ $nasabah->tgl_lahir }}"></div>
+                                                                <div
+                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_ba7b02b elementor-col-100">
+                                                                    <label for="form-field-field_ba7b02b"
+                                                                        class="elementor-field-label"> Alamat </label>
+                                                                    <input size="1" type="text"
+                                                                        name="alamat"
+                                                                        id="inputChoosePassword2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                        placeholder="Alamat" value="{{ $nasabah->alamat }}"></div>
+                                                                <div
+                                                                    class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+                                                                    <button type="submit"
+                                                                        class="elementor-button elementor-size-sm">
+                                                                        <span> <span class="elementor-button-icon">
+                                                                            </span> <span
+                                                                                class="elementor-button-text">Update</span>
+                                                                        </span> </button></div>
+                                                            </div>
+                                                        </form>
                                                     </div>
-                                                </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -742,8 +794,8 @@
                 "litespeed_docref", document.referrer), window.location.reload(!0))
         });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script data-optimized="1" type="litespeed/javascript" data-src="https://hafizadinata.com/wp-content/litespeed/js/ceca0279b6fa60c4c525ae823b4a97dc.js?ver=81f5c"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script data-optimized="1" type="litespeed/javascript" data-src="https://hafizadinata.com/wp-content/litespeed/js/7e30cebe0c4900ba091b2a78c383b7e5.js?ver=81f5c"></script>
     <script>
         const litespeed_ui_events = ["mouseover", "click", "keydown", "wheel", "touchmove", "touchstart"];
         var urlCreator = window.URL || window.webkitURL;
@@ -796,6 +848,6 @@
     </script>
 </body>
 
-</html> <!-- Page optimized by LiteSpeed Cache @2024-01-09 01:49:04 -->
-<!-- Page cached by LiteSpeed Cache 6.0.0.1 on 2024-01-09 01:49:03 --> <!-- Guest Mode -->
+</html> <!-- Page optimized by LiteSpeed Cache @2024-01-10 10:41:00 -->
+<!-- Page cached by LiteSpeed Cache 6.0.0.1 on 2024-01-10 10:40:59 --> <!-- Guest Mode -->
 <!-- QUIC.cloud UCSS in queue -->
