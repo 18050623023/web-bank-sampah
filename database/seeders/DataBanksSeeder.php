@@ -17,16 +17,18 @@ class DataBanksSeeder extends Seeder
     {
         $databanks = [
             [
-                'teller_id' => 'Admin',
-                'nama_bank' => 'admin@admin.com',
+                'teller_id' => '2',
+                'nama_bank' => 'Bank Siomo',
+                'alamat'    => 'Simo Sidomulyo',
                 'tgl_bergabung' => 0,
                 'lat' => '112.7150342,14z',
                 'long' => '-7.2664907',
                 'path' => '1703604467.jpg'
             ],
             [
-                'teller_id' => 'Teller',
-                'nama_bank' => 'teller@teller.com',
+                'teller_id' => '3',
+                'nama_bank' => 'Bank Rukun',
+                'alamat'    => 'Simo Rukun',
                 'tgl_bergabung' => 1,
                 'lat' => '112.7150342,14z',
                 'long' => '-7.2664907',
