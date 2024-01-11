@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('nasabah_id');
             $table->integer('kategori_id');
+            $table->string('invoice')->nullable();
+            $table->string('alamatjemput')->nullable();
             $table->integer('petugas_id')->nullable();
             $table->integer('lokasi_id')->nullable();
             $table->date('tgl_menabung');

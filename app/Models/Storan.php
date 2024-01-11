@@ -24,12 +24,14 @@ class Storan extends Model
         'point',
         'total_harga',
         'petugas_id',
+        'alamatjemput',
+        'invoice',
         'status'
     ];
 
     public function Nasabah(): BelongsTo
     {
-        return $this->belongsTo(Nasabah::class,'nasabah_id','user_id');
+        return $this->belongsTo(Nasabah::class, 'nasabah_id', 'user_id');
     }
 
     public function DataBank(): BelongsTo
