@@ -32,7 +32,13 @@
 										</div>
 									</div>
                                     <div class="row mb-3">
-										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Dokument</label>
+										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Keterangan</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" id="inputEnterYourName" name="keterangan" placeholder="Keterangan">
+										</div>
+									</div>
+                                    <div class="row mb-3">
+										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Gambar Voucher</label>
 										<div class="col-sm-9">
 											<input type="file" class="form-control" id="file" name="file" required autocomplete="file">
 										</div>

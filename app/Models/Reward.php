@@ -13,6 +13,8 @@ class Reward extends Model
         'id',
         'name',
         'point',
+        'keterangan',
+        'product_code',
         'path'
     ];
 }

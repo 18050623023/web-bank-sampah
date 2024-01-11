@@ -272,7 +272,7 @@
                             class="elementor-element elementor-element-5c8f015 e-transform e-flex e-con-boxed e-con e-child"
                             data-id="5c8f015" data-element_type="container"
                             data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                            href="#">
+                            href="{{ url('admin/rewarduser') }}">
                             <div class="e-con-inner">
                                 <div class="elementor-element elementor-element-c6c63a0 elementor-widget elementor-widget-image"
                                     data-id="c6c63a0" data-element_type="widget" data-widget_type="image.default">

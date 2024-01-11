@@ -61,6 +61,12 @@ class KategoriController extends Controller
         return view('admin.reward', compact('reward'));
     }
 
+    public function rewarduser()
+    {
+        $rewarduser = Reward::all();
+        return view('admin.tukarpoint', compact('rewarduser'));
+    }
+
     public function addreward()
     {
 
@@ -69,7 +75,6 @@ class KategoriController extends Controller
 
     public function storereward(Request $request)
     {
-
         $extension = $request->file('file')->extension();
 
         $waktu = time();
@@ -80,15 +85,28 @@ class KategoriController extends Controller
             base_path() . '/public/document/', $filename
         );
 
+        $number = mt_rand(1000000000,9999999999);
 
+        if ($this->productCodeExists($number)) {
+            $number = mt_rand(1000000000,999999999);
+        }
+        $request['product_code'] = $number;
         Reward::create([
             'name' => $request->name,
             'point' => $request->point,
+            'keterangan' => $request->keterangan,
+            'product_code' => $request->product_code,
             'path' => $filename
+
+
         ]);
 
         return redirect('admin/reward');
 
+    }
+
+    public function productCodeExists($number){
+        return Reward::whereProductCode($number)->exists();
     }
 
     public function destroyreward($id)
@@ -105,8 +123,8 @@ class KategoriController extends Controller
 
     public function updatereward($id, Request $request)
     {
-
         $extension = $request->file('file')->extension();
+
         $waktu = time();
 
         $filename = $waktu.'.'.$extension;
@@ -115,8 +133,19 @@ class KategoriController extends Controller
             base_path() . '/public/document/', $filename
         );
 
-        $reward = Reward::find($id);
-        $reward->update($request->except(['_token','submit']));
+        // $number = mt_rand(1000000000,9999999999);
+
+        // if ($this->productCodeExists($number)) {
+        //     $number = mt_rand(1000000000,999999999);
+        // }
+
+        DB::table('rewards')->where('id',$id)->update([
+            'name' => $request->name,
+            'point' => $request->point,
+            'keterangan' => $request->keterangan,
+            // 'product_code' => $request->product_code,
+            'path' => $filename
+		]);
         return redirect('admin/reward');
     }
 

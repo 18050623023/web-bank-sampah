@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('point');
-            $table->string('path')->nullable();
+            $table->string('keterangan');
+            $table->string('product_code');
+            $table->string('path');
             $table->timestamps();
         });
     }

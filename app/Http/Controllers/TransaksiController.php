@@ -316,4 +316,9 @@ class TransaksiController extends Controller
         DB::table('storans')->where('id', $id)->delete();
         return redirect('admin/setoran');
     }
+
+    public function viewgift()
+    {
+        return view('admin.succesgift');
+    }
 }

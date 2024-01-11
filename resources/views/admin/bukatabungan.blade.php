@@ -124,7 +124,7 @@
                         <div class="elementor-widget-container">
                             <div id="uc_dropdown_button_elementor10486" class="ca_btn_wrapper">
                                 <div class="ca_btn_container"> <button class="ca_btn" ontouchstart=""><i
-                                            class='fas fa-user-circle'></i><span class="ue-btn-text">Nasabah</span>
+                                            class='fas fa-user-circle'></i><span class="ue-btn-text">{{ Auth::user()->type }}</span>
                                         <ul class="ca_dropdown uc-items-wrapper">
                                             <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a
                                                     href="{{ url('admin/profileuser') }}"><i class='fas fa-user-edit'></i>Profile</a></li>

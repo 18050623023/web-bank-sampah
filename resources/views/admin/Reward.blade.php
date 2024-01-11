@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Kategori')
+@section('title','Reward')
 
 @section('conten')
 
@@ -14,23 +14,31 @@
 									<thead>
 										<tr>
 											<th>No</th>
+                                            {{-- <th>ID</th> --}}
 											<th>Name Reward</th>
 											<th>Point Reedem</th>
-                                            <th>Dockument</th>
+                                            <th>Keterangan</th>
+                                            <th>Barcode</th>
+                                            <th>Voucher</th>
 											<th>Action</th>
 										</tr>
 									</thead>
 									<tbody>
 									@php($i = 1)
-                					@foreach($reward as $rew)
+                					@foreach($reward as $reward)
 										<tr>
 											<td>{{ $i++ }}</td>
-											<td>{{$rew->name}}</td>
-											<td>{{$rew->point}} point</td>
-                                            <td><a href="{{url('/')}}/document/{{ $rew->path }}" target="__blank">{{ $rew->path }}</a></td>
+                                            {{-- <th>{{$rew->id}}</th> --}}
+											<td>{{$reward->name}}</td>
+											<td>{{$reward->point}} point</td>
+                                            <td>{{$reward->keterangan}}</td>
+                                            <td>{!! DNS1D::getBarcodeHTML("$reward->product_code",'UPCA',2,50) !!}
+                                            P - {{ $reward->product_code }}
+                                            </td>
+                                            <td><a href="{{url('/')}}/document/{{ $reward->path }}" target="__blank">{{ $reward->path }}</a></td>
 											<td>
-												<a href="/admin/{{$rew->id}}/editreward" class="btn btn-primary">Edit</a>
-												<a href="/admin/dellreward/<?php echo $rew->id ?>" class="btn btn-primary">Delete</a>
+												<a href="/admin/{{$reward->id}}/editreward" class="btn btn-primary">Edit</a>
+												<a href="/admin/dellreward/<?php echo $reward->id ?>" class="btn btn-primary">Delete</a>
 											</td>
 										</tr>
 									@endforeach
