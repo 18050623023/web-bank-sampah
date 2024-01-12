@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <title>Buka Tabungan - Earn Trash</title>
+    <title>Data Member - Earn Trash</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('template') }}/front/img/ttgicon.png" />
     <link rel="canonical" href="https://hafizadinata.com/?page_id=199" />
     <meta property="og:locale" content="en_US" />
@@ -162,7 +162,7 @@
                                 <div class="elementor-element elementor-element-97c2054 elementor-widget elementor-widget-heading"
                                     data-id="97c2054" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Buka Tabungan</h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">Data Member</h2>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-333221f elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
@@ -225,12 +225,12 @@
                                                                 <div
                                                                     class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
                                                                     <label for="form-field-email"
-                                                                        class="elementor-field-label"> NIK </label>
+                                                                        class="elementor-field-label"> NPWP </label>
                                                                     <input size="1" type="text"
                                                                         name="nik"
                                                                         id="inputEnterYourName"
                                                                         class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                        placeholder="NIK" required="required"
+                                                                        placeholder="NPWP" required="required"
                                                                         aria-required="true" value="{{ $nasabah->nik }}"></div>
                                                                 <div
                                                                     class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_09949bf elementor-col-100 elementor-field-required">

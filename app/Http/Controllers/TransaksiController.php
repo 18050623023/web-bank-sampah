@@ -9,6 +9,7 @@ use App\Models\Nasabah;
 use App\Models\Kategorie;
 use App\Models\User;
 use App\Models\Storan;
+use App\Models\Reward;
 use App\Models\Pegawai;
 use App\Models\Tabungan;
 use App\Models\Databank;
@@ -229,6 +230,7 @@ class TransaksiController extends Controller
 
         $lokasi = Databank::all();
         $nasabah = Nasabah::find($id);
+        $reward = Reward::all();
         $id = $nasabah->user_id;
         $petugas = Pegawai::all();
         $kredit = DB::table('tabungans')
@@ -246,37 +248,42 @@ class TransaksiController extends Controller
         $tarik = DB::table('tabungans')
             ->join('pegawais', 'tabungans.petugas_id', '=', 'pegawais.id')
             ->join('nasabahs', 'tabungans.nasabah_id', '=', 'nasabahs.id')
-            ->select('tabungans.*', 'pegawais.nama_pegawai', 'nasabahs.nama_nasabah')
+            ->join('rewards', 'tabungans.reward_id', '=', 'rewards.id')
+            ->select('tabungans.*', 'pegawais.nama_pegawai', 'nasabahs.nama_nasabah', 'rewards.name', 'rewards.point', 'rewards.keterangan')
             ->where('tabungans.nasabah_id', '=', $id)
             ->get();
 
 
 
 
-        return view('admin.penarikanuang', compact(['nasabah', 'lala', 'saldo', 'petugas', 'tarik', 'lokasi', 'lokasi_bank']));
+        return view('admin.penarikanuang', compact(['nasabah', 'lala', 'saldo', 'petugas', 'tarik', 'lokasi', 'lokasi_bank', 'reward']));
     }
 
     public function tarikuang(Request $request)
     {
         $nasabah_id = $request->nasabah_id;
         $user_id = $request->user_id;
+        // $reward = $request->point;
+        $reward = $request->reward;
+        // $point = $request->point;
         $kategori_id = $request->kategori;
         $petugas = $request->petugas;
-        $jml_tab = $request->jml_tab;
+        // $jml_tab = $request->jml_tab;
         $lokasi = $request->lokasi;
         $saldo = $request->saldo;
         $tgl_hariini = date('Y-m-d');
 
-        if ($jml_tab > $saldo) {
+        if ($reward > $saldo) {
             return redirect('admin/' . "{$nasabah_id}" . '/penarikanuang')->with('alert-danger', 'Saldo tidak cukup');
         } else {
             Tabungan::create([
                 'nasabah_id' => $user_id,
+                // 'reward_id' => $reward,
                 'petugas_id' => $petugas,
                 'lokasi_id' => $lokasi,
                 'tgl_tab' => $tgl_hariini,
                 'kredit' => 0,
-                'debit' => $jml_tab
+                'debit' => $reward
             ]);
         }
 

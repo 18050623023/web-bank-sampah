@@ -226,7 +226,7 @@
                             class="elementor-element elementor-element-b8e98ce e-transform e-flex e-con-boxed e-con e-child"
                             data-id="b8e98ce" data-element_type="container"
                             data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                            href="#">
+                            href="{{ url('admin/addnasabah') }}">
                             <div class="e-con-inner">
                                 <div class="elementor-element elementor-element-28e9f05 elementor-widget elementor-widget-image"
                                     data-id="28e9f05" data-element_type="widget" data-widget_type="image.default">
@@ -241,7 +241,7 @@
                                 <div class="elementor-element elementor-element-6932d27 elementor-widget elementor-widget-heading"
                                     data-id="6932d27" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Antar Sampah</h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">Data Member</h2>
                                     </div>
                                 </div>
                             </div>
