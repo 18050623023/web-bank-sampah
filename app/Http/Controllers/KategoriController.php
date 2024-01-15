@@ -61,11 +61,7 @@ class KategoriController extends Controller
         return view('admin.reward', compact('reward'));
     }
 
-    public function rewarduser()
-    {
-        $rewarduser = Reward::all();
-        return view('admin.tukarpoint', compact('rewarduser'));
-    }
+
 
     public function addreward()
     {

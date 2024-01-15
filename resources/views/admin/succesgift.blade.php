@@ -199,13 +199,12 @@
                                             data-id="787c8d7" data-element_type="widget"
                                             data-widget_type="image.default">
                                             <div class="elementor-widget-container"> <img data-lazyloaded="1"
-                                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NjEiIGhlaWdodD0iNDQyIiB2aWV3Qm94PSIwIDAgNjYxIDQ0MiI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4="
+                                                    src="{{asset('document')}}/{{$reward->path}}"
                                                     fetchpriority="high" decoding="async" width="661"
                                                     height="442"
-                                                    data-src="https://hafizadinata.com/wp-content/uploads/2024/01/indovoucher.png"
+
                                                     class="attachment-large size-large wp-image-222" alt=""
-                                                    data-srcset="https://hafizadinata.com/wp-content/uploads/2024/01/indovoucher.png 661w, https://hafizadinata.com/wp-content/uploads/2024/01/indovoucher-300x201.png 300w"
-                                                    data-sizes="(max-width: 661px) 100vw, 661px" /></div>
+                                                    /></div>
                                         </div>
                                         <div class="elementor-element elementor-element-c87a9f9 e-flex e-con-boxed e-con e-child"
                                             data-id="c87a9f9" data-element_type="container"

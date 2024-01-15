@@ -30,6 +30,7 @@ class TransaksiController extends Controller
         // return TransaksiResource::collection($setoran)->toArray(request());
 
         Tabungan::where('storan_id', $request->id)->update([
+            'kredit' => $request->total_tabungan,
             'petugas_id' => $request->petugas,
         ]);
 
@@ -142,7 +143,7 @@ class TransaksiController extends Controller
                 'lokasi_id' => $lokasi,
                 'storan_id' => $stor_id,
                 'tgl_tab' => $tgl_hariini,
-                'kredit' => $total_tabungan,
+                // 'kredit' => $total_tabungan,
                 'debit' => 0
             ]);
         }
@@ -261,6 +262,16 @@ class TransaksiController extends Controller
 
     public function tarikuang(Request $request)
     {
+        // $extension = $request->file('file')->extension();
+
+        // $waktu = time();
+
+        // $filename = $waktu.'.'.$extension;
+
+        // $request->file('file')->move(
+        //     base_path() . '/public/document/voucher/', $filename
+        // );
+
         $nasabah_id = $request->nasabah_id;
         $user_id = $request->user_id;
         // $reward = $request->point;
@@ -323,9 +334,117 @@ class TransaksiController extends Controller
         DB::table('storans')->where('id', $id)->delete();
         return redirect('admin/setoran');
     }
-
-    public function viewgift()
+    public function rewarduser($id)
     {
-        return view('admin.succesgift');
+
+        $user_id = Auth::user()->id;
+        $lokasi_bank = DB::table('databanks')->where('teller_id', $user_id)->first();
+
+        $lokasi = Databank::all();
+        $nasabah = Nasabah::find($id);
+        $reward = Reward::all();
+        $id = $nasabah->user_id;
+        $petugas = Pegawai::all();
+        $kredit = DB::table('tabungans')
+            ->where('nasabah_id', '=', $id)
+            ->sum('kredit');
+        $debit = DB::table('tabungans')
+            ->where('nasabah_id', '=', $id)
+            ->sum('debit');
+        $saldo = $kredit - $debit;
+
+        $lala = DB::table('tabungans')
+            ->where('tabungans.nasabah_id', '=', $id)
+            ->get();
+
+        $tarik = DB::table('tabungans')
+            ->join('pegawais', 'tabungans.petugas_id', '=', 'pegawais.id')
+            ->join('nasabahs', 'tabungans.nasabah_id', '=', 'nasabahs.id')
+            ->join('rewards', 'tabungans.reward_id', '=', 'rewards.id')
+            ->select('tabungans.*', 'pegawais.nama_pegawai', 'nasabahs.nama_nasabah', 'rewards.name', 'rewards.point', 'rewards.keterangan')
+            ->where('tabungans.nasabah_id', '=', $id)
+            ->get();
+
+        return view('admin.tukarpoint', compact(['nasabah', 'lala', 'saldo', 'petugas', 'tarik', 'lokasi', 'lokasi_bank', 'reward']));
+        // $rewarduser = Reward::all();
+        // return view('admin.tukarpoint', compact('rewarduser'));
+    }
+
+    public function viewgift($id)
+    {
+        $reward = Reward::find($id);
+        return view('admin.succesgift', compact(['reward']));
+        // $user_id = Auth::user()->id;
+        // $user_id = Auth::user()->id;
+        // $lokasi_bank = DB::table('databanks')->where('teller_id', $user_id)->first();
+
+        // $lokasi = Databank::all();
+        // $nasabah = Nasabah::find($id);
+        // $reward = Reward::all();
+        // $id = $nasabah->user_id;
+        // $petugas = Pegawai::all();
+        // $kredit = DB::table('tabungans')
+        //     ->where('nasabah_id', '=', $id)
+        //     ->sum('kredit');
+        // $debit = DB::table('tabungans')
+        //     ->where('nasabah_id', '=', $id)
+        //     ->sum('debit');
+        // $saldo = $kredit - $debit;
+
+        // $lala = DB::table('tabungans')
+        //     ->where('tabungans.nasabah_id', '=', $id)
+        //     ->get();
+
+        // $tarik = DB::table('tabungans')
+        //     ->join('pegawais', 'tabungans.petugas_id', '=', 'pegawais.id')
+        //     ->join('nasabahs', 'tabungans.nasabah_id', '=', 'nasabahs.id')
+        //     ->join('rewards', 'tabungans.reward_id', '=', 'rewards.id')
+        //     ->select('tabungans.*', 'pegawais.nama_pegawai', 'nasabahs.nama_nasabah', 'rewards.name', 'rewards.point', 'rewards.keterangan')
+        //     ->where('tabungans.nasabah_id', '=', $id)
+        //     ->get();
+
+        // return view('admin.succesgift', compact(['nasabah', 'lala', 'saldo', 'petugas', 'tarik', 'lokasi', 'lokasi_bank', 'reward']));
+    }
+
+    public function tarikuangpoint(Request $request)
+    {
+        // $extension = $request->file('file')->extension();
+
+        // $waktu = time();
+
+        // $filename = $waktu.'.'.$extension;
+
+        // $request->file('file')->move(
+        //     base_path() . '/public/document/voucher/', $filename
+        // );
+
+        $nasabah_id = $request->nasabah_id;
+        $user_id = $request->user_id;
+        // $reward = $request->point;
+        $reward = $request->reward;
+        $id_voucher = $request->id_voucher;
+        // $point = $request->point;
+        $kategori_id = $request->kategori;
+        $petugas = $request->petugas;
+        // $jml_tab = $request->jml_tab;
+        $lokasi = $request->lokasi;
+        $saldo = $request->saldo;
+        $tgl_hariini = date('Y-m-d');
+            // dd($request->all());
+        if ($reward > $saldo) {
+            return redirect('admin/rewarduser/'.$nasabah_id )->with('alert-danger', 'Saldo tidak cukup');
+        } else {
+            Tabungan::create([
+                'nasabah_id' => 4,
+                // 'reward_id' => $reward,
+                'petugas_id' => 1,
+                'lokasi_id' => 1,
+                'tgl_tab' => $tgl_hariini,
+                'kredit' => 0,
+                'debit' => $reward
+            ]);
+        }
+
+        return redirect('admin/succesgift/' .$id_voucher);
     }
 }
