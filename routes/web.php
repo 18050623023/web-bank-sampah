@@ -27,6 +27,15 @@ Route::group(['middleware' => ['auth']], function(){
     // New Route
 
     Route::get('/admin/dashboard', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboard');
+    // Route::get('/admin/dashboard', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboard');
+    Route::get('/admin/dashboarduser', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboarduser');
+    Route::post('/admin/panggilact', [App\Http\Controllers\TransaksiController::class, 'panggilact'])->name('panggilact');
+    Route::get('/admin/pilihtps', [App\Http\Controllers\TransaksiController::class, 'pilihtps'])->name('pilihtps');
+    Route::get('/admin/pilihtps/{stor_id}/{tabungan_id}/{tps}', [App\Http\Controllers\TransaksiController::class, 'pilihtpsact'])->name('pilihtpsact');
+    Route::get('/admin/invoice/{id}', [App\Http\Controllers\TransaksiController::class, 'invoice'])->name('invoice');
+    Route::get('/admin/pesanan/{id?}', [App\Http\Controllers\TransaksiController::class, 'pesanan'])->name('pesanan');
+
+
     // Route::get('/admin/dashboardbaru', function () {
     //     $user_id = Auth::user()->id;
 
@@ -58,7 +67,6 @@ Route::group(['middleware' => ['auth']], function(){
 
     // Route::get('/admin', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/admin/dashboardlama', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboardlama');
-
 
     Route::get('/admin/laporan', [App\Http\Controllers\DashboardController::class, 'laporansampah']);
     Route::post('/admin/searchlaporan', [App\Http\Controllers\DashboardController::class, 'searchlaporan']);
@@ -109,7 +117,8 @@ Route::group(['middleware' => ['auth']], function(){
     Route::put('/admin/updatekategori/{id}', [App\Http\Controllers\KategoriController::class, 'updatekategori']);
 
     Route::get('/admin/{id}/pilihnasabah', [App\Http\Controllers\TransaksiController::class, 'pilihnasabah']);
-    Route::get('/admin/setornasabah', [App\Http\Controllers\TransaksiController::class, 'setoranNasabah']);
+    Route::get('/admin/setornasabahold', [App\Http\Controllers\TransaksiController::class, 'setoranNasabahOld']);
+    Route::get('/admin/setornasabah/{id?}', [App\Http\Controllers\TransaksiController::class, 'setoranNasabah'])->name('setoranNasabah');
 
     Route::get('/admin/updatestatus', [App\Http\Controllers\TransaksiController::class, 'setoranNasabah']);
 

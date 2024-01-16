@@ -43,6 +43,12 @@ class Storan extends Model
     {
         return $this->HasOne(Tabungan::class, 'storan_id');
     }
+
+    public function Kategori(): BelongsTo
+    {
+        return $this->belongsTo(Kategorie::class);
+    }
+
     // public function Tabungan(): hasOneThrough
     // {
     //     return $this->hasOneThrough(
