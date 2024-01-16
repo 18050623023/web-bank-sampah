@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <title>Dashboard - My Blog</title>
+    <title>Dashboard User - Earn Trash</title>
+    <link rel="shortcut icon" type="image/png" href="{{ asset('template') }}/front/img/ttgicon.png" />
     <link rel="canonical" href="https://hafizadinata.com/?page_id=37" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
@@ -60,11 +61,11 @@
                 data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
                 <div class="elementor-element elementor-element-8a92391 elementor-widget elementor-widget-image"
                     data-id="8a92391" data-element_type="widget" data-widget_type="image.default">
-                    <div class="elementor-widget-container"> <img data-lazyloaded="1"
+                    <div class="elementor-widget-container"> <a href="{{ url('admin/dashboarduser') }}"><img data-lazyloaded="1"
                             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDEiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNDEgNDAiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHN0eWxlPSJmaWxsOiNjZmQ0ZGI7ZmlsbC1vcGFjaXR5OiAwLjE7Ii8+PC9zdmc+"
                             width="241" height="40"
                             data-src="https://hafizadinata.com/wp-content/uploads/2023/12/Frame-63.png"
-                            class="attachment-full size-full wp-image-39" alt="" /></div>
+                            class="attachment-full size-full wp-image-39" alt="" /></a></div>
                 </div>
             </div>
             <div class="elementor-element elementor-element-8ed6f24 e-con-full e-flex e-con e-child" data-id="8ed6f24"
@@ -118,10 +119,12 @@
                         <div class="elementor-widget-container">
                             <div id="uc_dropdown_button_elementor14365" class="ca_btn_wrapper">
                                 <div class="ca_btn_container"> <button class="ca_btn" ontouchstart=""><i
-                                            class='fas fa-user-circle'></i><span class="ue-btn-text"><p>{{ Auth::user()->type }}</p></span>
+                                            class='fas fa-user-circle'></i><span class="ue-btn-text">{{ Auth::user()->type }}</span>
                                         <ul class="ca_dropdown uc-items-wrapper">
-                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/profile') }}"><i
+                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/profileuser') }}"><i
                                                         class='fas fa-user-edit'></i>Profile</a></li>
+                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/addnasabah') }}"><i
+                                                        class='fas fa-solid fa-building-columns'></i>Tabungan</a></li>
                                             <li class="ca_dropdown_item elementor-repeater-item-f4af334"><a href="{{ route('logout') }}"onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();"><i
                                                         class='fas fa-sign-out-alt'></i>Logout</a></li>
@@ -160,7 +163,7 @@
                                             data-id="bfacb77" data-element_type="widget"
                                             data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Hai, <p>{{ Auth::user()->name }}</p>
+                                                <h2 class="elementor-heading-title elementor-size-default">Hai, {{ Auth::user()->name }}
                                                 </h2>
                                             </div>
                                         </div>
@@ -223,7 +226,7 @@
                             class="elementor-element elementor-element-b8e98ce e-transform e-flex e-con-boxed e-con e-child"
                             data-id="b8e98ce" data-element_type="container"
                             data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                            href="#">
+                            href="{{ url('admin/addnasabah') }}">
                             <div class="e-con-inner">
                                 <div class="elementor-element elementor-element-28e9f05 elementor-widget elementor-widget-image"
                                     data-id="28e9f05" data-element_type="widget" data-widget_type="image.default">
@@ -238,7 +241,7 @@
                                 <div class="elementor-element elementor-element-6932d27 elementor-widget elementor-widget-heading"
                                     data-id="6932d27" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">Antar Sampah</h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">Data Member</h2>
                                     </div>
                                 </div>
                             </div>
@@ -270,7 +273,7 @@
                             class="elementor-element elementor-element-5c8f015 e-transform e-flex e-con-boxed e-con e-child"
                             data-id="5c8f015" data-element_type="container"
                             data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                            href="#">
+                            href="{{ url('admin/rewarduser/'.$nasabah->id)  }}">
                             <div class="e-con-inner">
                                 <div class="elementor-element elementor-element-c6c63a0 elementor-widget elementor-widget-image"
                                     data-id="c6c63a0" data-element_type="widget" data-widget_type="image.default">

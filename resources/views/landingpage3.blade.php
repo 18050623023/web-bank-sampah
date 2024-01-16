@@ -13,7 +13,8 @@
     <meta charset="UTF-8">
     <link data-optimized="2" rel="stylesheet" href="{{asset('template')}}/landingpage3/css/css-ed75ce75a4edb4b315866acbc4cd594c.css" />
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <title>landingpage - My Blog</title>
+    <title>Earn Trash</title>
+    <link rel="shortcut icon" type="image/png" href="{{ asset('template') }}/front/img/ttgicon.png" />
     <link rel="canonical" href="https://hafizadinata.com/?page_id=50" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />

@@ -38,7 +38,7 @@ class UserController extends Controller
         ]);
 
         return redirect('admin/user');
-       
+
     }
 
     public function destroyusr($id)
@@ -65,6 +65,8 @@ class UserController extends Controller
         $user = User::find($id);
         return view('admin.changeuserpass', compact(['user']));
     }
+
+
 
     public function updatepass(Request $request)
     {

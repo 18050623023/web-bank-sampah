@@ -63,9 +63,10 @@ Route::group(['middleware' => ['auth']], function(){
     // });
 
     // Default Route
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('home', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboarduser');
 
     // Route::get('/admin', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+  
     Route::get('/admin/dashboardlama', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboardlama');
 
     Route::get('/admin/laporan', [App\Http\Controllers\DashboardController::class, 'laporansampah']);
@@ -79,9 +80,11 @@ Route::group(['middleware' => ['auth']], function(){
     Route::put('/admin/edituser/{id}', [App\Http\Controllers\UserController::class, 'updateuser']);
 
     Route::get('/admin/{id}/changeuserpass', [App\Http\Controllers\UserController::class, 'changeuserpass']);
+    Route::get('/admin/{id}/changeuserpassold', [App\Http\Controllers\UserController::class, 'changeuserpassold']);
     Route::post('/admin/updatepass', [App\Http\Controllers\UserController::class, 'updatepass']);
 
     Route::get('/admin/profile', [App\Http\Controllers\UserController::class, 'profile']);
+    Route::get('/admin/profileuser', [App\Http\Controllers\UserController::class, 'profileuser']);
     Route::post('/admin/saveprofile', [App\Http\Controllers\UserController::class, 'saveprofile']);
 
     Route::get('/admin/nasabah', [App\Http\Controllers\NasabahController::class, 'index']);
@@ -101,6 +104,17 @@ Route::group(['middleware' => ['auth']], function(){
 
     Route::get('/admin/setoran', [App\Http\Controllers\TransaksiController::class, 'setoran']);
     Route::get('/admin/penarikan', [App\Http\Controllers\TransaksiController::class, 'penarikan']);
+
+    Route::get('/admin/rewarduser/{id}', [App\Http\Controllers\TransaksiController::class, 'rewarduser']);
+    Route::post('/admin/tarikuangpoint', [App\Http\Controllers\TransaksiController::class, 'tarikuangpoint']);
+    Route::get('/admin/succesgift/{id}', [App\Http\Controllers\TransaksiController::class, 'viewgift']);
+
+    Route::get('/admin/reward', [App\Http\Controllers\KategoriController::class, 'reward']);
+    Route::get('/admin/addreward', [App\Http\Controllers\KategoriController::class, 'addreward']);
+    Route::post('/admin/storereward', [App\Http\Controllers\KategoriController::class, 'storereward']);
+    Route::get('/admin/dellreward/{id}', [App\Http\Controllers\KategoriController::class, 'destroyreward']);
+    Route::get('/admin/{id}/editreward', [App\Http\Controllers\KategoriController::class, 'editreward']);
+    Route::post('/admin/updatereward/{id}', [App\Http\Controllers\KategoriController::class, 'updatereward']);
 
     Route::get('/admin/lokasi', [App\Http\Controllers\LokasiController::class, 'index']);
     Route::get('/admin/addlokasi', [App\Http\Controllers\LokasiController::class, 'addlokasi']);

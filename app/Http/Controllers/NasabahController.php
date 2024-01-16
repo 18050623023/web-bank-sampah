@@ -26,7 +26,7 @@ class NasabahController extends Controller
         if($nasabah == null){
             return view('admin.addnasabah');
         }else{
-            return view('admin.profilnasabah', compact('nasabah'));
+            return view('admin.bukatabungan', compact('nasabah'));
         }
     }
 
@@ -46,7 +46,7 @@ class NasabahController extends Controller
         ]);
 
         return redirect('admin/addnasabah');
-       
+
     }
 
     public function destroynasabah($id)
@@ -65,6 +65,6 @@ class NasabahController extends Controller
     {
         $nasabah = Nasabah::find($id);
         $nasabah->update($request->except(['_token','submit']));
-        return redirect('admin/nasabah');
+        return redirect('admin/addnasabah');
     }
 }

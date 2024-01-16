@@ -46,6 +46,7 @@
                                 <td>
                                     <form action="" method="post" id="setoran{{ $no }}">
                                         <input type="hidden" name="id" value="{{ $stor->id }}">
+                                        <input type="hidden" name="total_tabungan" value="{{ $stor->total_tabungan }}">
                                         @csrf
                                         <select class="form-control" name="petugas">
                                             @if ($stor->tabungan->petugas_id)

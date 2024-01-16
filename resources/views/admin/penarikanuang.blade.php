@@ -80,10 +80,23 @@
                         </div>
                     </div>
 
-                    <div class="row mb-3">
+                    {{-- <div class="row mb-3">
                         <label for="inputEmailAddress2" class="col-sm-3 col-form-label">Jumlah Point Yang Ditarik</label>
                         <div class="col-sm-9">
                             <input type="number" name="jml_tab" class="form-control" id="inputEmailAddress2">
+                        </div>
+                    </div> --}}
+
+                    <div class="row mb-3">
+                        <label for="inputEnterYourName" class="col-sm-3 col-form-label">Voucher</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" name="reward">
+                                <option value="0">-Pilih Voucher-</option>
+                                {{-- {{var_dump($reward)}} --}}
+                                @foreach ($reward as $rew)
+                                    <option value="{{ $rew->point }}">{{ $rew->name }}| {{ $rew->keterangan }} | {{ $rew->point }} Point</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
 
