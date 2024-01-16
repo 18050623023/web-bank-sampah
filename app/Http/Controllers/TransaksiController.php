@@ -14,6 +14,7 @@ use App\Models\Pegawai;
 use App\Models\Tabungan;
 use App\Models\Databank;
 use Illuminate\Support\Facades\DB;
+use Termwind\Components\Dd;
 
 use function PHPUnit\Framework\isNull;
 
@@ -61,7 +62,7 @@ class TransaksiController extends Controller
         return view('admin.penarikan', compact('nasabah'));
     }
 
-    public function  setoranNasabah()
+    public function  setoranNasabahOld()
     {
         $user_id = Auth::user()->id;
         $nasabah = Nasabah::Where('user_id', $user_id)->first();
@@ -81,6 +82,132 @@ class TransaksiController extends Controller
                 // dd($setoran);
             return view('admin.pilihnasabah', compact(['nasabah', 'kategori', 'setoran', 'petugas', 'lokasi']));
         }
+    }
+
+
+    public function  setoranNasabah($idstoran = 0)
+    {
+        $user_id = Auth::user()->id;
+        $nasabah = Nasabah::Where('user_id', $user_id)->first();
+        // var_dump($nasabah);
+        if (empty($nasabah)) {
+            return redirect('/admin/addnasabah')->with('alert-nasabah', 'Buat tabungan terlebih dahulu');
+        } else {
+            $user_id = $nasabah->user_id;
+            $kategori = Kategorie::all();
+            $petugas = Pegawai::all();
+            $lokasi = Databank::all();
+            $setoran = DB::table('storans')
+            ->join('kategories', 'storans.kategori_id', '=', 'kategories.id')
+            ->select('storans.*', 'kategories.kategori_sampah')
+            ->where('storans.nasabah_id', '=', $user_id)
+                ->get();
+            // dd($setoran);
+            return view('nasabah.panggilPetugas', compact(['nasabah', 'kategori', 'setoran', 'petugas', 'lokasi', 'idstoran']));
+        }
+    }
+
+    public function panggilact(Request $request) {
+        $requestarr = $request->all();
+        $lokasi = Databank::all();
+
+
+        if ($requestarr['baru']==0) {
+
+            $nasabah_id = $request->nasabah_id;
+            $user_id = $request->user_id;
+
+            $kategori_id = $request->kategori;
+            // $petugas = $request->petugas;
+            $jml_tab = $request->jml_tab;
+
+            $kategori = Kategorie::find($kategori_id);
+            $harga_pergram = $kategori->harga_pergram;
+            $point = $kategori->point;
+
+
+            $total_tabungan = $point * $jml_tab;
+            $total_harga = $harga_pergram * $jml_tab;
+            $tgl_hariini = date('Y-m-d');
+
+            $status = (isset($request->status)) ? $request->status : 0;
+            $stor_id = Storan::create([
+                'nasabah_id' => Auth::user()->id,
+                'kategori_id' => $request->kategori,
+                // 'lokasi_id' => $lokasi,
+                // 'petugas_id' => $petugas,
+                'alamatjemput' => $request->lokasi,
+                'invoice' => 'ET'.date('ymdHis'),
+                'tgl_menabung' => $tgl_hariini,
+                'harga_pergram' => $harga_pergram,
+                'point' => $point,
+                'total_harga' => $total_harga,
+                'jml_tab_pergram' => $jml_tab,
+                'total_tabungan' => $total_tabungan,
+                'status' => $status
+            ])->id;
+            if ($stor_id) {
+                $tabungan_id = Tabungan::create([
+                    'nasabah_id' => $nasabah_id,
+                    // 'petugas_id' => $petugas,
+                    // 'lokasi_id' => $lokasi,
+                    'storan_id' => $stor_id,
+                    'tgl_tab' => $tgl_hariini,
+                    'kredit' => $total_tabungan,
+                    'debit' => 0
+                ])->id;
+            }
+        } else {
+            return "lama";
+        }
+        return redirect()->route('pilihtps', ['stor_id' => $stor_id, 'tabungan_id' => $tabungan_id,]);
+        // return view('nasabah.pilihbank', compact(['stor_id', 'lokasi']));
+
+    }
+
+    public function pilihtps(Request $request) {
+
+        $lokasi = Databank::all();
+        $stor_id = $request->stor_id;
+        $tabungan_id = $request->tabungan_id;
+        return view('nasabah.pilihbank', compact(['stor_id', 'tabungan_id', 'lokasi']));
+    }
+
+    public function pilihtpsact($stor_id, $tabungan_id, $tps)
+    {
+        $stor = DB::table('storans')->where('id', $stor_id)->update([
+            'lokasi_id' => $tps,
+        ]);
+
+        if ($stor) {
+            DB::table('tabungans')->where('id', $tabungan_id)->update([
+                'lokasi_id' => $tps,
+            ]);
+        }
+
+        return redirect()->route('invoice', [$stor_id]);
+
+    }
+
+    public function invoice($id){
+
+        $stor = Storan::where('id',$id)->with('DataBank','Kategori')->get()->first();
+        // dd($stor);
+        return view('nasabah.invoice', compact(['stor']));
+
+    }
+
+    public function pesanan($id = null)  {
+
+        if (empty($id)) {
+            $stor = Storan::with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
+
+        $storall = Storan::with('DataBank', 'Kategori')->get();
+        // dd($storall);
+        return view('nasabah.pesanan', compact(['stor', 'storall']));
     }
 
     public function pilihnasabah($id)
@@ -123,7 +250,7 @@ class TransaksiController extends Controller
         // var_dump($status);
 
         $stor_id = Storan::create([
-            'nasabah_id' => $user_id,
+            'nasabah_id' => $nasabah_id,
             'kategori_id' => $kategori_id,
             'lokasi_id' => $lokasi,
             'petugas_id' => $petugas,
@@ -137,7 +264,7 @@ class TransaksiController extends Controller
         ])->id;
         if ($stor_id) {
             Tabungan::create([
-                'nasabah_id' => $user_id,
+                'nasabah_id' => $nasabah_id,
                 'petugas_id' => $petugas,
                 'storan_id' => $stor_id,
                 'lokasi_id' => $lokasi,
@@ -253,10 +380,7 @@ class TransaksiController extends Controller
             ->select('tabungans.*', 'pegawais.nama_pegawai', 'nasabahs.nama_nasabah', 'rewards.name', 'rewards.point', 'rewards.keterangan')
             ->where('tabungans.nasabah_id', '=', $id)
             ->get();
-
-
-
-
+      
         return view('admin.penarikanuang', compact(['nasabah', 'lala', 'saldo', 'petugas', 'tarik', 'lokasi', 'lokasi_bank', 'reward']));
     }
 
