@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('petugas_id')->nullable();
             $table->integer('lokasi_id')->nullable();
             $table->integer('storan_id')->nullable();
+            $table->integer('reward_id')->nullable();
             $table->date('tgl_tab');
             $table->double('kredit');
             $table->double('debit');
