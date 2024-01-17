@@ -26,7 +26,7 @@ Route::group(['middleware' => ['auth']], function(){
 
     // New Route
 
-    Route::get('/admin/dashboard', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboard');
+    // Route::get('/admin/dashboard', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboard');
     // Route::get('/admin/dashboard', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboard');
     Route::get('/admin/dashboarduser', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboarduser');
     Route::post('/admin/panggilact', [App\Http\Controllers\TransaksiController::class, 'panggilact'])->name('panggilact');
@@ -63,11 +63,12 @@ Route::group(['middleware' => ['auth']], function(){
     // });
 
     // Default Route
-    Route::get('home', [App\Http\Controllers\TransaksiController::class, 'lihattabungan'])->name('dashboarduser');
+    Route::get('home', [App\Http\Controllers\HomeController::class, 'index']);
 
     // Route::get('/admin', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-  
+
     Route::get('/admin/dashboardlama', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboardlama');
+    Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/admin/laporan', [App\Http\Controllers\DashboardController::class, 'laporansampah']);
     Route::post('/admin/searchlaporan', [App\Http\Controllers\DashboardController::class, 'searchlaporan']);
@@ -88,6 +89,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::post('/admin/saveprofile', [App\Http\Controllers\UserController::class, 'saveprofile']);
 
     Route::get('/admin/nasabah', [App\Http\Controllers\NasabahController::class, 'index']);
+    Route::get('/admin/addnasabahold', [App\Http\Controllers\NasabahController::class, 'addnasabahold']);
     Route::get('/admin/addnasabah', [App\Http\Controllers\NasabahController::class, 'addnasabah']);
     Route::post('/admin/storenasabah', [App\Http\Controllers\NasabahController::class, 'storenasabah']);
     Route::get('/admin/delnasabah/{id}', [App\Http\Controllers\NasabahController::class, 'destroynasabah']);

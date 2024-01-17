@@ -178,6 +178,12 @@
                 </div>
             </div>
         </div>
+        @if (session('alert-nasabah'))
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{ session('alert-nasabah') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="elementor-element elementor-element-d05904e e-flex e-con-boxed e-con e-parent" data-id="d05904e"
             data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"
             data-core-v316-plus="true">
