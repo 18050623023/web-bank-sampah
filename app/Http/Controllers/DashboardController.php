@@ -13,7 +13,7 @@ class DashboardController extends Controller
     public function index(Request $request)
     {
         if (auth()->user()->type == 'Nasabah') {
-            app('App\Http\Controllers\TransaksiController')->lihattabungan();
+            return app('App\Http\Controllers\TransaksiController')->lihattabungan();
         } else {
 
             $nasabah = DB::table('nasabahs')->count();

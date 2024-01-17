@@ -17,6 +17,10 @@ class NasabahController extends Controller
         return view('admin.nasabah', compact('nasabah'));
     }
 
+    public function addnasabahold() {
+        return view('admin.addnasabahold');
+    }
+
     public function addnasabah()
     {
         $id = Auth::user()->id;
@@ -24,6 +28,7 @@ class NasabahController extends Controller
         ->where('user_id', '=', $id)
         ->first();
         if($nasabah == null){
+            // echo"lala";
             return view('admin.addnasabah');
         }else{
             return view('admin.bukatabungan', compact('nasabah'));
@@ -45,7 +50,7 @@ class NasabahController extends Controller
             'alamat' => $request->alamat
         ]);
 
-        return redirect('admin/addnasabah');
+        return redirect('admin/dashboard');
 
     }
 

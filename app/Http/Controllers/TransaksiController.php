@@ -55,7 +55,6 @@ class TransaksiController extends Controller
         return view('admin.setoran', compact(['nasabah', 'setoran', 'pegawai']));
     }
 
-
     public function penarikan(Request $request)
     {
         $nasabah = Nasabah::all();
@@ -83,7 +82,6 @@ class TransaksiController extends Controller
             return view('admin.pilihnasabah', compact(['nasabah', 'kategori', 'setoran', 'petugas', 'lokasi']));
         }
     }
-
 
     public function  setoranNasabah($idstoran = 0)
     {
@@ -380,7 +378,7 @@ class TransaksiController extends Controller
             ->select('tabungans.*', 'pegawais.nama_pegawai', 'nasabahs.nama_nasabah', 'rewards.name', 'rewards.point', 'rewards.keterangan')
             ->where('tabungans.nasabah_id', '=', $id)
             ->get();
-      
+
         return view('admin.penarikanuang', compact(['nasabah', 'lala', 'saldo', 'petugas', 'tarik', 'lokasi', 'lokasi_bank', 'reward']));
     }
 
@@ -425,7 +423,7 @@ class TransaksiController extends Controller
         return redirect('admin/' . "{$nasabah_id}" . '/penarikanuang');
     }
 
-    public function lihattabungan(Request $request)
+    public function lihattabungan()
     {
         $user_id = Auth::user()->id;
 
@@ -446,18 +444,20 @@ class TransaksiController extends Controller
             ->get();
 
         if ($nasabah == null) {
-            return view('admin.bukarek');
+
+            return app('App\Http\Controllers\NasabahController')->addnasabah();
+            // return view('admin.bukarek');
         } else {
             return view('admin.dashboarduser', compact(['nasabah', 'saldo', 'tarik']));
         }
     }
-
 
     public function destroystr($id)
     {
         DB::table('storans')->where('id', $id)->delete();
         return redirect('admin/setoran');
     }
+
     public function rewarduser($id)
     {
 
