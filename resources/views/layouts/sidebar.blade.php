@@ -34,7 +34,7 @@
                 <a href="{{ url('admin/nasabah') }}">
                     <div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
                     </div>
-                    <div class="menu-title">Data Nasabah</div>
+                    <div class="menu-title">Data Member</div>
                 </a>
             </li>
 
@@ -42,7 +42,7 @@
                 <a href="{{ url('admin/petugas') }}">
                     <div class="parent-icon"><i class='bx bx-message-square-edit'></i>
                     </div>
-                    <div class="menu-title">Data Pegawai</div>
+                    <div class="menu-title">Data Pegawai TPS</div>
                 </a>
             </li>
 
@@ -57,7 +57,7 @@
                 <a href="{{ url('admin/lokasi') }}">
                     <div class="parent-icon"><i class="bx bx-map-alt"></i>
                     </div>
-                    <div class="menu-title">Bank Sampah</div>
+                    <div class="menu-title">Daftar TPS</div>
                 </a>
             </li>
 
@@ -124,7 +124,7 @@
             <a href="{{ url('admin/nasabah') }}">
                 <div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
                 </div>
-                <div class="menu-title">Data Nasabah</div>
+                <div class="menu-title">Data User Mall</div>
             </a>
         </li>
 
@@ -132,7 +132,7 @@
             <a href="{{ url('admin/petugas') }}">
                 <div class="parent-icon"><i class='bx bx-message-square-edit'></i>
                 </div>
-                <div class="menu-title">Data Pegawai</div>
+                <div class="menu-title">Data Pegawai TPS</div>
             </a>
         </li>
 

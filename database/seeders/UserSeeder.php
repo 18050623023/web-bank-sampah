@@ -24,13 +24,13 @@ class UserSeeder extends Seeder
                'password'=> hash::make('admin12345'),
             ],
             [
-                'name' => 'Teller1',
+                'name' => 'Admin TPS 1',
                 'email' => 'teller1@teller.com',
                 'type' => 1,
                 'password' => hash::make('teller12345'),
             ],
             [
-                'name' => 'Teller2',
+                'name' => 'Admin TPS 1',
                 'email' => 'teller2@teller.com',
                 'type' => 1,
                 'password' => hash::make('teller12345'),

@@ -3,10 +3,10 @@
 @section('title','Lokasi')
 
 @section('conten')
-    
+
 		<div class="row">
 					<div class="col-xl-9 mx-auto">
-						<h6 class="mb-0 text-uppercase">Tambah Lokasi Bank</h6>
+						<h6 class="mb-0 text-uppercase">Tambah Data TPS</h6>
 						<hr/>
 						<div class="card border-top border-0 border-4 border-info">
 							<div class="card-body">
@@ -14,16 +14,16 @@
 									<div class="card-title d-flex align-items-center">
 										<div><i class="bx bxs-user me-1 font-22 text-info"></i>
 										</div>
-										<h5 class="mb-0 text-info">Tambah Lokasi Bank</h5>
+										<h5 class="mb-0 text-info">Tambah Data TPS</h5>
 									</div>
 									<hr/>
                         <form method="POST" action="{{ url('admin/storelokasi') }}" enctype="multipart/form-data">
                         @csrf
 									<div class="row mb-3">
-										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Teller</label>
+										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Admin TPS</label>
 										<div class="col-sm-9">
 											<select class="form-control" name="teller">
-													<option value="0">-Pilih Teller-</option>
+													<option value="0">-Pilih Admin-</option>
 												@foreach($teller as $tel)
 													<option value="{{ $tel->id }}">{{ $tel->name }}</option>
 												@endforeach
@@ -31,7 +31,7 @@
 										</div>
 									</div>
 									<div class="row mb-3">
-										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Nama Bank</label>
+										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Nama TPS</label>
 										<div class="col-sm-9">
 											<input type="text" name="nama_bank" class="form-control" id="inputEnterYourName" placeholder="Nama Bank">
 										</div>
@@ -55,7 +55,7 @@
 										</div>
 									</div>
                                     <div class="row mb-3">
-										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Dokument</label>
+										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Dokumen</label>
 										<div class="col-sm-9">
 											<input type="file" class="form-control" id="file" name="file" required autocomplete="file">
 										</div>

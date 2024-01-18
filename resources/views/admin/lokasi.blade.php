@@ -4,17 +4,17 @@
 
 @section('conten')
 
-		<h6 class="mb-0 text-uppercase">Data Bank Sampah</h6>
+		<h6 class="mb-0 text-uppercase">Data TPS</h6>
 		<hr/>
 		<div class="card">
 			<div class="card-body">
-				<a href="{{ url('admin/addlokasi') }}" class="btn btn-primary">+Data Bank Sampah</a></br></br>
+				<a href="{{ url('admin/addlokasi') }}" class="btn btn-primary">Tambah TPS</a></br></br>
 							<div class="table-responsive">
 								<table id="example2" class="table table-striped table-bordered">
 									<thead>
 										<tr>
 											<th>No</th>
-											<th>Nama Bank</th>
+											<th>Nama TPS</th>
 											<th>Tanggal Bergabung</th>
 											<th>Latitude</th>
 											<th>Longitude</th>

@@ -18,7 +18,7 @@ class DataBanksSeeder extends Seeder
         $databanks = [
             [
                 'teller_id' => '2',
-                'nama_bank' => 'Bank Siomo',
+                'nama_bank' => 'TPS Siomo',
                 'alamat'    => 'Simo Sidomulyo',
                 'harga' => '20000',
                 'tgl_bergabung' => 0,
@@ -28,7 +28,7 @@ class DataBanksSeeder extends Seeder
             ],
             [
                 'teller_id' => '3',
-                'nama_bank' => 'Bank Rukun',
+                'nama_bank' => 'TPS Rukun',
                 'alamat'    => 'Simo Rukun',
                 'harga' => '20000',
                 'tgl_bergabung' => 1,
