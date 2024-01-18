@@ -33,7 +33,7 @@
 									<div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Nama TPS</label>
 										<div class="col-sm-9">
-											<input type="text" name="nama_bank" class="form-control" id="inputEnterYourName" placeholder="Nama Bank">
+											<input type="text" name="nama_bank" class="form-control" id="inputEnterYourName" placeholder="Nama TPS">
 										</div>
 									</div>
 									<div class="row mb-3">
@@ -52,6 +52,21 @@
 										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Longitude</label>
 										<div class="col-sm-9">
 											<input type="text" name="long" class="form-control" id="inputEmailAddress2" placeholder="Longitude">
+										</div>
+									</div>
+                                    <div class="row mb-3">
+                                        <label for="inputEmailAddress2" class="col-sm-3 col-form-label">Alamat</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="alamat" class="form-control" id="inputEmailAddress2" placeholder="Alamat Lengkap">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3 ">
+										<label for="inputEmailAddress2" class="col-sm-3 col-form-label">Harga Jasa</label>
+										<div class=" input-group " style="width: 75%; flex: 0 0 auto;">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">Rp</span>
+                                            </div>
+											<input type="text" name="harga" class="form-control" id="inputEmailAddress2" placeholder="Harga Jasa TPS">
 										</div>
 									</div>
                                     <div class="row mb-3">
