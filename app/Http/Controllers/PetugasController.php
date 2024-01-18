@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pegawai;
+use App\Models\Databank;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
@@ -17,13 +18,15 @@ class PetugasController extends Controller
 
     public function addpetugas()
     {
-        return view('admin.addpetugas');
+        $bank = Databank::all();
+        return view('admin.addpetugas', compact('bank'));
     }
 
     public function storepetugas(Request $request)
     {
 
         Pegawai::create([
+            'lokasi_id' => $request->bank,
             'nama_pegawai' => $request->nama_pegawai,
             'tempat_lahir' => $request->tempat_lahir,
             'tgl_lahir' => $request->tgl_lahir,
@@ -32,7 +35,7 @@ class PetugasController extends Controller
         ]);
 
         return redirect('admin/petugas');
-       
+
     }
 
     public function destroypetugas($id)
@@ -43,8 +46,9 @@ class PetugasController extends Controller
 
     public function editpetugas($id)
     {
+        $bank = Databank::all();
         $petugas = Pegawai::find($id);
-        return view('admin.editpetugas', compact(['petugas']));
+        return view('admin.editpetugas', compact(['petugas','bank']));
     }
 
     public function updatepetugas($id, Request $request)
