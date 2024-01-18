@@ -14,7 +14,14 @@
                     <h5>Welcome,</h5>
                     <div class="user-info ps-3">
                         <p class="user-name mb-0">{{ Auth::user()->name }}</p>
-                        <p class="designattion mb-0">{{ Auth::user()->type }}</p>
+                        <p class="designattion mb-0">
+                            @if (Auth::user()->type == "Teller")
+                                Admin TPS
+                            @else
+                                {{ Auth::user()->type }}
+                            @endif
+
+                        </p>
                     </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">

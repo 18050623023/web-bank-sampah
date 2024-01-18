@@ -19,17 +19,22 @@
 									<hr/>
                         <form method="POST" action="{{ url('admin/storelokasi') }}" enctype="multipart/form-data">
                         @csrf
-									<div class="row mb-3">
-										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Admin TPS</label>
-										<div class="col-sm-9">
-											<select class="form-control" name="teller">
-													<option value="0">-Pilih Admin-</option>
-												@foreach($teller as $tel)
-													<option value="{{ $tel->id }}">{{ $tel->name }}</option>
-												@endforeach
-											</select>
-										</div>
-									</div>
+                                    @if (Auth::user()->type == 'Admin')
+                                        <div class="row mb-3">
+                                            <label for="inputEnterYourName" class="col-sm-3 col-form-label">Admin TPS</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" name="teller">
+                                                        <option value="0">-Pilih Admin-</option>
+                                                    @foreach($teller as $tel)
+                                                        <option value="{{ $tel->id }}">{{ $tel->name }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    @else
+                                        <input type="hidden" name="teller" value="{{Auth::user()->id}}">
+                                    @endif
 									<div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Nama TPS</label>
 										<div class="col-sm-9">

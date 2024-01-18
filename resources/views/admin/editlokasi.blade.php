@@ -26,21 +26,21 @@
                                         value="{{ $lokasi->id }}">
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <label for="inputEnterYourName" class="col-sm-3 col-form-label">Teller</label>
-                                <div class="col-sm-9">
-                                    <select class="form-control" name="teller">
-                                        <option value="0">-Pilih Teller-</option>
-                                        @foreach ($users as $usr)
-                                            @if ($lokasi->teller_id == $usr->id)
-                                                <option value="{{ $usr->id }}" selected>{{ $usr->name }}</option>
-                                            @else
-                                                <option value="{{ $usr->id }}">{{ $usr->name }}</option>
-                                            @endif
-                                        @endforeach
-                                    </select>
+                            @if (Auth::user()->type == 'Admin')
+                                <div class="row mb-3">
+                                    <label for="inputEnterYourName" class="col-sm-3 col-form-label">Admin TPS</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" name="teller">
+                                            <option value="0">-Pilih Admin-</option>
+                                            @foreach ($user as $usr)
+                                                <option value="{{ $tel->id }}">{{ $usr->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
+                            @else
+                                <input type="hidden" name="teller" value="{{ Auth::user()->id }}">
+                            @endif
                             <div class="row mb-3">
                                 <label for="inputEnterYourName" class="col-sm-3 col-form-label">Nama TPS</label>
                                 <div class="col-sm-9">
@@ -89,7 +89,8 @@
                             <div class="row mb-3">
                                 <label for="inputEmailAddress2" class="col-sm-3 col-form-label">Dokumen</label>
                                 <div class="col-sm-9">
-                                    <iframe src="{{ url('/document/' . $lokasi->path) }}" frameborder="0"width="100%"></iframe>
+                                    <iframe src="{{ url('/document/' . $lokasi->path) }}"
+                                        frameborder="0"width="100%"></iframe>
                                 </div>
                             </div>
                             <div class="row mb-3">

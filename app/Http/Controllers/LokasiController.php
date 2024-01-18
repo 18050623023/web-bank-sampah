@@ -6,13 +6,28 @@ use Illuminate\Http\Request;
 use App\Models\Databank;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class LokasiController extends Controller
 {
     public function index(Request $request)
     {
-        $lokasi = Databank::all();
-        return view('admin.lokasi', compact('lokasi'));
+        if (Auth::user()->type == 'Teller') {
+            $lokasi = Databank::where('teller_id','=',Auth::user()->id);
+            // var_dump($lokasi);
+            if ($lokasi->count() > 0) {
+                $lokasi = $lokasi->get();
+                // dd();
+                return $this->editlokasi($lokasi[0]->id);
+                // return view('admin.lokasi', compact('lokasi'));
+            } else {
+                // return $this->addlokasi();
+            }
+        } else {
+            $lokasi = Databank::all();
+            return view('admin.lokasi', compact('lokasi'));
+        }
+
     }
 
     public function addlokasi()
