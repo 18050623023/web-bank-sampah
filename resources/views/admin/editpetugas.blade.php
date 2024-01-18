@@ -20,6 +20,9 @@
                         <form method="POST" action="/admin/updatepetugas/{{ $petugas->id }}">
                         @method('put')
                         @csrf
+
+
+                            @if (Auth::user()->type == 'Admin')
                                     <div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">TPS</label>
 										<div class="col-sm-9">
@@ -35,6 +38,9 @@
 											</select>
 										</div>
 									</div>
+                            @else
+                                <input type="hidden" name="bank" value="{{ $bank[0]->id }}">
+                            @endif
 									<div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Nama Pegawai</label>
 										<div class="col-sm-9">

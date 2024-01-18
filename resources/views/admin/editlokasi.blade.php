@@ -33,7 +33,11 @@
                                         <select class="form-control" name="teller">
                                             <option value="0">-Pilih Admin-</option>
                                             @foreach ($user as $usr)
-                                                <option value="{{ $tel->id }}">{{ $usr->name }}</option>
+                                                @if ($tel->id == $petugas->lokasi_id)
+                                                    <option value="{{ $tel->id }}" selected>{{ $usr->name }}</option>
+                                                @else
+                                                    <option value="{{ $tel->id }}">{{ $usr->name }}</option>
+                                                @endif
                                             @endforeach
                                         </select>
                                     </div>

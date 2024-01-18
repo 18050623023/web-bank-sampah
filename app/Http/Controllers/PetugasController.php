@@ -5,20 +5,32 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pegawai;
 use App\Models\Databank;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Termwind\Components\Dd;
 
 class PetugasController extends Controller
 {
     public function index()
     {
-        $petugas = Pegawai::all();
+        if (Auth::user()->type == 'Teller') {
+            $petugas = Pegawai::join('databanks','pegawais.lokasi_id','=','databanks.id')->where('databanks.teller_id','=',Auth::user()->id)->get();
+        } else {
+            $petugas = Pegawai::all();
+        }
+        // dd($petugas);
         return view('admin.petugas', compact('petugas'));
     }
 
     public function addpetugas()
     {
-        $bank = Databank::all();
+        if (Auth::user()->type == 'Teller') {
+            $bank = Databank::where('teller_id','=', Auth::user()->id)->get();
+        } else {
+            $bank = Databank::all();
+        }
+        // dd($bank);
         return view('admin.addpetugas', compact('bank'));
     }
 
@@ -46,7 +58,11 @@ class PetugasController extends Controller
 
     public function editpetugas($id)
     {
-        $bank = Databank::all();
+        if (Auth::user()->type == 'Teller') {
+            $bank = Databank::where('teller_id','=', Auth::user()->id)->get();
+        } else {
+            $bank = Databank::all();
+        }
         $petugas = Pegawai::find($id);
         return view('admin.editpetugas', compact(['petugas','bank']));
     }

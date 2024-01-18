@@ -19,17 +19,22 @@
 									<hr/>
                                     <form method="POST" action="{{ url('admin/storepetugas') }}">
                                     @csrf
-                                    <div class="row mb-3">
-										<label for="inputEnterYourName" class="col-sm-3 col-form-label">TPS</label>
-										<div class="col-sm-9">
-											<select class="form-control" name="bank">
-													<option value="0">-Pilih TPS-</option>
-												@foreach($bank as $tel)
-													<option value="{{ $tel->id }}">{{ $tel->nama_bank }}</option>
-												@endforeach
-											</select>
-										</div>
-									</div>
+
+                                    @if (Auth::user()->type == 'Admin')
+                                        <div class="row mb-3">
+                                            <label for="inputEnterYourName" class="col-sm-3 col-form-label">TPS</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" name="bank">
+                                                        <option value="0">-Pilih TPS-</option>
+                                                    @foreach($bank as $tel)
+                                                        <option value="{{ $tel->id }}">{{ $tel->nama_bank }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    @else
+                                        <input type="hidden" name="bank" value="{{$bank[0]->id}}">
+                                    @endif
 									<div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Nama Pegawai</label>
 										<div class="col-sm-9">
