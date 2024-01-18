@@ -14,20 +14,16 @@ class LokasiController extends Controller
     {
         if (Auth::user()->type == 'Teller') {
             $lokasi = Databank::where('teller_id','=',Auth::user()->id);
-            // var_dump($lokasi);
             if ($lokasi->count() > 0) {
                 $lokasi = $lokasi->get();
-                // dd();
                 return $this->editlokasi($lokasi[0]->id);
-                // return view('admin.lokasi', compact('lokasi'));
             } else {
-                // return $this->addlokasi();
+                return $this->addlokasi();
             }
         } else {
             $lokasi = Databank::all();
             return view('admin.lokasi', compact('lokasi'));
         }
-
     }
 
     public function addlokasi()
