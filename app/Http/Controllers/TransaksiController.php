@@ -92,7 +92,7 @@ class TransaksiController extends Controller
             return redirect('/admin/addnasabah')->with('alert-nasabah', 'Buat tabungan terlebih dahulu');
         } else {
             $user_id = $nasabah->user_id;
-            $kategori = Kategorie::all();
+            $kategorie = Kategorie::all();
             $petugas = Pegawai::all();
             $lokasi = Databank::all();
             $setoran = DB::table('storans')
@@ -100,8 +100,8 @@ class TransaksiController extends Controller
             ->select('storans.*', 'kategories.kategori_sampah')
             ->where('storans.nasabah_id', '=', $user_id)
                 ->get();
-            // dd($setoran);
-            return view('nasabah.panggilPetugas', compact(['nasabah', 'kategori', 'setoran', 'petugas', 'lokasi', 'idstoran']));
+            // dd($kategorie);
+            return view('nasabah.panggilPetugas', compact(['nasabah', 'kategorie', 'setoran', 'petugas', 'lokasi', 'idstoran']));
         }
     }
 

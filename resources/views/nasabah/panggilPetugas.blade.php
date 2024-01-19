@@ -442,10 +442,7 @@
                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}">
                     <div class="e-con-inner">
                         <div class="elementor-element elementor-element-db0ef1e e-flex e-con-boxed e-con e-child"
-                            data-id="db0ef1e" data-element_type="container"
-                            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
-
-
+                            style="width:100%">
                             <form action="{{ route('panggilact') }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="baru" value="{{ !empty($idstoran) ? $idstoran : '0' }}">
@@ -487,45 +484,31 @@
                                                 data-id="be2ec98" data-element_type="widget"
                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                    <h2 class="elementor-heading-title elementor-size-default">Jenis
-                                                        Sampah
+                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                        Jenis Sampah
                                                     </h2>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-22743aa elementor-widget elementor-widget-button"
-                                                data-id="22743aa" data-element_type="widget"
-                                                data-widget_type="button.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-button-wrapper">
-                                                        <input type="radio" name="kategori" value="1"
-                                                            id="option-kardus" checked>
-                                                        <label for="option-kardus"
-                                                            class="elementor-button elementor-button-link elementor-size-sm option option-kardus"
-                                                            href="#">
-                                                            <span class="elementor-button-content-wrapper">
-                                                                <span class="elementor-button-text">Kardus</span>
-                                                            </span>
-                                                        </label>
+
+                                            @foreach ($kategorie as $kategori )
+                                                <div class="elementor-element elementor-element-22743aa elementor-widget elementor-widget-button"
+                                                    data-id="22743aa" data-element_type="widget"
+                                                    data-widget_type="button.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="elementor-button-wrapper">
+                                                            <input type="radio" name="kategori" value="{{$kategori->id}}"
+                                                                id="option-kardus{{$kategori->id}}" class="option-kardus" checked>
+                                                            <label for="option-kardus{{$kategori->id}}"
+                                                                class="elementor-button elementor-button-link elementor-size-sm option option-kardus"
+                                                                href="#">
+                                                                <span class="elementor-button-content-wrapper">
+                                                                    <span class="elementor-button-text">{{$kategori->kategori_sampah}}</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="elementor-element elementor-element-3cef1d2 elementor-widget elementor-widget-button"
-                                                data-id="3cef1d2" data-element_type="widget"
-                                                data-widget_type="button.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="elementor-button-wrapper">
-                                                        <input type="radio" name="kategori" value="2"
-                                                            id="option-plastik">
-                                                        <label for="option-plastik"
-                                                            class="elementor-button elementor-button-link elementor-size-sm option option-plastik"
-                                                            href="#">
-                                                            <span class="elementor-button-content-wrapper">
-                                                                <span class="elementor-button-text">Plastik</span>
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                     <div class="elementor-element elementor-element-a4a066a e-flex e-con-boxed e-con e-child"

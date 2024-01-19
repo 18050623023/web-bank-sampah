@@ -17505,7 +17505,7 @@ template {
 
 label {
     display: inline-block;
-    line-height: 1;
+    /* line-height: 1; */
     vertical-align: middle
 }
 
@@ -20842,7 +20842,7 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
 
 .e-con>.e-con-inner {
     gap: var(--gap);
-    width: 100%;
+    width: 85%;
     max-width: var(--content-width);
     margin: 0 auto;
     padding-inline-start: 0;
@@ -25634,7 +25634,7 @@ button.swiper-pagination-bullet {
     --display: flex;
     --min-height: 275px;
     --align-items: center;
-    padding: 70px 70px;
+    padding: 70px 0;
     --container-widget-width: calc((1 - var(--container-widget-flex-grow))*100%);
     --background-transition: .3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
