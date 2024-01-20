@@ -712,7 +712,7 @@
                                                                                         @elseif ($storan->status == 1)
                                                                                             Petugas Sedang Menuju
                                                                                             Lokasi
-                                                                                        @elseif ($storan->status == 3)
+                                                                                        @elseif ($storan->status == 2)
                                                                                             selesai
                                                                                         @else
                                                                                             <span style="color: red">Di Tolak</span>
@@ -824,7 +824,7 @@
                                                                     @elseif ($stor->status == 1)
                                                                         Petugas Sedang Menuju
                                                                         Lokasi
-                                                                    @elseif ($stor->status == 3)
+                                                                    @elseif ($stor->status == 2)
                                                                         selesai
                                                                     @else
                                                                         <span style="color: red">Di Tolak</span>

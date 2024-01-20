@@ -36,11 +36,11 @@
                                 <td>{{ $stor->jml_tab_pergram }}</td>
                                 <td>
                                     @if ($stor->status == 1)
-                                        <span class="badge bg-success">Accept</span>
+                                        <span class="badge bg-primary">Mengambil</span>
                                     @elseif ($stor->status == 2)
-                                        <span class="badge bg-danger">Cencel</span>
+                                        <span class="badge bg-success">Selesai</span>
                                     @else
-                                        <span class="badge bg-warning">Pending</span>
+                                        <span class="badge bg-danger">Ditolak</span>
                                     @endif
                                 </td>
                                 <td>
