@@ -3,7 +3,7 @@
 @section('title','edit nasabah')
 
 @section('conten')
-    
+
 		<div class="row">
 					<div class="col-xl-9 mx-auto">
 						<h6 class="mb-0 text-uppercase">Edit Nasabah</h6>
@@ -62,8 +62,8 @@
 											<input type="text" name="alamat" class="form-control" id="inputChoosePassword2" value="{{ $nasabah->alamat }}">
 										</div>
 									</div>
-									
-	
+
+
 									<div class="row">
 										<label class="col-sm-3 col-form-label"></label>
 										<div class="col-sm-9">

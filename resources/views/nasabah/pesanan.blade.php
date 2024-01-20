@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /> <!-- This site is optimized with the Yoast SEO plugin v21.7 - https://yoast.com/wordpress/plugins/seo/ -->
+    <me    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /> <!-- This site is optimized with the Yoast SEO plugin v21.7 - https://yoast.com/wordpress/plugins/seo/ -->
     <title>Panggilan 4 - My Blog</title>
     <link rel="canonical" href="https://hafizadinata.com/?page_id=95" />
     <meta property="og:locale" content="en_US" />
@@ -592,7 +592,19 @@
                                 }
                             </style>
                             <div id="uc_dropdown_button_elementor15328" class="ca_btn_wrapper">
-                                <div class="ca_btn_container"> <button class="ca_btn" ontouchstart=""><i class='fas fa-user-circle'></i><span class="ue-btn-text">Nasabah</span>
+                                <div class="ca_btn_container">
+                                    <button class="ca_btn" ontouchstart="">
+                                        <i class='fas fa-user-circle'></i>
+                                        <span class="ue-btn-text">
+                                            @if (Auth::user()->type == 'Teller')
+                                                Admin TPS
+                                            @elseif (Auth::user()->type == 'Nasabah')
+                                                Member
+                                            @else
+                                                Admin
+                                            @endif
+
+                                        </span>
                                         <ul class="ca_dropdown uc-items-wrapper">
                                             <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="#"><i class='fas fa-user-edit'></i>Profile</a></li>
                                             <li class="ca_dropdown_item elementor-repeater-item-f4af334"><a href="#"><i class='fas fa-sign-out-alt'></i>Logout</a></li>
@@ -695,11 +707,15 @@
                                                                                 <div class="elementor-widget-container">
                                                                                     <h2 class="elementor-heading-title elementor-size-default">
                                                                                         @if ($storan->status == 0)
-                                                                                            Menunggu Konfirmasi Petugas TPS
+                                                                                            Menunggu Konfirmasi
+                                                                                            Petugas TPS
                                                                                         @elseif ($storan->status == 1)
-                                                                                            Petugas Sedang Menuju Lokasi
+                                                                                            Petugas Sedang Menuju
+                                                                                            Lokasi
+                                                                                        @elseif ($storan->status == 3)
+                                                                                            selesai
                                                                                         @else
-                                                                                            Selesai
+                                                                                            <span style="color: red">Di Tolak</span>
                                                                                         @endif
                                                                                     </h2>
                                                                                 </div>
@@ -721,7 +737,7 @@
                                                                             <div class="elementor-element elementor-element-2cfe406 elementor-widget elementor-widget-heading" data-id="2cfe406" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
                                                                                 <div class="elementor-widget-container">
                                                                                     <h2 class="elementor-heading-title elementor-size-default">
-                                                                                        {{$stor->alamatjemput}}
+                                                                                        {{$storan->alamatjemput}}
                                                                                     </h2>
                                                                                 </div>
                                                                             </div>
@@ -736,7 +752,7 @@
                                                                             </div>
                                                                             <div class="elementor-element elementor-element-d573895 elementor-widget elementor-widget-heading" data-id="d573895" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
                                                                                 <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$stor->DataBank->nama_bank}}</h2>
+                                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$storan->DataBank->nama_bank}}</h2>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -750,7 +766,7 @@
                                                                             </div>
                                                                             <div class="elementor-element elementor-element-c9e9517 elementor-widget elementor-widget-heading" data-id="c9e9517" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
                                                                                 <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$stor->Kategori->kategori_sampah}}</h2>
+                                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$storan->Kategori->kategori_sampah}}</h2>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="elementor-element elementor-element-694f41d elementor-widget elementor-widget-heading" data-id="694f41d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
@@ -760,7 +776,7 @@
                                                                             </div>
                                                                             <div class="elementor-element elementor-element-65f3e58 elementor-widget elementor-widget-heading" data-id="65f3e58" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
                                                                                 <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$stor->jml_tab_pergram}}Kg</h2>
+                                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$storan->jml_tab_pergram}}Kg</h2>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -769,7 +785,7 @@
                                                                         <div class="e-con-inner">
                                                                             <div class="elementor-element elementor-element-bdbbe67 elementor-widget elementor-widget-heading" data-id="bdbbe67" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
                                                                                 <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">Rp. {{$stor->total_harga}}</h2>
+                                                                                    <h2 class="elementor-heading-title elementor-size-default">Rp. {{$storan->total_harga}}</h2>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -803,11 +819,15 @@
                                                             <div class="elementor-widget-container">
                                                                 <h2 class="elementor-heading-title elementor-size-default">
                                                                     @if ($stor->status == 0)
-                                                                        Menunggu Konfirmasi Petugas TPS
+                                                                        Menunggu Konfirmasi
+                                                                        Petugas TPS
                                                                     @elseif ($stor->status == 1)
-                                                                        Petugas Sedang Menuju Lokasi
+                                                                        Petugas Sedang Menuju
+                                                                        Lokasi
+                                                                    @elseif ($stor->status == 3)
+                                                                        selesai
                                                                     @else
-                                                                        Selesai
+                                                                        <span style="color: red">Di Tolak</span>
                                                                     @endif
                                                                 </h2>
                                                             </div>
@@ -1080,7 +1100,3 @@
     <script src="{{ asset("template") }}/nasabah/pesanan/js/elementskit-modules-pro-form-signature-field-assets-js-elementskit-signature-field-scripts.js" id="elementskit-signature-field-scripts-js"></script>
     <script defer src="{{ asset("template") }}/nasabah/pesanan/js/elementskit-modules-parallax-assets-js-parallax-admin-scripts.js" id="elementskit-parallax-admin-defer-js"></script>
     <script src="{{ asset("template") }}/nasabah/pesanan/js/elementskit-modules-conditional-fields-for-elementor-pro-form-assets-js-elementskit-conditional-fields.js" id="elementskit-conditional-fields-js"></script> <!--   Unlimited Elements Scripts  -->
-
-</body>
-
-</html> <!-- Page cached by LiteSpeed Cache 6.0.0.1 on 2024-01-13 16:28:05 -->

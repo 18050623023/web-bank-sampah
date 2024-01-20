@@ -50,7 +50,7 @@ class TransaksiController extends Controller
         }
 
         // return TransaksiResource::collection($hasil)->toArray(request());
-        // dd($hasil);
+        // dd($setoran);
 
         return view('admin.setoran', compact(['nasabah', 'setoran', 'pegawai']));
     }
@@ -146,7 +146,7 @@ class TransaksiController extends Controller
             ])->id;
             if ($stor_id) {
                 $tabungan_id = Tabungan::create([
-                    'nasabah_id' => $nasabah_id,
+                    'nasabah_id' => Auth::user()->id,
                     // 'petugas_id' => $petugas,
                     // 'lokasi_id' => $lokasi,
                     'storan_id' => $stor_id,
@@ -197,14 +197,15 @@ class TransaksiController extends Controller
 
     public function pesanan($id = null)  {
 
+        $user_id = Auth::user()->id;
         if (empty($id)) {
-            $stor = Storan::with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
         } else {
-            $stor = Storan::where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
         }
 
-        $storall = Storan::with('DataBank', 'Kategori')->get();
-        // dd($storall);
+        $storall = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->get();
+        // dd($user_id);
         return view('nasabah.pesanan', compact(['stor', 'storall']));
     }
 
@@ -248,7 +249,7 @@ class TransaksiController extends Controller
         // var_dump($status);
 
         $stor_id = Storan::create([
-            'nasabah_id' => $nasabah_id,
+            'nasabah_id' => $user_id,
             'kategori_id' => $kategori_id,
             'lokasi_id' => $lokasi,
             'petugas_id' => $petugas,
@@ -262,7 +263,7 @@ class TransaksiController extends Controller
         ])->id;
         if ($stor_id) {
             Tabungan::create([
-                'nasabah_id' => $nasabah_id,
+                'nasabah_id' => $user_id,
                 'petugas_id' => $petugas,
                 'storan_id' => $stor_id,
                 'lokasi_id' => $lokasi,
