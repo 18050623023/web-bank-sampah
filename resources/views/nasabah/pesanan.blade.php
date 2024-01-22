@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <me    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /> <!-- This site is optimized with the Yoast SEO plugin v21.7 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /> <!-- This site is optimized with the Yoast SEO plugin v21.7 - https://yoast.com/wordpress/plugins/seo/ -->
     <title>Panggilan 4 - My Blog</title>
     <link rel="canonical" href="https://hafizadinata.com/?page_id=95" />
     <meta property="og:locale" content="en_US" />
@@ -420,6 +420,7 @@
             line-height: 1.6;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel='stylesheet' id='hello-elementor-css' href='{{ asset("template") }}/nasabah/pesanan/css/hello-elementor-style.min.css' media='all' />
     <link rel='stylesheet' id='hello-elementor-theme-style-css' href='{{ asset("template") }}/nasabah/pesanan/css/hello-elementor-theme.min.css' media='all' />
     <link rel='stylesheet' id='elementor-frontend-css' href='{{ asset("template") }}/nasabah/pesanan/css/elementor-assets-css-frontend-lite.min.css' media='all' />
@@ -480,7 +481,7 @@
                                 display: inline-block
                             }
                         </style>
-                        <img width="241" height="40" src="{{ asset("template") }}/nasabah/pesanan/images/2023-12-Frame-63.png" class="attachment-full size-full wp-image-39" alt="" />
+                      <a href="{{ url('admin/dashboarduser') }}">   <img width="241" height="40" src="{{ asset("template") }}/nasabah/pesanan/images/2023-12-Frame-63.png" class="attachment-full size-full wp-image-39" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -490,8 +491,8 @@
                         <link rel="stylesheet" href="{{ asset("template") }}/nasabah/pesanan/css/elementor-pro-assets-css-widget-nav-menu.min.css">
                         <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
                             <ul id="menu-1-64d3dac" class="elementor-nav-menu">
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="#" class="elementor-item elementor-item-anchor">Layanan</a></li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="#" class="elementor-item elementor-item-anchor">Pesanan</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="{{route('setoranNasabah')}}" class="elementor-item elementor-item-anchor">Layanan</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="{{route('pesanan', [$stor->id])}}" class="elementor-item elementor-item-anchor">Pesanan</a></li>
                             </ul>
                         </nav>
                         <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false"> <svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar" viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
@@ -599,15 +600,20 @@
                                             @if (Auth::user()->type == 'Teller')
                                                 Admin TPS
                                             @elseif (Auth::user()->type == 'Nasabah')
-                                                Member
+                                            {{ Auth::user()->type }}
                                             @else
-                                                Admin
+                                            {{ Auth::user()->type }}
                                             @endif
 
                                         </span>
                                         <ul class="ca_dropdown uc-items-wrapper">
-                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="#"><i class='fas fa-user-edit'></i>Profile</a></li>
-                                            <li class="ca_dropdown_item elementor-repeater-item-f4af334"><a href="#"><i class='fas fa-sign-out-alt'></i>Logout</a></li>
+                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/profileuser') }}"><i class='fas fa-user-edit'></i>Profile</a></li>
+                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/addnasabah') }}"><i  class='fas fa-solid fa-building-columns'></i>Tabungan</a></li>
+                                            <li class="ca_dropdown_item elementor-repeater-item-f4af334"><a href="{{ route('logout') }}"onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();"><i class='fas fa-sign-out-alt'></i>Logout</a></li>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                    @csrf
+                                                </form>
                                         </ul>
                                     </button> </div>
                             </div> <!-- end Dropdown Button -->
@@ -785,7 +791,7 @@
                                                                         <div class="e-con-inner">
                                                                             <div class="elementor-element elementor-element-bdbbe67 elementor-widget elementor-widget-heading" data-id="bdbbe67" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
                                                                                 <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">Rp. {{$storan->total_harga}}</h2>
+                                                                                    <h2 class="elementor-heading-title elementor-size-default">Rp. {{$storan->DataBank->harga + $storan->total_harga}}</h2>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -903,7 +909,7 @@
                                                     <div class="e-con-inner">
                                                         <div class="elementor-element elementor-element-bdbbe67 elementor-widget elementor-widget-heading" data-id="bdbbe67" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
                                                             <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">Rp. {{$stor->total_harga}}</h2>
+                                                                <h2 class="elementor-heading-title elementor-size-default">Rp. {{$stor->DataBank->harga + $stor->total_harga}}</h2>
                                                             </div>
                                                         </div>
                                                     </div>

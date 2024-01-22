@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use App\Models\Storan;
 use Illuminate\Support\Str;
 
 class UserController extends Controller
@@ -17,8 +18,13 @@ class UserController extends Controller
     }
     public function profileuser(Request $request)
     {
-        $user = User::find(Auth::user()->id);
-        return view('admin.profileuser');
+        $user_id = Auth::user()->id;
+        if (empty($id)) {
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
+        return view('admin.profileuser', compact(['stor']));
     }
     public function profile(Request $request)
     {
@@ -76,8 +82,9 @@ class UserController extends Controller
         return view('admin.changeuserpassold', compact(['user']));
     }
 
-    public function updatepass(Request $request)
+    public function updatepass( Request $request)
     {
+        // $user = User::find($id);
         $request->validate([
             'old_password' => 'required',
             'new_password' => 'required|confirmed',
@@ -91,7 +98,7 @@ class UserController extends Controller
             'password' => Hash::make($request->new_password)
         ]);
 
-        return redirect('admin/user');
+        return redirect('admin/changeuserpass');
 
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\TransaksiResource;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Nasabah;
 use App\Models\Kategorie;
@@ -86,6 +87,11 @@ class TransaksiController extends Controller
     public function  setoranNasabah($idstoran = 0)
     {
         $user_id = Auth::user()->id;
+        if (empty($id)) {
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
         $nasabah = Nasabah::Where('user_id', $user_id)->first();
         // var_dump($nasabah);
         if (empty($nasabah)) {
@@ -101,7 +107,7 @@ class TransaksiController extends Controller
             ->where('storans.nasabah_id', '=', $user_id)
                 ->get();
             // dd($kategorie);
-            return view('nasabah.panggilPetugas', compact(['nasabah', 'kategorie', 'setoran', 'petugas', 'lokasi', 'idstoran']));
+            return view('nasabah.panggilPetugas', compact(['nasabah', 'kategorie', 'setoran', 'petugas', 'lokasi', 'idstoran','stor']));
         }
     }
 
@@ -164,11 +170,16 @@ class TransaksiController extends Controller
     }
 
     public function pilihtps(Request $request) {
-
+        $user_id = Auth::user()->id;
+        if (empty($id)) {
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
         $lokasi = Databank::all();
         $stor_id = $request->stor_id;
         $tabungan_id = $request->tabungan_id;
-        return view('nasabah.pilihbank', compact(['stor_id', 'tabungan_id', 'lokasi']));
+        return view('nasabah.pilihbank', compact(['stor_id', 'tabungan_id', 'lokasi','stor']));
     }
 
     public function pilihtpsact($stor_id, $tabungan_id, $tps)
@@ -427,6 +438,11 @@ class TransaksiController extends Controller
     public function lihattabungan()
     {
         $user_id = Auth::user()->id;
+        if (empty($id)) {
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
 
         $nasabah = DB::table('nasabahs')
             ->where('user_id', '=', $user_id)
@@ -449,7 +465,7 @@ class TransaksiController extends Controller
             return app('App\Http\Controllers\NasabahController')->addnasabah();
             // return view('admin.bukarek');
         } else {
-            return view('admin.dashboarduser', compact(['nasabah', 'saldo', 'tarik']));
+            return view('admin.dashboarduser', compact(['nasabah', 'saldo', 'tarik','stor']));
         }
     }
 
@@ -497,8 +513,14 @@ class TransaksiController extends Controller
 
     public function viewgift($id)
     {
+        $user_id = Auth::user()->id;
+        if (empty($id)) {
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
         $reward = Reward::find($id);
-        return view('admin.succesgift', compact(['reward']));
+        return view('admin.succesgift', compact(['reward', 'stor']));
         // $user_id = Auth::user()->id;
         // $user_id = Auth::user()->id;
         // $lokasi_bank = DB::table('databanks')->where('teller_id', $user_id)->first();
@@ -572,4 +594,17 @@ class TransaksiController extends Controller
 
         return redirect('admin/succesgift/' .$id_voucher);
     }
+
+    // public  function unduhreward(Request $request)
+    // {
+    //     $extension = $request->file('file')->extension();
+
+    //     $waktu = time();
+
+    //     $filename = $waktu.'.'.$extension;
+
+    //     $filename = base_path('uploads/image/')."$filename";
+    //     return Response::download($filename);
+
+    // }
 }

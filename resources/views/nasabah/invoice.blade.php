@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link data-optimized="2" rel="stylesheet" href="{{ asset('template') }}/nasabah/invoice/css/css-14a24fd363e0fe328425c6ba926884fa.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
@@ -56,7 +57,7 @@
                 <div class="elementor-element elementor-element-8a92391 elementor-widget elementor-widget-image"
                     data-id="8a92391" data-element_type="widget" data-widget_type="image.default">
                     <div class="elementor-widget-container">
-                        <img data-lazyloaded="1" src="https://hafizadinata.com/wp-content/uploads/2023/12/Frame-63.png"  class="attachment-full size-full wp-image-39" alt="" />
+                        <a href="{{ url('admin/dashboarduser') }}">  <img data-lazyloaded="1" src="https://hafizadinata.com/wp-content/uploads/2023/12/Frame-63.png"  class="attachment-full size-full wp-image-39" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -71,9 +72,9 @@
                             class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
                             <ul id="menu-1-64d3dac" class="elementor-nav-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
-                                        href="#" class="elementor-item elementor-item-anchor">Layanan</a></li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
-                                        href="#" class="elementor-item elementor-item-anchor">Pesanan</a></li>
+                                    href="{{route('setoranNasabah')}}" class="elementor-item elementor-item-anchor">Layanan</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
+                                    href="{{route('pesanan', [$stor->id])}}" class="elementor-item elementor-item-anchor">Pesanan</a></li>
                             </ul>
                         </nav>
                         <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
@@ -113,12 +114,18 @@
                         <div class="elementor-widget-container">
                             <div id="uc_dropdown_button_elementor11335" class="ca_btn_wrapper">
                                 <div class="ca_btn_container"> <button class="ca_btn" ontouchstart=""><i
-                                            class='fas fa-user-circle'></i><span class="ue-btn-text">Nasabah</span>
+                                            class='fas fa-user-circle'></i><span class="ue-btn-text">{{ Auth::user()->type }}</span>
                                         <ul class="ca_dropdown uc-items-wrapper">
-                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a
-                                                    href="#"><i class='fas fa-user-edit'></i>Profile</a></li>
-                                            <li class="ca_dropdown_item elementor-repeater-item-f4af334"><a
-                                                    href="#"><i class='fas fa-sign-out-alt'></i>Logout</a></li>
+                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/profileuser') }}"><i
+                                                class='fas fa-user-edit'></i>Profile</a></li>
+                                    <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/addnasabah') }}"><i
+                                                class='fas fa-solid fa-building-columns'></i>Tabungan</a></li>
+                                    <li class="ca_dropdown_item elementor-repeater-item-f4af334"><a href="{{ route('logout') }}"onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();"><i
+                                                class='fas fa-sign-out-alt'></i>Logout</a></li>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                    @csrf
+                                                </form>
                                         </ul>
                                     </button></div>
                             </div>
@@ -498,7 +505,7 @@
             <div class="e-con-inner"></div>
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html> <!-- Page optimized by LiteSpeed Cache @2024-01-09 04:17:34 -->
