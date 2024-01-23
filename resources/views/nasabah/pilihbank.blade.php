@@ -69,9 +69,9 @@
                 data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
                 <div class="elementor-element elementor-element-8a92391 elementor-widget elementor-widget-image"
                     data-id="8a92391" data-element_type="widget" data-widget_type="image.default">
-                    <div class="elementor-widget-container"> <img data-lazyloaded="1"
+                    <div class="elementor-widget-container"> <a href="{{ url('admin/dashboarduser') }}"><img data-lazyloaded="1"
                             src="https://hafizadinata.com/wp-content/uploads/2023/12/Frame-63.png" width="241"
-                            height="40" class="attachment-full size-full wp-image-39" alt="" /></div>
+                            height="40" class="attachment-full size-full wp-image-39" alt="" /></a></div>
                 </div>
             </div>
             <div class="elementor-element elementor-element-8ed6f24 e-con-full e-flex e-con e-child" data-id="8ed6f24"
@@ -85,9 +85,9 @@
                             class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
                             <ul id="menu-1-64d3dac" class="elementor-nav-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
-                                        href="#" class="elementor-item elementor-item-anchor">Layanan</a></li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
-                                        href="#" class="elementor-item elementor-item-anchor">Pesanan</a></li>
+                                    href="{{route('setoranNasabah')}}" class="elementor-item elementor-item-anchor">Layanan</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
+                                    href="{{route('pesanan', [$stor->id])}}" class="elementor-item elementor-item-anchor">Pesanan</a></li>
                             </ul>
                         </nav>
                         <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
@@ -127,12 +127,18 @@
                         <div class="elementor-widget-container">
                             <div id="uc_dropdown_button_elementor10633" class="ca_btn_wrapper">
                                 <div class="ca_btn_container"> <button class="ca_btn" ontouchstart=""><i
-                                            class='fas fa-user-circle'></i><span class="ue-btn-text">Nasabah</span>
+                                            class='fas fa-user-circle'></i><span class="ue-btn-text">{{ Auth::user()->type }}</span>
                                         <ul class="ca_dropdown uc-items-wrapper">
                                             <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a
-                                                    href="#"><i class='fas fa-user-edit'></i>Profile</a></li>
+                                                    href="{{ url('admin/profileuser') }}"><i class='fas fa-user-edit'></i>Profile</a></li>
+                                                    <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/addnasabah') }}"><i
+                                                        class='fas fa-solid fa-building-columns'></i>Tabungan</a></li>
                                             <li class="ca_dropdown_item elementor-repeater-item-f4af334"><a
-                                                    href="#"><i class='fas fa-sign-out-alt'></i>Logout</a></li>
+                                                    href="{{ route('logout') }}"onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();"><i class='fas fa-sign-out-alt'></i>Logout</a></li>
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                        @csrf
+                                                    </form>
                                         </ul>
                                     </button>
                                 </div>

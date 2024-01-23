@@ -82,9 +82,9 @@
                             class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
                             <ul id="menu-1-64d3dac" class="elementor-nav-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
-                                        href="#" class="elementor-item elementor-item-anchor">Layanan</a></li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
-                                        href="#" class="elementor-item elementor-item-anchor">Pesanan</a></li>
+                                    href="{{route('setoranNasabah')}}" class="elementor-item elementor-item-anchor">Layanan</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
+                                    href="{{route('pesanan', [$stor->id])}}" class="elementor-item elementor-item-anchor">Pesanan</a></li>
                             </ul>
                         </nav>
                         <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
@@ -217,10 +217,8 @@
                                                             <input type="hidden" name="referer_title"
                                                                 value="Buka Tabungan - My Blog" /><input
                                                                 type="hidden" name="queried_id" value="199" />
-                                                            <div
-                                                                class="elementor-form-fields-wrapper elementor-labels-above">
-                                                                <div
-                                                                    class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
+                                                            <div class="elementor-form-fields-wrapper elementor-labels-above">
+                                                                <div  style="width: 50%; padding-right: 25px;"  class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
                                                                     <label for="form-field-name"
                                                                         class="elementor-field-label"> Email </label>
                                                                     <input size="1" type="email"
@@ -228,8 +226,15 @@
                                                                         class="elementor-field elementor-size-sm  elementor-field-textual"
                                                                         placeholder="Email" required="required"
                                                                         aria-required="true" value="{{ Auth::user()->email }}" readonly></div>
-                                                                <div
-                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+                                                                <div  style="width: 50%; padding-left: 25px;" class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9b53800 elementor-col-100">
+                                                                    <label for="form-field-field_9b53800"
+                                                                        class="elementor-field-label"> Nama Nasabah
+                                                                    </label> <input size="1" type="text"
+                                                                        name="nama_nasabah"
+                                                                        id="inputEmailAddress2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                        placeholder="Nama Nasabah" value="{{ $nasabah->nama_nasabah }}"></div>
+                                                                <div  style="width: 50%; padding-right: 25px;" class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
                                                                     <label for="form-field-email"
                                                                         class="elementor-field-label"> NPWP </label>
                                                                     <input size="1" type="text"
@@ -238,8 +243,32 @@
                                                                         class="elementor-field elementor-size-sm  elementor-field-textual"
                                                                         placeholder="NPWP" required="required"
                                                                         aria-required="true" value="{{ $nasabah->nik }}"></div>
-                                                                <div
-                                                                    class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_09949bf elementor-col-100 elementor-field-required">
+                                                                <div  style="width: 50%; padding-left: 25px;" class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9a57f99 elementor-col-100">
+                                                                    <label for="form-field-field_9a57f99"
+                                                                        class="elementor-field-label"> No Handphone
+                                                                    </label> <input size="1" type="text"
+                                                                        name="no_hp"
+                                                                        id="inputChoosePassword2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                        placeholder="No Handphone" value="{{ $nasabah->no_hp }}"></div>
+                                                                <div style="width: 50%; padding-right: 25px;" class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_28ef71a elementor-col-100">
+                                                                    <label for="form-field-field_28ef71a"
+                                                                        class="elementor-field-label"> Tempat Lahir
+                                                                    </label> <input size="1" type="text"
+                                                                        name="tempat_lahir"
+                                                                        id="inputChoosePassword2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                        placeholder="Tempat Lahir" value="{{ $nasabah->tempat_lahir }}"></div>
+                                                                <div style="width: 50%; padding-left: 25px;" class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_e7fd189 elementor-col-100">
+                                                                    <label for="form-field-field_e7fd189"
+                                                                        class="elementor-field-label"> Tanggal Lahir
+                                                                    </label> <input type="date"
+                                                                        name="tgl_lahir"
+                                                                        id="inputChoosePassword2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual elementor-date-field"
+                                                                        placeholder="Tanggal Lahir"
+                                                                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="{{ $nasabah->tgl_lahir }}"></div>
+                                                                <div class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_09949bf elementor-col-100 elementor-field-required">
                                                                     <label for="form-field-field_09949bf"
                                                                         class="elementor-field-label"> Tanggal
                                                                         Bergabung </label> <input type="date"
@@ -249,43 +278,6 @@
                                                                         placeholder="Tanggal Bergabung"
                                                                         required="required" aria-required="true"
                                                                         pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="{{ $nasabah->tgl_bergabung }}"></div>
-                                                                <div
-                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9b53800 elementor-col-100">
-                                                                    <label for="form-field-field_9b53800"
-                                                                        class="elementor-field-label"> Nama Nasabah
-                                                                    </label> <input size="1" type="text"
-                                                                        name="nama_nasabah"
-                                                                        id="inputEmailAddress2"
-                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                        placeholder="Nama Nasabah" value="{{ $nasabah->nama_nasabah }}"></div>
-                                                                <div
-                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9a57f99 elementor-col-100">
-                                                                    <label for="form-field-field_9a57f99"
-                                                                        class="elementor-field-label"> No Handphone
-                                                                    </label> <input size="1" type="text"
-                                                                        name="no_hp"
-                                                                        id="inputChoosePassword2"
-                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                        placeholder="No Handphone" value="{{ $nasabah->no_hp }}"></div>
-                                                                <div
-                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_28ef71a elementor-col-100">
-                                                                    <label for="form-field-field_28ef71a"
-                                                                        class="elementor-field-label"> Tempat Lahir
-                                                                    </label> <input size="1" type="text"
-                                                                        name="tempat_lahir"
-                                                                        id="inputChoosePassword2"
-                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                        placeholder="Tempat Lahir" value="{{ $nasabah->tempat_lahir }}"></div>
-                                                                <div
-                                                                    class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_e7fd189 elementor-col-100">
-                                                                    <label for="form-field-field_e7fd189"
-                                                                        class="elementor-field-label"> Tanggal Lahir
-                                                                    </label> <input type="date"
-                                                                        name="tgl_lahir"
-                                                                        id="inputChoosePassword2"
-                                                                        class="elementor-field elementor-size-sm  elementor-field-textual elementor-date-field"
-                                                                        placeholder="Tanggal Lahir"
-                                                                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="{{ $nasabah->tgl_lahir }}"></div>
                                                                 <div
                                                                     class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_ba7b02b elementor-col-100">
                                                                     <label for="form-field-field_ba7b02b"

@@ -17505,7 +17505,7 @@ template {
 
 label {
     display: inline-block;
-    line-height: 1;
+    /* line-height: 1; */
     vertical-align: middle
 }
 
@@ -17532,7 +17532,7 @@ select,
 textarea {
     width: 100%;
     border: 1px solid #666;
-    border-radius: 3px;
+    border-radius: 8px;
     padding: .5rem 1rem;
     transition: all .3s
 }
@@ -20842,7 +20842,7 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
 
 .e-con>.e-con-inner {
     gap: var(--gap);
-    width: 100%;
+    width: 85%;
     max-width: var(--content-width);
     margin: 0 auto;
     padding-inline-start: 0;
@@ -20992,7 +20992,7 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
 .elementor-field-group .elementor-field-textual {
     width: 100%;
     max-width: 100%;
-    border: 1px solid #69727d;
+    border: 1px solid #BEBEBF;
     background-color: transparent;
     color: #1f2124;
     vertical-align: middle;
@@ -21355,7 +21355,7 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
     background-color: #69727d;
     font-size: 15px;
     padding: 12px 24px;
-    border-radius: 3px;
+    border-radius: 8px;
     color: #fff;
     fill: #fff;
     text-align: center;
@@ -25634,13 +25634,15 @@ button.swiper-pagination-bullet {
     --display: flex;
     --min-height: 275px;
     --align-items: center;
+    padding: 70px 0;
     --container-widget-width: calc((1 - var(--container-widget-flex-grow))*100%);
     --background-transition: .3s;
-    border-style: solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --border-radius: 30px
+    /* border-style: solid;
     --border-style: solid;
     border-color: #8c8c8c;
-    --border-color: #8c8c8c;
-    --border-radius: 30px
+    --border-color: #8c8c8c;*/
 }
 
 .elementor-199 .elementor-element.elementor-element-1c19b70,

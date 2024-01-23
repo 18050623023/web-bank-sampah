@@ -8977,8 +8977,7 @@ input[type="radio"] {
     display: none;
 }
 
-#option-kardus:checked:checked~.option-kardus,
-#option-plastik:checked:checked~.option-plastik {
+.option-kardus:checked:checked~label.option-kardus {
     fill: #000 !important;
     color: #000 !important;
     background-color: #b9ff96 !important;
@@ -8989,10 +8988,6 @@ input[type="radio"] {
 .wrapper .option span {
     font-size: 20px;
     color: #808080;
-}
-
-#option-kardus:checked:checked~.option-kardus span,
-#option-plastik:checked:checked~.option-plastik span {
 }
 
 /* end update */
@@ -9239,7 +9234,7 @@ input[type="radio"] {
 .elementor-13 .elementor-element.elementor-element-173b6e0 .ca_btn svg {
     height: 18px;
     width: 18px;
-    fill: #4ecb71
+    color: #4ecb71
 }
 
 .elementor-13 .elementor-element.elementor-element-173b6e0 .ca_btn:hover>i {

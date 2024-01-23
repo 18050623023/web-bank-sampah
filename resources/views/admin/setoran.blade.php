@@ -36,11 +36,11 @@
                                 <td>{{ $stor->jml_tab_pergram }}</td>
                                 <td>
                                     @if ($stor->status == 1)
-                                        <span class="badge bg-success">Accept</span>
+                                        <span class="badge bg-primary">Mengambil</span>
                                     @elseif ($stor->status == 2)
-                                        <span class="badge bg-danger">Cencel</span>
+                                        <span class="badge bg-success">Selesai</span>
                                     @else
-                                        <span class="badge bg-warning">Pending</span>
+                                        <span class="badge bg-danger">Ditolak</span>
                                     @endif
                                 </td>
                                 <td>
@@ -76,30 +76,36 @@
                                     @if ($stor->status == 0)
                                         <button
                                             onclick="confirmSetoran('/admin/updatesetoran/1','Yakin Accept Setoran?',{{ $no }})"
-                                            class="btn btn-success">
-                                            <i class="bx bx-check" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            class="btn btn-primary">
+                                            <i class="bx bxs-truck" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                 title="Accept">
                                             </i>
                                         </button>
                                         <button
-                                            onclick="confirmSetoran('/admin/updatesetoran/2','Yakin Cencel Setoran?',{{ $no }})"
+                                            onclick="confirmSetoran('/admin/updatesetoran/6','Yakin Cencel Setoran?',{{ $no }})"
                                             class="btn btn-danger">
                                             <i class="bx bx-x" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                 title="Cencel"></i>
                                         </button>
                                     @elseif ($stor->status == 1)
                                         <button
-                                            onclick="confirmSetoran('/admin/updatesetoran/2','Yakin Cencel Setoran?',{{ $no }})"
+                                            onclick="confirmSetoran('/admin/updatesetoran/6','Yakin Cencel Setoran?',{{ $no }})"
                                             class="btn btn-danger">
                                             <i class="bx bx-x" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                 title="Cencel"></i>
                                         </button>
+                                        <button
+                                            onclick="confirmSetoran('/admin/updatesetoran/2','Yakin Selesaikan Setoran?',{{ $no }})"
+                                            class="btn btn-success">
+                                            <i class="bx bx-check" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                title="Selesai"></i>
+                                        </button>
                                     @else
                                         <button
                                             onclick="confirmSetoran('/admin/updatesetoran/1','Yakin Accept Setoran?',{{ $no }})"
-                                            class="btn btn-success">
-                                            <i class="bx bx-check" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                title="Accept"></i>
+                                            class="btn btn-primary">
+                                            <i class="bx bxs-truck" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                title="Ambil Sampah"></i>
                                         </button>
                                     @endif
                                 </td>

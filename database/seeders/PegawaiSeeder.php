@@ -17,6 +17,7 @@ class PegawaiSeeder extends Seeder
     {
         $pegawais = [
             [
+                'lokasi_id' => '0',
                 'nama_pegawai' => 'Pegawai 1',
                 'tempat_lahir' => 'Surabaya',
                 'tgl_bergabung' => '2023-08-30',
@@ -24,6 +25,7 @@ class PegawaiSeeder extends Seeder
                 'alamat' => 'Surabaya',
             ],
             [
+                'lokasi_id' => '0',
                 'nama_pegawai' => 'Pegawai 2',
                 'tempat_lahir' => 'Surabaya',
                 'tgl_bergabung' => '2023-08-30',

@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Storan;
 
 class NasabahController extends Controller
 {
@@ -23,15 +24,20 @@ class NasabahController extends Controller
 
     public function addnasabah()
     {
-        $id = Auth::user()->id;
+        $user_id = Auth::user()->id;
+        if (empty($id)) {
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
         $nasabah = DB::table('nasabahs')
-        ->where('user_id', '=', $id)
+        ->where('user_id', '=', $user_id)
         ->first();
         if($nasabah == null){
             // echo"lala";
             return view('admin.addnasabah');
         }else{
-            return view('admin.bukatabungan', compact('nasabah'));
+            return view('admin.bukatabungan', compact('nasabah','stor'));
         }
     }
 

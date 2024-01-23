@@ -83,7 +83,7 @@
                             class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
                             <ul id="menu-1-64d3dac" class="elementor-nav-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
-                                        href="#" class="elementor-item elementor-item-anchor">Layanan</a></li>
+                                        href="{{route('setoranNasabah')}}" class="elementor-item elementor-item-anchor">Layanan</a></li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
                                         href="#" class="elementor-item elementor-item-anchor">Pesanan</a></li>
                             </ul>

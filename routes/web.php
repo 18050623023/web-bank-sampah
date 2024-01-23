@@ -110,6 +110,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/admin/rewarduser/{id}', [App\Http\Controllers\TransaksiController::class, 'rewarduser']);
     Route::post('/admin/tarikuangpoint', [App\Http\Controllers\TransaksiController::class, 'tarikuangpoint']);
     Route::get('/admin/succesgift/{id}', [App\Http\Controllers\TransaksiController::class, 'viewgift']);
+    Route::get('/admin/unduhreward', [App\Http\Controllers\TransaksiController::class, 'unduhreward']);
 
     Route::get('/admin/reward', [App\Http\Controllers\KategoriController::class, 'reward']);
     Route::get('/admin/addreward', [App\Http\Controllers\KategoriController::class, 'addreward']);

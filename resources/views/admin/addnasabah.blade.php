@@ -213,65 +213,57 @@
                                                             @csrf
                                                             <input type="hidden" name="post_id" value="199" />
                                                             <input type="hidden" name="form_id" value="32f88b3" />
-                                                            <input type="hidden" name="referer_title"
-                                                                value="Buka Tabungan - My Blog" /><input
-                                                                type="hidden" name="queried_id" value="199" />
-                                                            <div
-                                                                class="elementor-form-fields-wrapper elementor-labels-above">
-                                                                <div
-                                                                    class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
-                                                                    <label for="form-field-name"
-                                                                        class="elementor-field-label"> Email </label>
+                                                            <input type="hidden" name="referer_title" value="Buka Tabungan - My Blog" />
+                                                            <input type="hidden" name="queried_id" value="199" />
+                                                            <div class="elementor-form-fields-wrapper elementor-labels-above">
+                                                                <div style="width: 50%; padding-right: 25px;" class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
+                                                                    <label for="form-field-name" class="elementor-field-label"> Email </label>
                                                                     <input size="1" type="email"
                                                                         name="email" id="inputEnterYourName"
                                                                         class="elementor-field elementor-size-sm  elementor-field-textual"
                                                                         placeholder="Email" required="required"
-                                                                        aria-required="true" value="{{ Auth::user()->email }}" readonly></div>
-                                                                <div
-                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
-                                                                    <label for="form-field-email"
-                                                                        class="elementor-field-label"> NPWP </label>
+                                                                        aria-required="true" value="{{ Auth::user()->email }}" readonly />
+                                                                </div>
+                                                                <div style="width: 50%; padding-left: 25px;" class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9b53800 elementor-col-100">
+                                                                    <label for="form-field-field_9b53800" class="elementor-field-label"> Nama Nasabah </label>
+                                                                    <input size="1" type="text"
+                                                                        name="nama_nasabah"
+                                                                        id="inputEmailAddress2"
+                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                        placeholder="Nama Nasabah" value="" />
+                                                                </div>
+                                                                <div style="width: 50%; padding-right: 25px;" class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+                                                                    <label for="form-field-email" class="elementor-field-label"> NPWP </label>
                                                                     <input size="1" type="text"
                                                                         name="nik"
                                                                         id="inputEnterYourName"
                                                                         class="elementor-field elementor-size-sm  elementor-field-textual"
                                                                         placeholder="NPWP" required="required"
-                                                                        aria-required="true" value=""></div>
+                                                                        aria-required="true" value="" />
+                                                                </div>
                                                                 <div class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_09949bf elementor-col-100 elementor-field-required" style="display:none">
                                                                     <label for="form-field-field_09949bf" class="elementor-field-label">
                                                                         Tanggal Bergabung
                                                                     </label>
-                                                                        <input type="hidden" name="tgl_bergabung" id="inputChoosePassword2" class="elementor-field elementor-size-sm  elementor-field-textual elementor-date-field" required="required" aria-required="true" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="{{date('Y-m-d H:i:s')}}">
+                                                                        <input type="hidden" name="tgl_bergabung" id="inputChoosePassword2" class="elementor-field elementor-size-sm  elementor-field-textual elementor-date-field" required="required" aria-required="true" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="{{date('Y-m-d H:i:s')}}" />
                                                                 </div>
-                                                                <div
-                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9b53800 elementor-col-100">
-                                                                    <label for="form-field-field_9b53800"
-                                                                        class="elementor-field-label"> Nama Nasabah
-                                                                    </label> <input size="1" type="text"
-                                                                        name="nama_nasabah"
-                                                                        id="inputEmailAddress2"
-                                                                        class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                        placeholder="Nama Nasabah" value=""></div>
-                                                                <div
-                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9a57f99 elementor-col-100">
-                                                                    <label for="form-field-field_9a57f99"
-                                                                        class="elementor-field-label"> No Handphone
-                                                                    </label> <input size="1" type="text"
+                                                                <div style="width: 50%; padding-left: 25px;" class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9a57f99 elementor-col-100">
+                                                                    <label for="form-field-field_9a57f99" class="elementor-field-label"> No Handphone </label>
+                                                                    <input size="1" type="text"
                                                                         name="no_hp"
                                                                         id="inputChoosePassword2"
                                                                         class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                        placeholder="No Handphone" value=""></div>
-                                                                <div
-                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_28ef71a elementor-col-100">
-                                                                    <label for="form-field-field_28ef71a"
-                                                                        class="elementor-field-label"> Tempat Lahir
-                                                                    </label> <input size="1" type="text"
+                                                                        placeholder="No Handphone" value="">
+                                                                </div>
+                                                                <div style="width: 50%; padding-right: 25px;" class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_28ef71a elementor-col-100">
+                                                                    <label for="form-field-field_28ef71a" class="elementor-field-label"> Tempat Lahir </label>
+                                                                    <input size="1" type="text"
                                                                         name="tempat_lahir"
                                                                         id="inputChoosePassword2"
                                                                         class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                        placeholder="Tempat Lahir" value=""></div>
-                                                                <div
-                                                                    class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_e7fd189 elementor-col-100">
+                                                                        placeholder="Tempat Lahir" value="">
+                                                                </div>
+                                                                <div style="width: 50%; padding-left: 25px;" class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_e7fd189 elementor-col-100">
                                                                     <label for="form-field-field_e7fd189"
                                                                         class="elementor-field-label"> Tanggal Lahir
                                                                     </label> <input type="date"
@@ -279,24 +271,26 @@
                                                                         id="inputChoosePassword2"
                                                                         class="elementor-field elementor-size-sm  elementor-field-textual elementor-date-field"
                                                                         placeholder="Tanggal Lahir"
-                                                                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value=""></div>
-                                                                <div
-                                                                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_ba7b02b elementor-col-100">
+                                                                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="">
+                                                                </div>
+                                                                <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_ba7b02b elementor-col-100">
                                                                     <label for="form-field-field_ba7b02b"
                                                                         class="elementor-field-label"> Alamat </label>
                                                                     <input size="1" type="text"
                                                                         name="alamat"
                                                                         id="inputChoosePassword2"
                                                                         class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                        placeholder="Alamat" value=""></div>
-                                                                <div
-                                                                    class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+                                                                        placeholder="Alamat" value="">
+                                                                </div>
+                                                                <div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
                                                                     <button type="submit"
                                                                         class="elementor-button elementor-size-sm">
-                                                                        <span> <span class="elementor-button-icon">
-                                                                            </span> <span
-                                                                                class="elementor-button-text">Buat Member</span>
-                                                                        </span> </button></div>
+                                                                        <span>
+                                                                            <span class="elementor-button-icon"></span>
+                                                                            <span class="elementor-button-text">Buat Member</span>
+                                                                        </span>
+                                                                    </button>
+                                                                </div>
                                                             </div>
                                                         </form>
                                                     </div>

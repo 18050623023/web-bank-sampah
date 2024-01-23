@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\TransaksiResource;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Nasabah;
 use App\Models\Kategorie;
@@ -50,7 +51,7 @@ class TransaksiController extends Controller
         }
 
         // return TransaksiResource::collection($hasil)->toArray(request());
-        // dd($hasil);
+        // dd($setoran);
 
         return view('admin.setoran', compact(['nasabah', 'setoran', 'pegawai']));
     }
@@ -86,13 +87,18 @@ class TransaksiController extends Controller
     public function  setoranNasabah($idstoran = 0)
     {
         $user_id = Auth::user()->id;
+        if (empty($id)) {
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
         $nasabah = Nasabah::Where('user_id', $user_id)->first();
         // var_dump($nasabah);
         if (empty($nasabah)) {
             return redirect('/admin/addnasabah')->with('alert-nasabah', 'Buat tabungan terlebih dahulu');
         } else {
             $user_id = $nasabah->user_id;
-            $kategori = Kategorie::all();
+            $kategorie = Kategorie::all();
             $petugas = Pegawai::all();
             $lokasi = Databank::all();
             $setoran = DB::table('storans')
@@ -100,8 +106,8 @@ class TransaksiController extends Controller
             ->select('storans.*', 'kategories.kategori_sampah')
             ->where('storans.nasabah_id', '=', $user_id)
                 ->get();
-            // dd($setoran);
-            return view('nasabah.panggilPetugas', compact(['nasabah', 'kategori', 'setoran', 'petugas', 'lokasi', 'idstoran']));
+            // dd($kategorie);
+            return view('nasabah.panggilPetugas', compact(['nasabah', 'kategorie', 'setoran', 'petugas', 'lokasi', 'idstoran','stor']));
         }
     }
 
@@ -146,7 +152,7 @@ class TransaksiController extends Controller
             ])->id;
             if ($stor_id) {
                 $tabungan_id = Tabungan::create([
-                    'nasabah_id' => $nasabah_id,
+                    'nasabah_id' => Auth::user()->id,
                     // 'petugas_id' => $petugas,
                     // 'lokasi_id' => $lokasi,
                     'storan_id' => $stor_id,
@@ -164,11 +170,16 @@ class TransaksiController extends Controller
     }
 
     public function pilihtps(Request $request) {
-
+        $user_id = Auth::user()->id;
+        if (empty($id)) {
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
         $lokasi = Databank::all();
         $stor_id = $request->stor_id;
         $tabungan_id = $request->tabungan_id;
-        return view('nasabah.pilihbank', compact(['stor_id', 'tabungan_id', 'lokasi']));
+        return view('nasabah.pilihbank', compact(['stor_id', 'tabungan_id', 'lokasi','stor']));
     }
 
     public function pilihtpsact($stor_id, $tabungan_id, $tps)
@@ -197,14 +208,15 @@ class TransaksiController extends Controller
 
     public function pesanan($id = null)  {
 
+        $user_id = Auth::user()->id;
         if (empty($id)) {
-            $stor = Storan::with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
         } else {
-            $stor = Storan::where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
         }
 
-        $storall = Storan::with('DataBank', 'Kategori')->get();
-        // dd($storall);
+        $storall = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->get();
+        // dd($user_id);
         return view('nasabah.pesanan', compact(['stor', 'storall']));
     }
 
@@ -248,7 +260,7 @@ class TransaksiController extends Controller
         // var_dump($status);
 
         $stor_id = Storan::create([
-            'nasabah_id' => $nasabah_id,
+            'nasabah_id' => $user_id,
             'kategori_id' => $kategori_id,
             'lokasi_id' => $lokasi,
             'petugas_id' => $petugas,
@@ -262,7 +274,7 @@ class TransaksiController extends Controller
         ])->id;
         if ($stor_id) {
             Tabungan::create([
-                'nasabah_id' => $nasabah_id,
+                'nasabah_id' => $user_id,
                 'petugas_id' => $petugas,
                 'storan_id' => $stor_id,
                 'lokasi_id' => $lokasi,
@@ -426,6 +438,11 @@ class TransaksiController extends Controller
     public function lihattabungan()
     {
         $user_id = Auth::user()->id;
+        if (empty($id)) {
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
 
         $nasabah = DB::table('nasabahs')
             ->where('user_id', '=', $user_id)
@@ -448,7 +465,7 @@ class TransaksiController extends Controller
             return app('App\Http\Controllers\NasabahController')->addnasabah();
             // return view('admin.bukarek');
         } else {
-            return view('admin.dashboarduser', compact(['nasabah', 'saldo', 'tarik']));
+            return view('admin.dashboarduser', compact(['nasabah', 'saldo', 'tarik','stor']));
         }
     }
 
@@ -496,8 +513,14 @@ class TransaksiController extends Controller
 
     public function viewgift($id)
     {
+        $user_id = Auth::user()->id;
+        if (empty($id)) {
+            $stor = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->orderby('id', 'desc')->get()->first();
+        } else {
+            $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
+        }
         $reward = Reward::find($id);
-        return view('admin.succesgift', compact(['reward']));
+        return view('admin.succesgift', compact(['reward', 'stor']));
         // $user_id = Auth::user()->id;
         // $user_id = Auth::user()->id;
         // $lokasi_bank = DB::table('databanks')->where('teller_id', $user_id)->first();
@@ -571,4 +594,17 @@ class TransaksiController extends Controller
 
         return redirect('admin/succesgift/' .$id_voucher);
     }
+
+    // public  function unduhreward(Request $request)
+    // {
+    //     $extension = $request->file('file')->extension();
+
+    //     $waktu = time();
+
+    //     $filename = $waktu.'.'.$extension;
+
+    //     $filename = base_path('uploads/image/')."$filename";
+    //     return Response::download($filename);
+
+    // }
 }
