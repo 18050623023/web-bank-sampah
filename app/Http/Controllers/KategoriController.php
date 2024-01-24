@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kategorie;
+use App\Models\Reward;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Expr\FuncCall;
 
 class KategoriController extends Controller
 {
-    
+
     public function index()
     {
         $kategori = Kategorie::all();
@@ -25,11 +27,13 @@ class KategoriController extends Controller
 
         Kategorie::create([
             'kategori_sampah' => $request->kategori_sampah,
-            'harga_pergram' => $request->harga_pergram
+            'harga_pergram' => $request->harga_pergram,
+            'point' => $request->point,
+            'ton' => $request->ton
         ]);
 
         return redirect('admin/kategori');
-       
+
     }
 
     public function destroykategori($id)
@@ -50,5 +54,95 @@ class KategoriController extends Controller
         $kategori->update($request->except(['_token','submit']));
         return redirect('admin/kategori');
     }
-       
+
+    public function reward()
+    {
+        $reward = Reward::all();
+        return view('admin.reward', compact('reward'));
+    }
+
+
+
+    public function addreward()
+    {
+
+        return view('admin.addreward');
+    }
+
+    public function storereward(Request $request)
+    {
+        $extension = $request->file('file')->extension();
+
+        $waktu = time();
+
+        $filename = $waktu.'.'.$extension;
+
+        $request->file('file')->move(
+            base_path() . '/public/document/', $filename
+        );
+
+        $number = mt_rand(1000000000,9999999999);
+
+        if ($this->productCodeExists($number)) {
+            $number = mt_rand(1000000000,999999999);
+        }
+        $request['product_code'] = $number;
+        Reward::create([
+            'name' => $request->name,
+            'point' => $request->point,
+            'keterangan' => $request->keterangan,
+            'product_code' => $request->product_code,
+            'path' => $filename
+
+
+        ]);
+
+        return redirect('admin/reward');
+
+    }
+
+    public function productCodeExists($number){
+        return Reward::whereProductCode($number)->exists();
+    }
+
+    public function destroyreward($id)
+    {
+        DB::table('rewards')->where('id',$id)->delete();
+        return redirect('admin/reward');
+    }
+
+    public function editreward($id)
+    {
+        $reward = Reward::find($id);
+        return view('admin.editreward', compact('reward'));
+    }
+
+    public function updatereward($id, Request $request)
+    {
+        $extension = $request->file('file')->extension();
+
+        $waktu = time();
+
+        $filename = $waktu.'.'.$extension;
+
+        $request->file('file')->move(
+            base_path() . '/public/document/', $filename
+        );
+
+        // $number = mt_rand(1000000000,9999999999);
+
+        // if ($this->productCodeExists($number)) {
+        //     $number = mt_rand(1000000000,999999999);
+        // }
+
+        DB::table('rewards')->where('id',$id)->update([
+            'name' => $request->name,
+            'point' => $request->point,
+            'keterangan' => $request->keterangan,
+            // 'product_code' => $request->product_code,
+            'path' => $filename
+		]);
+        return redirect('admin/reward');
+    }
+
 }

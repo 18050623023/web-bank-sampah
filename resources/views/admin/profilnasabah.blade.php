@@ -3,7 +3,7 @@
 @section('title','profil nasabah')
 
 @section('conten')
-    
+
 		<div class="row">
 					<div class="col-xl-9 mx-auto">
 						<h6 class="mb-0 text-uppercase">Profil Nasabah</h6>
@@ -27,7 +27,7 @@
 											<input type="email" name="email" class="form-control" id="inputEnterYourName" value="{{ Auth::user()->email }}" readonly>
 										</div>
 									</div>
-									
+
 									<div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">NIK</label>
 										<div class="col-sm-9">
@@ -70,8 +70,8 @@
 											<input type="text" name="alamat" class="form-control" id="inputChoosePassword2" value="{{ $nasabah->alamat }}">
 										</div>
 									</div>
-									
-	
+
+
 									<div class="row">
 										<label class="col-sm-3 col-form-label"></label>
 										<div class="col-sm-9">

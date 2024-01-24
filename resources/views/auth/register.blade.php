@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ url('storeuser') }}"enctype="multipart/form-data">
                         @csrf
 
                         <div class="row mb-3">
@@ -32,6 +32,21 @@
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="dokument" class="col-md-4 col-form-label text-md-end">{{ __('Dokument') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="file" class="form-control" id="file" name="file" required autocomplete="file">
+                                {{-- <p>hanya tampilan belum ada fungsi nya</p> --}}
+
+                                @error('file')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -66,8 +81,8 @@
 							    <div class="col-md-6">
 									<select class="form-control" name="type">
                                         {{-- <option value="0">Admin</option> --}}
-                                        <option value="1">Teller/Petugas</option>
-                                        <option value="2">Nasabah</option>
+                                        <option value="1">Admin TPS</option>
+                                        <option value="2">User Mall</option>
                                     </select>
 								</div>
 						</div>

@@ -3,7 +3,7 @@
 @section('title','Petugas')
 
 @section('conten')
-    
+
 		<div class="row">
 					<div class="col-xl-9 mx-auto">
 						<h6 class="mb-0 text-uppercase">Tambah Pegawai</h6>
@@ -17,8 +17,24 @@
 										<h5 class="mb-0 text-info">Tambah Pegawai</h5>
 									</div>
 									<hr/>
-                        <form method="POST" action="{{ url('admin/storepetugas') }}">
-                        @csrf
+                                    <form method="POST" action="{{ url('admin/storepetugas') }}">
+                                    @csrf
+
+                                    @if (Auth::user()->type == 'Admin')
+                                        <div class="row mb-3">
+                                            <label for="inputEnterYourName" class="col-sm-3 col-form-label">TPS</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" name="bank">
+                                                        <option value="0">-Pilih TPS-</option>
+                                                    @foreach($bank as $tel)
+                                                        <option value="{{ $tel->id }}">{{ $tel->nama_bank }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    @else
+                                        <input type="hidden" name="bank" value="{{$bank[0]->id}}">
+                                    @endif
 									<div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Nama Pegawai</label>
 										<div class="col-sm-9">
@@ -49,8 +65,8 @@
 											<input type="text" name="alamat" class="form-control" id="inputChoosePassword2" placeholder="Alamat">
 										</div>
 									</div>
-									
-	
+
+
 									<div class="row">
 										<label class="col-sm-3 col-form-label"></label>
 										<div class="col-sm-9">

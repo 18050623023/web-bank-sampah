@@ -12,6 +12,8 @@ class Databank extends Model
     protected $fillable = [
         'teller_id',
         'nama_bank',
+        'alamat',
+        'harga',
         'tgl_bergabung',
         'lat',
         'long',

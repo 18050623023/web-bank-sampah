@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('teller_id');
             $table->string('nama_bank');
+            $table->string('alamat');
+            $table->double('harga');
             $table->date('tgl_bergabung');
             $table->string('lat');
             $table->string('long');
