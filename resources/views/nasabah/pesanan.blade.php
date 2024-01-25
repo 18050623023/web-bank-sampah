@@ -643,163 +643,168 @@
                                                 <div class="elementor-element elementor-element-e0f063b elementor-widget elementor-widget-n-accordion" data-id="e0f063b" data-element_type="widget" data-settings="{&quot;default_state&quot;:&quot;expanded&quot;,&quot;max_items_expended&quot;:&quot;one&quot;,&quot;n_accordion_animation_duration&quot;:{&quot;unit&quot;:&quot;ms&quot;,&quot;size&quot;:400,&quot;sizes&quot;:[]},&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="nested-accordion.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="e-n-accordion" aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys">
+                                                            @if($storallCount == 0)
+                                                                <h2 class="elementor-heading-title elementor-size-default">
+                                                                    Data Kosong
+                                                                </h2>
+                                                            @else
+                                                                @foreach ($storall as $storan )
 
-                                                            @foreach ($storall as $storan )
+                                                                    <details id="e-n-accordion-item-2350" class="e-n-accordion-item" >
+                                                                        <summary class="e-n-accordion-item-title" data-accordion-index="1" tabindex="0" aria-expanded="true" aria-controls="e-n-accordion-item-2350">
+                                                                            <span class='e-n-accordion-item-title-header'>
+                                                                                <div class="e-n-accordion-item-title-text">{{date_format($storan->created_at,'d F Y , H.i')}} </div>
+                                                                            </span>
+                                                                            <span class='e-n-accordion-item-title-icon'>
+                                                                                <span class='e-opened'>
+                                                                                    <svg aria-hidden="true" class="e-font-icon-svg e-fas-minus" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z">
+                                                                                        </path>
+                                                                                    </svg>
+                                                                                </span>
+                                                                                <span class='e-closed'>
+                                                                                    <svg aria-hidden="true" class="e-font-icon-svg e-fas-plus" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </span>
+                                                                        </summary>
+                                                                        <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-241dcbe e-con-full e-flex e-con e-child" data-id="241dcbe" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                                            <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-5c9a4bd e-flex e-con-boxed e-con e-child" data-id="5c9a4bd" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                                                <div class="e-con-inner">
+                                                                                    <div class="elementor-element elementor-element-aa34b2b elementor-widget elementor-widget-heading" data-id="aa34b2b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <style>
+                                                                                                /*! elementor - v3.18.0 - 08-12-2023 */
+                                                                                                .elementor-heading-title {
+                                                                                                    padding: 0;
+                                                                                                    margin: 0;
+                                                                                                    line-height: 1
+                                                                                                }
 
-                                                            <details id="e-n-accordion-item-2350" class="e-n-accordion-item" >
-                                                                <summary class="e-n-accordion-item-title" data-accordion-index="1" tabindex="0" aria-expanded="true" aria-controls="e-n-accordion-item-2350">
-                                                                    <span class='e-n-accordion-item-title-header'>
-                                                                        <div class="e-n-accordion-item-title-text">{{date_format($storan->created_at,'d F Y , H.i')}} </div>
-                                                                    </span>
-                                                                    <span class='e-n-accordion-item-title-icon'>
-                                                                        <span class='e-opened'>
-                                                                            <svg aria-hidden="true" class="e-font-icon-svg e-fas-minus" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                                                                <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z">
-                                                                                </path>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class='e-closed'>
-                                                                            <svg aria-hidden="true" class="e-font-icon-svg e-fas-plus" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                                                                <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
-                                                                            </svg>
-                                                                        </span>
-                                                                    </span>
-                                                                </summary>
-                                                                <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-241dcbe e-con-full e-flex e-con e-child" data-id="241dcbe" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                                    <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-5c9a4bd e-flex e-con-boxed e-con e-child" data-id="5c9a4bd" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                                        <div class="e-con-inner">
-                                                                            <div class="elementor-element elementor-element-aa34b2b elementor-widget elementor-widget-heading" data-id="aa34b2b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <style>
-                                                                                        /*! elementor - v3.18.0 - 08-12-2023 */
-                                                                                        .elementor-heading-title {
-                                                                                            padding: 0;
-                                                                                            margin: 0;
-                                                                                            line-height: 1
-                                                                                        }
+                                                                                                .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+                                                                                                    color: inherit;
+                                                                                                    font-size: inherit;
+                                                                                                    line-height: inherit
+                                                                                                }
 
-                                                                                        .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                                                                                            color: inherit;
-                                                                                            font-size: inherit;
-                                                                                            line-height: inherit
-                                                                                        }
+                                                                                                .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                                                                                                    font-size: 15px
+                                                                                                }
 
-                                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                                                                                            font-size: 15px
-                                                                                        }
+                                                                                                .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                                                                                                    font-size: 19px
+                                                                                                }
 
-                                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                                                                                            font-size: 19px
-                                                                                        }
+                                                                                                .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                                                                                                    font-size: 29px
+                                                                                                }
 
-                                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                                                                                            font-size: 29px
-                                                                                        }
+                                                                                                .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                                                                                                    font-size: 39px
+                                                                                                }
 
-                                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                                                                                            font-size: 39px
-                                                                                        }
-
-                                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                                                                                            font-size: 59px
-                                                                                        }
-                                                                                    </style>
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">
-                                                                                        {{date_format($storan->created_at,'d F, H.i')}}
-                                                                                    </h2>
+                                                                                                .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                                                                                                    font-size: 59px
+                                                                                                }
+                                                                                            </style>
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">
+                                                                                                {{date_format($storan->created_at,'d F, H.i')}}
+                                                                                            </h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="elementor-element elementor-element-65a80ca elementor-widget elementor-widget-heading" data-id="65a80ca" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">
+                                                                                                @if ($storan->status == 0)
+                                                                                                    Menunggu Konfirmasi
+                                                                                                    Petugas TPS
+                                                                                                @elseif ($storan->status == 1)
+                                                                                                    Petugas Sedang Menuju
+                                                                                                    Lokasi
+                                                                                                @elseif ($storan->status == 2)
+                                                                                                    selesai
+                                                                                                @else
+                                                                                                    <span style="color: red">Di Tolak</span>
+                                                                                                @endif
+                                                                                            </h2>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="elementor-element elementor-element-65a80ca elementor-widget elementor-widget-heading" data-id="65a80ca" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                            <div class="elementor-element elementor-element-6f94982 elementor-widget elementor-widget-heading" data-id="6f94982" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
                                                                                 <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">
-                                                                                        @if ($storan->status == 0)
-                                                                                            Menunggu Konfirmasi
-                                                                                            Petugas TPS
-                                                                                        @elseif ($storan->status == 1)
-                                                                                            Petugas Sedang Menuju
-                                                                                            Lokasi
-                                                                                        @elseif ($storan->status == 2)
-                                                                                            selesai
-                                                                                        @else
-                                                                                            <span style="color: red">Di Tolak</span>
-                                                                                        @endif
-                                                                                    </h2>
+                                                                                    <h2 class="elementor-heading-title elementor-size-default">Panggil Petugas</h2>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-e69d7d1 e-flex e-con-boxed e-con e-child" data-id="e69d7d1" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                                                <div class="e-con-inner">
+                                                                                    <div class="elementor-element elementor-element-fa32e8e elementor-widget elementor-widget-heading" data-id="fa32e8e" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">Lokasi Ambil :</h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="elementor-element elementor-element-2cfe406 elementor-widget elementor-widget-heading" data-id="2cfe406" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">
+                                                                                                {{$storan->alamatjemput}}
+                                                                                            </h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-1ee6639 e-flex e-con-boxed e-con e-child" data-id="1ee6639" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                                                <div class="e-con-inner">
+                                                                                    <div class="elementor-element elementor-element-becc0ac elementor-widget elementor-widget-heading" data-id="becc0ac" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">TPS Tujuan :</h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="elementor-element elementor-element-d573895 elementor-widget elementor-widget-heading" data-id="d573895" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">{{$storan->DataBank->nama_bank}}</h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-38118ea e-flex e-con-boxed e-con e-child" data-id="38118ea" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                                                <div class="e-con-inner">
+                                                                                    <div class="elementor-element elementor-element-4963ff4 elementor-widget elementor-widget-heading" data-id="4963ff4" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">Jenis / Berat :</h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="elementor-element elementor-element-c9e9517 elementor-widget elementor-widget-heading" data-id="c9e9517" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">{{$storan->Kategori->kategori_sampah}}</h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="elementor-element elementor-element-694f41d elementor-widget elementor-widget-heading" data-id="694f41d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">/</h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="elementor-element elementor-element-65f3e58 elementor-widget elementor-widget-heading" data-id="65f3e58" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">{{$storan->jml_tab_pergram}}Kg</h2>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-e4c7d3d e-flex e-con-boxed e-con e-child" data-id="e4c7d3d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                                                <div class="e-con-inner">
+                                                                                    <div class="elementor-element elementor-element-bdbbe67 elementor-widget elementor-widget-heading" data-id="bdbbe67" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                                        <div class="elementor-widget-container">
+                                                                                            <h2 class="elementor-heading-title elementor-size-default">Rp. {{$storan->DataBank->harga + $storan->total_harga}}</h2>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-6f94982 elementor-widget elementor-widget-heading" data-id="6f94982" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <h2 class="elementor-heading-title elementor-size-default">Panggil Petugas</h2>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-e69d7d1 e-flex e-con-boxed e-con e-child" data-id="e69d7d1" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                                        <div class="e-con-inner">
-                                                                            <div class="elementor-element elementor-element-fa32e8e elementor-widget elementor-widget-heading" data-id="fa32e8e" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">Lokasi Ambil :</h2>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-2cfe406 elementor-widget elementor-widget-heading" data-id="2cfe406" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">
-                                                                                        {{$storan->alamatjemput}}
-                                                                                    </h2>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-1ee6639 e-flex e-con-boxed e-con e-child" data-id="1ee6639" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                                        <div class="e-con-inner">
-                                                                            <div class="elementor-element elementor-element-becc0ac elementor-widget elementor-widget-heading" data-id="becc0ac" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">TPS Tujuan :</h2>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-d573895 elementor-widget elementor-widget-heading" data-id="d573895" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$storan->DataBank->nama_bank}}</h2>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-38118ea e-flex e-con-boxed e-con e-child" data-id="38118ea" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                                        <div class="e-con-inner">
-                                                                            <div class="elementor-element elementor-element-4963ff4 elementor-widget elementor-widget-heading" data-id="4963ff4" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">Jenis / Berat :</h2>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-c9e9517 elementor-widget elementor-widget-heading" data-id="c9e9517" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$storan->Kategori->kategori_sampah}}</h2>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-694f41d elementor-widget elementor-widget-heading" data-id="694f41d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">/</h2>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="elementor-element elementor-element-65f3e58 elementor-widget elementor-widget-heading" data-id="65f3e58" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$storan->jml_tab_pergram}}Kg</h2>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div role="region" aria-labelledby="e-n-accordion-item-2350" class="elementor-element elementor-element-e4c7d3d e-flex e-con-boxed e-con e-child" data-id="e4c7d3d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                                        <div class="e-con-inner">
-                                                                            <div class="elementor-element elementor-element-bdbbe67 elementor-widget elementor-widget-heading" data-id="bdbbe67" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <h2 class="elementor-heading-title elementor-size-default">Rp. {{$storan->DataBank->harga + $storan->total_harga}}</h2>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </details>
+                                                                    </details>
 
-                                                            @endforeach
+                                                                @endforeach
+                                                            @endif
 
                                                         </div>
                                                     </div>
@@ -812,108 +817,114 @@
                                     <div data-elementor-type="section" data-elementor-id="233" class="elementor elementor-233" data-elementor-post-type="elementor_library">
                                         <div class="elementor-element elementor-element-782a701 e-flex e-con-boxed e-con e-child" data-id="782a701" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
                                             <div class="e-con-inner">
-                                                <div class="elementor-element elementor-element-c2c88dd e-flex e-con-boxed e-con e-child" data-id="c2c88dd" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-aa34b2b elementor-widget elementor-widget-heading" data-id="aa34b2b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">
-                                                                    {{date_format($stor->created_at,'d F, H.i')}}
-                                                                </h2>
+                                                @if($storCount == 0)
+                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                        Data Kosong
+                                                    </h2>
+                                                @else
+                                                    <div class="elementor-element elementor-element-c2c88dd e-flex e-con-boxed e-con e-child" data-id="c2c88dd" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                        <div class="e-con-inner">
+                                                            <div class="elementor-element elementor-element-aa34b2b elementor-widget elementor-widget-heading" data-id="aa34b2b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                                        {{date_format($stor->created_at,'d F, H.i')}}
+                                                                    </h2>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-65a80ca elementor-widget elementor-widget-heading" data-id="65a80ca" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">
-                                                                    @if ($stor->status == 0)
-                                                                        Menunggu Konfirmasi
-                                                                        Petugas TPS
-                                                                    @elseif ($stor->status == 1)
-                                                                        Petugas Sedang Menuju
-                                                                        Lokasi
-                                                                    @elseif ($stor->status == 2)
-                                                                        selesai
-                                                                    @else
-                                                                        <span style="color: red">Di Tolak</span>
-                                                                    @endif
-                                                                </h2>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-07797a2 e-flex e-con-boxed e-con e-child" data-id="07797a2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-6f94982 elementor-widget elementor-widget-heading" data-id="6f94982" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">Panggil Petugas</h2>
+                                                            <div class="elementor-element elementor-element-65a80ca elementor-widget elementor-widget-heading" data-id="65a80ca" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                                        @if ($stor->status == 0)
+                                                                            Menunggu Konfirmasi
+                                                                            Petugas TPS
+                                                                        @elseif ($stor->status == 1)
+                                                                            Petugas Sedang Menuju
+                                                                            Lokasi
+                                                                        @elseif ($stor->status == 2)
+                                                                            selesai
+                                                                        @else
+                                                                            <span style="color: red">Di Tolak</span>
+                                                                        @endif
+                                                                    </h2>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-e69d7d1 e-flex e-con-boxed e-con e-child" data-id="e69d7d1" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-fa32e8e elementor-widget elementor-widget-heading" data-id="fa32e8e" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">Lokasi Ambil :</h2>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-2cfe406 elementor-widget elementor-widget-heading" data-id="2cfe406" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">
-                                                                    {{$stor->alamatjemput}}
-                                                                </h2>
+                                                    <div class="elementor-element elementor-element-07797a2 e-flex e-con-boxed e-con e-child" data-id="07797a2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                        <div class="e-con-inner">
+                                                            <div class="elementor-element elementor-element-6f94982 elementor-widget elementor-widget-heading" data-id="6f94982" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">Panggil Petugas</h2>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-1ee6639 e-flex e-con-boxed e-con e-child" data-id="1ee6639" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-becc0ac elementor-widget elementor-widget-heading" data-id="becc0ac" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">TPS Tujuan :</h2>
+                                                    <div class="elementor-element elementor-element-e69d7d1 e-flex e-con-boxed e-con e-child" data-id="e69d7d1" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                        <div class="e-con-inner">
+                                                            <div class="elementor-element elementor-element-fa32e8e elementor-widget elementor-widget-heading" data-id="fa32e8e" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">Lokasi Ambil :</h2>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-d573895 elementor-widget elementor-widget-heading" data-id="d573895" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">
-                                                                    {{$stor->DataBank->nama_bank}}
-                                                                </h2>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-38118ea e-flex e-con-boxed e-con e-child" data-id="38118ea" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-4963ff4 elementor-widget elementor-widget-heading" data-id="4963ff4" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">Jenis / Berat :</h2>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-c9e9517 elementor-widget elementor-widget-heading" data-id="c9e9517" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">{{$stor->Kategori->kategori_sampah}}</h2>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-694f41d elementor-widget elementor-widget-heading" data-id="694f41d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">/</h2>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-65f3e58 elementor-widget elementor-widget-heading" data-id="65f3e58" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">{{$stor->jml_tab_pergram}}Kg</h2>
+                                                            <div class="elementor-element elementor-element-2cfe406 elementor-widget elementor-widget-heading" data-id="2cfe406" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                                        {{$stor->alamatjemput}}
+                                                                    </h2>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-e4c7d3d e-flex e-con-boxed e-con e-child" data-id="e4c7d3d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
-                                                    <div class="e-con-inner">
-                                                        <div class="elementor-element elementor-element-bdbbe67 elementor-widget elementor-widget-heading" data-id="bdbbe67" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="elementor-heading-title elementor-size-default">Rp. {{$stor->DataBank->harga + $stor->total_harga}}</h2>
+                                                    <div class="elementor-element elementor-element-1ee6639 e-flex e-con-boxed e-con e-child" data-id="1ee6639" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                        <div class="e-con-inner">
+                                                            <div class="elementor-element elementor-element-becc0ac elementor-widget elementor-widget-heading" data-id="becc0ac" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">TPS Tujuan :</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-d573895 elementor-widget elementor-widget-heading" data-id="d573895" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                                        {{$stor->DataBank->nama_bank}}
+                                                                    </h2>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <div class="elementor-element elementor-element-38118ea e-flex e-con-boxed e-con e-child" data-id="38118ea" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                        <div class="e-con-inner">
+                                                            <div class="elementor-element elementor-element-4963ff4 elementor-widget elementor-widget-heading" data-id="4963ff4" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">Jenis / Berat :</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-c9e9517 elementor-widget elementor-widget-heading" data-id="c9e9517" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$stor->Kategori->kategori_sampah}}</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-694f41d elementor-widget elementor-widget-heading" data-id="694f41d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">/</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-65f3e58 elementor-widget elementor-widget-heading" data-id="65f3e58" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">{{$stor->jml_tab_pergram}}Kg</h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-e4c7d3d e-flex e-con-boxed e-con e-child" data-id="e4c7d3d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+                                                        <div class="e-con-inner">
+                                                            <div class="elementor-element elementor-element-bdbbe67 elementor-widget elementor-widget-heading" data-id="bdbbe67" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2 class="elementor-heading-title elementor-size-default">Rp. {{$stor->DataBank->harga + $stor->total_harga}}</h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>

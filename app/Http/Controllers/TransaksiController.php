@@ -215,9 +215,11 @@ class TransaksiController extends Controller
             $stor = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->get()->first();
         }
 
-        $storall = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->get();
+        $storCount = Storan::where('nasabah_id', $user_id)->where('id', $id)->with('DataBank', 'Kategori')->count();
+        $storallCount = Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->count();
+        $storall =  Storan::where('nasabah_id', $user_id)->with('DataBank', 'Kategori')->get();
         // dd($user_id);
-        return view('nasabah.pesanan', compact(['stor', 'storall']));
+        return view('nasabah.pesanan', compact(['stor', 'storall', 'storallCount', 'storCount']));
     }
 
     public function pilihnasabah($id)
