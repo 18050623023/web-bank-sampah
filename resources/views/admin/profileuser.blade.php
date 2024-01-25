@@ -80,7 +80,7 @@
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
                                         href="{{route('setoranNasabah')}}" class="elementor-item elementor-item-anchor">Layanan</a></li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
-                                        href="{{route('pesanan', [$stor->id])}}" class="elementor-item elementor-item-anchor">Pesanan</a></li>
+                                        href="{{route('pesanan', [empty($stor->id) ? 0 : $stor->id])}}" class="elementor-item elementor-item-anchor">Pesanan</a></li>
                             </ul>
                         </nav>
                         <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"

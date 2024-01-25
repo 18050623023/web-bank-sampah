@@ -81,8 +81,8 @@
 							    <div class="col-md-6">
 									<select class="form-control" name="type">
                                         {{-- <option value="0">Admin</option> --}}
-                                        <option value="1">Admin TPS</option>
-                                        <option value="2">User Mall</option>
+                                        <option value="1">TPS</option>
+                                        <option value="2">Pengguna</option>
                                     </select>
 								</div>
 						</div>
