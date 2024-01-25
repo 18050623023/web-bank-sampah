@@ -45,7 +45,7 @@
                                 </td>
                                 <td>
                                     <form action="" method="post" id="setoran{{ $no }}">
-                                        <input type="hidden" name="id" value="{{ empty($stor->id) ? 0 : $stor->id }}">
+                                        <input type="hidden" name="id" value="{{ empty($stor->id) ? "" : $stor->id }}">
                                         <input type="hidden" name="total_tabungan" value="{{ $stor->total_tabungan }}">
                                         @csrf
                                         <select class="form-control" name="petugas">
