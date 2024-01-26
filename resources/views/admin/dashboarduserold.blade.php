@@ -125,12 +125,15 @@
                                                         class='fas fa-user-edit'></i>Profile</a></li>
                                             <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/addnasabah') }}"><i
                                                         class='fas fa-solid fa-building-columns'></i>Tabungan</a></li>
-                                            <li class="ca_dropdown_item elementor-repeater-item-f4af334"><a href="{{ route('logout') }}"onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();"><i
-                                                        class='fas fa-sign-out-alt'></i>Logout</a></li>
-                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                            @csrf
-                                                        </form>
+                                            <li class="ca_dropdown_item elementor-repeater-item-f4af334">
+                                                <a href="{{ route('logout') }}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    <i class='fas fa-sign-out-alt'>
+                                                    </i>Logout
+                                                </a>
+                                            </li>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
                                         </ul>
                                     </button></div>
                             </div>

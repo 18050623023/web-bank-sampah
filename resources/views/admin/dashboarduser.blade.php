@@ -596,9 +596,9 @@
                             class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
                             <ul id="menu-1-64d3dac" class="elementor-nav-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
-                                        href="#" class="elementor-item elementor-item-anchor">Layanan</a></li>
+                                        href="{{route('setoranNasabah')}}" class="elementor-item elementor-item-anchor">Layanan</a></li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
-                                        href="#" class="elementor-item elementor-item-anchor">Pesanan</a></li>
+                                        href="{{route('pesanan', [empty($stor->id) ? "" : $stor->id ])}}" class="elementor-item elementor-item-anchor">Pesanan</a></li>
                             </ul>
                         </nav>
                         <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
@@ -618,10 +618,10 @@
                         <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
                             <ul id="menu-2-64d3dac" class="elementor-nav-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
-                                        href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Layanan</a>
+                                        href="{{route('setoranNasabah')}}" class="elementor-item elementor-item-anchor" tabindex="-1">Layanan</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
-                                        href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Pesanan</a>
+                                        href="{{route('pesanan', [empty($stor->id) ? "" : $stor->id ])}}" class="elementor-item elementor-item-anchor" tabindex="-1">Pesanan</a>
                                 </li>
                             </ul>
                         </nav>
@@ -724,10 +724,17 @@
                                 <div class="ca_btn_container"> <button class="ca_btn" ontouchstart=""><i
                                             class='fas fa-user-circle'></i><span class="ue-btn-text">Nasabah</span>
                                         <ul class="ca_dropdown uc-items-wrapper">
-                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="#"><i
+                                            <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/profileuser') }}"><i
                                                         class='fas fa-user-edit'></i>Profile</a></li>
-                                            <li class="ca_dropdown_item elementor-repeater-item-f4af334"><a href="#"><i
-                                                        class='fas fa-sign-out-alt'></i>Logout</a></li>
+                                            <li class="ca_dropdown_item elementor-repeater-item-f4af334">
+                                                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    <i class='fas fa-sign-out-alt'>
+                                                    </i>Logout
+                                                </a>
+                                            </li>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
                                         </ul>
                                     </button> </div>
                             </div> <!-- end Dropdown Button -->
@@ -791,7 +798,7 @@
                                                 font-size: 59px
                                             }
                                         </style>
-                                        <h2 class="elementor-heading-title elementor-size-default">Hai, Admin</h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">Hai, {{ Auth::user()->name }}</h2>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-5e26629 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
@@ -871,7 +878,7 @@
                                         data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                                         data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">12</h2>
+                                            <h2 class="elementor-heading-title elementor-size-default"><?php echo $saldo; ?></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -889,7 +896,7 @@
                     class="elementor-element elementor-element-b8e98ce e-transform e-flex e-con-boxed e-con e-child"
                     data-id="b8e98ce" data-element_type="container"
                     data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                    href="#">
+                    href="{{ url('admin/addnasabah') }}">
                     <div class="e-con-inner">
                         <div class="elementor-element elementor-element-28e9f05 elementor-widget elementor-widget-image"
                             data-id="28e9f05" data-element_type="widget"
@@ -906,14 +913,14 @@
                             data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                             data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default">Antar Sampah</h2>
+                                <h2 class="elementor-heading-title elementor-size-default">Data Member</h2>
                             </div>
                         </div>
                     </div>
                 </a> <a class="elementor-element elementor-element-eb77791 e-transform e-flex e-con-boxed e-con e-child"
                     data-id="eb77791" data-element_type="container"
                     data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                    href="#">
+                    href="{{route('setoranNasabah')}}">
                     <div class="e-con-inner">
                         <div class="elementor-element elementor-element-44d7500 elementor-widget elementor-widget-image"
                             data-id="44d7500" data-element_type="widget"
@@ -930,14 +937,14 @@
                             data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                             data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default">Antar Sampah</h2>
+                                <h2 class="elementor-heading-title elementor-size-default">Panggil Petugas</h2>
                             </div>
                         </div>
                     </div>
                 </a> <a class="elementor-element elementor-element-5c8f015 e-transform e-flex e-con-boxed e-con e-child"
                     data-id="5c8f015" data-element_type="container"
                     data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                    href="#">
+                    href="{{ url('admin/rewarduser/'.$nasabah->id)  }}">
                     <div class="e-con-inner">
                         <div class="elementor-element elementor-element-c6c63a0 elementor-widget elementor-widget-image"
                             data-id="c6c63a0" data-element_type="widget"
@@ -952,7 +959,7 @@
                             data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                             data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default">Antar Sampah</h2>
+                                <h2 class="elementor-heading-title elementor-size-default">Tukar Poin</h2>
                             </div>
                         </div>
                     </div>
