@@ -519,7 +519,7 @@
             data-element_type="container"
             data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}"
             data-core-v316-plus="true">
-            <div class="elementor-element elementor-element-237af45 e-con-full e-flex e-con e-child" data-id="237af45"
+            <a href="{{url('/admin/dashboard')}}" class="elementor-element elementor-element-237af45 e-con-full e-flex e-con e-child" data-id="237af45"
                 data-element_type="container"
                 data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
                 <div class="elementor-element elementor-element-8a92391 elementor-widget elementor-widget-image"
@@ -549,7 +549,7 @@
                             class="attachment-full size-full wp-image-39" alt="" />
                     </div>
                 </div>
-            </div>
+            </a>
             <div class="elementor-element elementor-element-8ed6f24 e-con-full e-flex e-con e-child" data-id="8ed6f24"
                 data-element_type="container"
                 data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
@@ -686,7 +686,7 @@
                                     align-content: center;
                                     align-items: center;
                                     border-bottom-style: solid;
-                                    white-space: pre-line;
+                                    /* white-space: pre-line; */
                                 }
 
                                 #uc_dropdown_button_elementor16909 .ca_dropdown i {
@@ -694,8 +694,18 @@
                                 }
                             </style>
                             <div id="uc_dropdown_button_elementor16909" class="ca_btn_wrapper">
-                                <div class="ca_btn_container"> <button class="ca_btn" ontouchstart=""><i
-                                            class='fas fa-user-circle'></i><span class="ue-btn-text">Nasabah</span>
+                                <div class="ca_btn_container">
+                                    <button class="ca_btn" ontouchstart="">
+                                        <i class='fas fa-user-circle'></i>
+                                        <span class="ue-btn-text">
+                                            @if( Auth::user()->type == "Nasabah" )
+                                                Member
+                                            @elseif(Auth::user()->type == "Teller")
+                                                TPS
+                                            @else
+                                                {{Auth::user()->type}}
+                                            @endif
+                                        </span>
                                         <ul class="ca_dropdown uc-items-wrapper">
                                             <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a
                                                     href="{{ url('admin/profileuser') }}"><i
@@ -712,7 +722,8 @@
                                                 @csrf
                                             </form>
                                         </ul>
-                                    </button> </div>
+                                    </button>
+                                </div>
                             </div> <!-- end Dropdown Button -->
                         </div>
                     </div>

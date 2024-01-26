@@ -592,8 +592,7 @@
                     data-widget_type="nav-menu.default">
                     <div class="elementor-widget-container">
                         <link rel="stylesheet" href="{{asset('template')}}/nasabah/dashboard/css/elementor-pro-assets-css-widget-nav-menu.min.css">
-                        <nav
-                            class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
+                        <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
                             <ul id="menu-1-64d3dac" class="elementor-nav-menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
                                         href="{{route('setoranNasabah')}}" class="elementor-item elementor-item-anchor">Layanan</a></li>
@@ -721,8 +720,17 @@
                                 }
                             </style>
                             <div id="uc_dropdown_button_elementor18866" class="ca_btn_wrapper">
-                                <div class="ca_btn_container"> <button class="ca_btn" ontouchstart=""><i
-                                            class='fas fa-user-circle'></i><span class="ue-btn-text">Nasabah</span>
+                                <div class="ca_btn_container"> <button class="ca_btn" ontouchstart="">
+                                    <i class='fas fa-user-circle'></i>
+                                        <span class="ue-btn-text">
+                                            @if( Auth::user()->type == "Nasabah" )
+                                                Member
+                                            @elseif(Auth::user()->type == "Teller")
+                                                TPS
+                                            @else
+                                                {{Auth::user()->type}}
+                                            @endif
+                                        </span>
                                         <ul class="ca_dropdown uc-items-wrapper">
                                             <li class="ca_dropdown_item elementor-repeater-item-468ee9a"><a href="{{ url('admin/profileuser') }}"><i
                                                         class='fas fa-user-edit'></i>Profile</a></li>
