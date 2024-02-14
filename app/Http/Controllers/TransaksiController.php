@@ -107,7 +107,7 @@ class TransaksiController extends Controller
             ->where('storans.nasabah_id', '=', $user_id)
                 ->get();
             // dd($kategorie);
-            return view('nasabah.panggilPetugas', compact(['nasabah', 'kategorie', 'setoran', 'petugas', 'lokasi', 'idstoran','stor']));
+            return view('nasabah.panggilPetugasnew', compact(['nasabah', 'kategorie', 'setoran', 'petugas', 'lokasi', 'idstoran','stor']));
         }
     }
 
