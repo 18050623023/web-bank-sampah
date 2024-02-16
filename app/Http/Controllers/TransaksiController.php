@@ -179,7 +179,7 @@ class TransaksiController extends Controller
         $lokasi = Databank::all();
         $stor_id = $request->stor_id;
         $tabungan_id = $request->tabungan_id;
-        return view('nasabah.pilihbank', compact(['stor_id', 'tabungan_id', 'lokasi','stor']));
+        return view('nasabah.pilihtps', compact(['stor_id', 'tabungan_id', 'lokasi','stor']));
     }
 
     public function pilihtpsact($stor_id, $tabungan_id, $tps)
