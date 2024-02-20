@@ -30,7 +30,7 @@
                         @foreach ($setoran as $stor)
                             <?php $no++; ?>
                             <tr>
-                                <td>{{ $stor->databank->nama_bank }}</td>
+                                <td>{{ $stor->DataBank->nama_bank }}</td>
                                 <td>{{ $stor->nasabah->nama_nasabah }}</td>
                                 <td>{{ $stor->nasabah->alamat }}</td>
                                 <td>{{ $stor->jml_tab_pergram }}</td>
